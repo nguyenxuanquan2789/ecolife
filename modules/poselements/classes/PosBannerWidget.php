@@ -146,15 +146,15 @@ class PosBannerWidget extends WidgetHelper {
 					'options' => [
 						'left' => [
 							'title' => $this->l( 'Top' ),
-							'icon' => 'ceicon-v-align-top',
+							'icon' => 'fa fa-long-arrow-up',
 						],
 						'center' => [
 							'title' => $this->l( 'Middle' ),
-							'icon' => 'ceicon-v-align-middle',
+							'icon' => 'fa fa-arrows-h',
 						],
 						'right' => [
 							'title' => $this->l( 'Bottom' ),
-							'icon' => 'ceicon-v-align-bottom',
+							'icon' => 'fa fa-long-arrow-down',
 						],
 					],
 					'default' => 'center',
