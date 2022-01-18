@@ -1263,58 +1263,26 @@ class Posvegamenu extends Module
 		$submenus = PosVegamenuClass::getMenus();
 		foreach ($submenus as $key => $submenu)
 		{
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a{ 
-				'.($submenus[$key]['item_bg_color'] != '' ? 'background: '.$submenus[$key]['item_bg_color'].';' : '').'
-				'.($submenus[$key]['item_color'] != '' ? 'color: '.$submenus[$key]['item_color'].';' : '').'
-				'.($submenus[$key]['item_fontsize'] != 0 ? 'font-size: '.$submenus[$key]['item_fontsize'].'px;' : '').'
-				'.($submenus[$key]['item_lineheight'] != 0 ? 'line-height: '.$submenus[$key]['item_lineheight'].'px;' : '').'
-				text-transform: '.$this->convertTransform($submenus[$key]['item_transform']).';
-			}';
-			if($submenus[$key]['item_bg_colorh'] != '' || $submenus[$key]['item_colorh'] != ''){
-				$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a:hover { 
-					'.($submenus[$key]['item_bg_colorh'] != '' ? 'background: '.$submenus[$key]['item_bg_colorh'].';' : '').'
-					'.($submenus[$key]['item_colorh'] != '' ? 'color: '.$submenus[$key]['item_colorh'].';' : '').'
-				}';
-			}
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle{ 
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle{ 
 				'.($submenus[$key]['subtitle_bg_color'] != '' ? 'background: '.$submenus[$key]['subtitle_bg_color'].';' : '').'
 				'.($submenus[$key]['subtitle_color'] != '' ? 'color: '.$submenus[$key]['subtitle_color'].';' : '').'
 				'.($submenus[$key]['subtitle_fontsize'] != 0 ? 'font-size: '.$submenus[$key]['subtitle_fontsize'].'px;' : '').'
 				'.($submenus[$key]['subtitle_lineheight'] != 0 ? 'line-height: '.$submenus[$key]['subtitle_lineheight'].'px;' : '').'
 				text-transform: '.$this->convertTransform($submenus[$key]['subtitle_transform']).';
 			}';
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle:after{ 
+				'.($submenus[$key]['subtitle_bg_color'] != '' ? 'border-right-color: '.$submenus[$key]['subtitle_bg_color'].';' : '').'
+			}';
 			$submenu_config = PosVegamenuSubmenuClass::getSubmenuConfig($submenus[$key]['id_posvegamenu_item']);
 			if($submenu_config['submenu_bg'] == 2 && $submenu_config['submenu_bg_color'] != ''){
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown{
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown{
 					'.($submenu_config['submenu_bg_color'] != '' ? 'background: '.$submenu_config['submenu_bg_color'].';' : '').'
 				}';
 			}elseif($submenu_config['submenu_bg'] == 3 && $submenu_config['submenu_bg_image'] != ''){
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown{
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown{
 					'.($submenu_config['submenu_bg_image'] != '' ? 'background-image: url("'.$submenu_config['submenu_bg_image'].'");' : '').'
 					background-repeat: '.$this->convertBgRepeat($submenu_config['submenu_bg_repeat']).';
 					background-position: '.$this->convertBgPosition($submenu_config['submenu_bg_position']).';
-				}';
-			}
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown .submenu-item > a{
-				'.($submenu_config['submenu_title_color'] != '' ? 'color: '.$submenu_config['submenu_title_color'].';' : '').'
-				'.($submenu_config['submenu_title_fontsize'] != 0 ? 'font-size: '.$submenu_config['submenu_title_fontsize'].'px;' : '').'
-				'.($submenu_config['submenu_title_lineheight'] != 0 ? 'line-height: '.$submenu_config['submenu_title_lineheight'].'px;' : '').'
-				text-transform: '.$this->convertTransform($submenu_config['submenu_title_transform']).';
-			}';
-			if($submenu_config['submenu_title_colorh'] != ''){
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown .submenu-item > a:hover { 
-					'.($submenu_config['submenu_title_colorh'] != '' ? 'color: '.$submenu_config['submenu_title_colorh'].';' : '').'
-				}';
-			}
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown .submenu-item .category-sub-menu a{
-				'.($submenu_config['submenu_link_color'] != '' ? 'color: '.$submenu_config['submenu_link_color'].';' : '').'
-				'.($submenu_config['submenu_link_fontsize'] != 0 ? 'font-size: '.$submenu_config['submenu_link_fontsize'].'px;' : '').'
-				'.($submenu_config['submenu_link_lineheight'] != 0 ? 'line-height: '.$submenu_config['submenu_link_lineheight'].'px;' : '').'
-				text-transform: '.$this->convertTransform($submenu_config['submenu_link_transform']).';
-			}';
-			if($submenu_config['submenu_link_colorh'] != ''){
-			$css .= '#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' .menu-dropdown .submenu-item .category-sub-menu a:hover { 
-					'.($submenu_config['submenu_link_colorh'] != '' ? 'color: '.$submenu_config['submenu_link_colorh'].';' : '').'
 				}';
 			}
 		}

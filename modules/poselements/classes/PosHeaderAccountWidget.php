@@ -52,7 +52,7 @@ class PosHeaderAccountWidget extends WidgetBase {
 				[
 					'label' => $this->l( 'Button layout'),
 					'type' => ControlsManager::SELECT,
-					'default' => 'icon',
+					'default' => 'icon_text',
 					'options' => [
 						'icon' => $this->l( 'Icon'),
 						'text' => $this->l( 'Text'),

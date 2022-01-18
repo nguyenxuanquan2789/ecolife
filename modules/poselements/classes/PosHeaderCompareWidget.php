@@ -36,7 +36,7 @@ class PosHeaderCompareWidget extends WidgetBase {
 				[
 					'label' => $this->l( 'Button Layout'),
 					'type' => ControlsManager::SELECT,
-					'default' => 'icon',
+					'default' => 'icon_text',
 					'options' => [
 						'icon' => $this->l( 'Icon'),
 						'icon_text' => $this->l( 'Icon & Text'),

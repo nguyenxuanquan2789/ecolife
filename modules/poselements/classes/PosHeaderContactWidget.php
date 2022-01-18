@@ -74,7 +74,7 @@ class PosHeaderContactWidget extends WidgetBase
             array(
                 'label' => $this->l('Image Position'),
                 'type' => ControlsManager::CHOOSE,
-                'default' => 'top',
+                'default' => 'left',
                 'options' => array(
                     'left' => array(
                         'title' => $this->l('Left'),
@@ -168,6 +168,9 @@ class PosHeaderContactWidget extends WidgetBase
                         'min' => 5,
                         'max' => 100,
                     ),
+                ),
+				'default' => array(
+                    'size' => 40,
                 ),
                 'selectors' => array(
                     '{{WRAPPER}} .box-contact .contact-img' => 'width: {{SIZE}}{{UNIT}};',

@@ -49,7 +49,7 @@ class PosHeaderCartWidget extends WidgetBase {
 				[
 					'label' => $this->l( 'Cart icon'),
 					'type' => ControlsManager::SELECT,
-					'default' => 'icon-rt-FullShoppingCart',
+					'default' => 'icon-rt-bag2',
 					'options' => [
 						'icon-rt-cart-outline' => $this->l( 'Icon 1'),
 						'icon-rt-FullShoppingCart' => $this->l( 'Icon 2'),
