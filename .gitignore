@@ -117,6 +117,7 @@ app/config/config.php
 override/*
 themes/*/
 !themes/theme_ecolife
+
 !themes/_core
 !themes/_libraries
 modules/posmegamenu/views/css/posmegamenu_s_*.css
