@@ -119,8 +119,8 @@ themes/*/
 !themes/classic
 !themes/_core
 !themes/_libraries
-modules/vecmegamenu/views/css/vecmegamenu_s_*.css
-modules/vecvegamenu/views/css/vecvegamenu_s_*.css
+modules/posmegamenu/views/css/posmegamenu_s_*.css
+modules/posvegamenu/views/css/posvegamenu_s_*.css
 modules/posthemeoptions/views/css/posthemeoptions_s_*.css
 modules/creativeelements/views/css/ce/*
 
