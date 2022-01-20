@@ -10,7 +10,9 @@ class AdminPosvegamenuController extends ModuleAdminController {
         if (!$this->module->active) {
             Tools::redirectAdmin($this->context->link->getAdminLink('AdminHome'));
         }
-        Tools::redirectAdmin($this->context->link->getAdminLink('AdminModules').'&configure=posvegamenu');
+        if(!Tools::getValue('ajax')){
+            Tools::redirectAdmin($this->context->link->getAdminLink('AdminModules').'&configure=posvegamenu');
+        }
     }
     public function ajaxProcessSave()
     {
