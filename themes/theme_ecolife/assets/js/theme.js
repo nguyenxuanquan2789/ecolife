@@ -315,10 +315,11 @@ var posthemes = {
 								html += '<div class="product-price-and-shipping">'+ price + '</div>';
 							}
 							html += '<ul class="add-to-links">'+ $(element).find('.add-to-links').html() + '</ul>';	
-							html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	
+							
 						html += '</div>';
 						html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
 						html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+						html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	
 					html += '</div>';
 					html += '</article>';
 				}else if (cate_type == 4) {

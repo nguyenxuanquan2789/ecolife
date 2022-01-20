@@ -94,14 +94,9 @@
 					 {/if}
 					
 				</ul> 
-				<div class="variant-links">
-				{block name='product_variants'}
-				{if $product.main_variants}
-				{include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
-				{/if}
-				{/block} 
-				</div>
+				
 			</div>
+			
 			<div class="availability"> 
 			{if $product.show_availability }
 				{if $product.quantity > 0}
@@ -116,9 +111,13 @@
 			{block name='product_description_short'}
 				<div class="product-desc" itemprop="description">{$product.description_short nofilter}</div>
 			{/block}
-		
-			
-		
+			<div class="variant-links">
+				{block name='product_variants'}
+				{if $product.main_variants}
+				{include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+				{/if}
+				{/block} 
+			</div>
 		</div>
 	</article>
 {/block}
