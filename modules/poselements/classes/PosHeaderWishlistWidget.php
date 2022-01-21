@@ -168,6 +168,10 @@ class PosHeaderWishlistWidget extends WidgetBase {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .wishlist-top a:hover' => 'color: {{VALUE}};',
 	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 

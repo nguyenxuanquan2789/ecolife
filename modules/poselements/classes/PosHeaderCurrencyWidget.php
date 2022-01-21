@@ -179,6 +179,10 @@ class PosHeaderCurrencyWidget extends WidgetHelper {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .pos-currency-widget .pos-dropdown-toggle:hover' => 'color: {{VALUE}};',
 	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 

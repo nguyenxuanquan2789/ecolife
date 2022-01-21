@@ -168,6 +168,10 @@ class PosHeaderCompareWidget extends WidgetBase {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .compare-top a:hover' => 'color: {{VALUE}};',
 	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 

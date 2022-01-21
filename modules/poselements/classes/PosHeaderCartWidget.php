@@ -166,6 +166,10 @@ class PosHeaderCartWidget extends WidgetBase {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .blockcart > a:hover' => 'color: {{VALUE}};',
 	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 
@@ -348,7 +352,11 @@ class PosHeaderCartWidget extends WidgetBase {
 					'selectors' => [
 						'{{WRAPPER}} .blockcart .cart-products-count' => 'background-color: {{VALUE}};',
 					],
-					'separator' => 'none'
+					'separator' => 'none',
+					'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 				]
 			);
 		$this->endControlsSection();

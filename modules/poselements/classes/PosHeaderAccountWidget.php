@@ -239,7 +239,11 @@ class PosHeaderAccountWidget extends WidgetBase {
 	                'type' => ControlsManager::COLOR,
 	                'selectors' => array(
 	                    '{{WRAPPER}} .pos-account > a:hover' => 'color: {{VALUE}};',
-	                )
+	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 

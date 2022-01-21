@@ -286,6 +286,10 @@ class PosHeaderSearchWidget extends WidgetBase {
                 'selectors' => [
                     '{{WRAPPER}} .pos-search__toggle i:hover' => 'color: {{VALUE}}; border-color: {{VALUE}}',
                 ],
+                'scheme' => array(
+                    'type' => SchemeColor::getType(),
+                    'value' => SchemeColor::COLOR_1,
+                ),
             ]
         );
         $this->endControlsTab();

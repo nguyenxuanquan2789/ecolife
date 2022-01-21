@@ -194,6 +194,10 @@ class PosHeaderMenuWidget extends WidgetBase {
 					'selectors' => [
 						'{{WRAPPER}} #menu-icon i:hover' => 'fill: {{VALUE}}; color: {{VALUE}};',
 					],
+					'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),	
 				]
 			);
         $this->endControlsSection();

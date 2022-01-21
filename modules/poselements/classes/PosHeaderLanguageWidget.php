@@ -189,6 +189,10 @@ class PosHeaderLanguageWidget extends WidgetHelper {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .pos-languages-widget .pos-dropdown-toggle:hover' => 'color: {{VALUE}};',
 	                ),
+	                'scheme' => array(
+	                    'type' => SchemeColor::getType(),
+	                    'value' => SchemeColor::COLOR_1,
+	                ),
 	            )
 	        );
 

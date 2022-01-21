@@ -524,7 +524,7 @@ class PosSlideshowWidget extends WidgetHelper {
 	                'type' => ControlsManager::COLOR,
 	                'scheme' => array(
 	                    'type' => SchemeColor::getType(),
-	                    'value' => SchemeColor::COLOR_4,
+	                    'value' => SchemeColor::COLOR_1,
 	                ),
 	                'selectors' => array(
 	                    '{{WRAPPER}} a.slideshow-button' => 'background-color: {{VALUE}};',
