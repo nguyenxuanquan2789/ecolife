@@ -624,6 +624,7 @@ class Posmegamenu extends Module
 								$sub_menu_infos[$key1]['title'] = $menu_info['title'];
 						        break;
 						    case 3: // custom link
+								$sub_menu_infos[$key1]['customlink_link']= str_replace('/pos_ecolife/',__PS_BASE_URI__,$sub_menu_infos[$key1]['customlink_link']); 
 						        break;
 						    case 4: // product
 						        $id_prod = (int)$sub_menu_info['id_product'];
