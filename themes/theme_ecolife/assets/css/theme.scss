@@ -12516,13 +12516,13 @@ body#checkout section#checkout-personal-information-step {
 			right: 0;
 			bottom:90%;
 			line-height: 1;
-			padding: 5px 0.9375rem; 
+			padding: 0 0.9375rem; 
 			background: rgba(0,0,0,.1);
 			visibility: hidden;
 			opacity: 0;
 			@include pos-transition(300ms);
             a {
-                margin: 0;
+                margin: 5px 0;  
              
             }
         }
@@ -15285,6 +15285,9 @@ body:not(.page-index) .sticky-inner.absolute-header {
             background: $main-color;
             color: $color-white;
             padding: 0 0.625rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
         }
     }
     &.search-dropdown {
@@ -16080,6 +16083,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
                         vertical-align: middle;
                         font-size: 1rem;
                         line-height: 1;
+						vertical-align: 0px; 
                         &.hidden-md-down {
                             font-size: 8px;
                         }
@@ -16409,7 +16413,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
 					text-transform: capitalize;
 					word-wrap: break-word;
 					background: white;
-					padding: 0.625rem 1.25rem;
+					padding: 0.6875rem 1.25rem;
 					font-size: 0.875rem;
 					&:hover {
 						background:#f5f5f5;
@@ -17674,10 +17678,13 @@ body:not(.page-index) .sticky-inner.absolute-header {
 	}
 }
 .navtab-products {
+    white-space: nowrap; 
+    overflow-y: hidden;
     font-size: 0;
     li {
         display: inline-block;
         line-height: 1;
+		margin-bottom:0.625rem; 
     }
 }
 //testimonial
@@ -17831,6 +17838,9 @@ body:not(.page-index) .sticky-inner.absolute-header {
         }
     }
     &.design-2 {
+		.post-category a {
+			 display:none;
+		}
         @media (min-width: 768px) {
             .post-content {
                 position: absolute;
@@ -17874,7 +17884,6 @@ body:not(.page-index) .sticky-inner.absolute-header {
                     border-radius: 1.875rem;
                     padding: 0 0.9375rem;
                     margin-bottom: 1.25rem;
-                    display: inline-block;
                     &:hover {
                         background: var(--hovercolor);
                         color: $color-white;

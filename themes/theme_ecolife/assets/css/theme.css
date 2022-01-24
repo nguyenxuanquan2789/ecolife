@@ -12640,7 +12640,7 @@ body#checkout section#checkout-personal-information-step .step-title {
     right: 0;
     bottom: 90%;
     line-height: 1;
-    padding: 5px 0.9375rem;
+    padding: 0 0.9375rem;
     background: rgba(0, 0, 0, 0.1);
     visibility: hidden;
     opacity: 0;
@@ -12652,7 +12652,7 @@ body#checkout section#checkout-personal-information-step .step-title {
     .style_product_default .product_desc .variant-links a,
     .style_product1 .product_desc .variant-links a,
     .style_product2 .product_desc .variant-links a {
-      margin: 0; }
+      margin: 5px 0; }
 .style_product_default:hover .product_desc .variant-links,
 .style_product1:hover .product_desc .variant-links,
 .style_product2:hover .product_desc .variant-links {
@@ -15095,7 +15095,10 @@ body:not(.page-index) .sticky-inner.absolute-header {
       cursor: pointer;
       background: #253237;
       color: #ffffff;
-      padding: 0 0.625rem; }
+      padding: 0 0.625rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
   .pos-search.search-dropdown .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -15709,7 +15712,8 @@ body:not(.page-index) .sticky-inner.absolute-header {
         display: inline-block;
         vertical-align: middle;
         font-size: 1rem;
-        line-height: 1; }
+        line-height: 1;
+        vertical-align: 0px; }
         .main-menu .pos-menu-horizontal .menu-content .menu-item > a i.hidden-md-down {
           font-size: 8px; }
     .main-menu .pos-menu-horizontal .menu-content .menu-item .menu-dropdown {
@@ -15999,7 +16003,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
         text-transform: capitalize;
         word-wrap: break-word;
         background: white;
-        padding: 0.625rem 1.25rem;
+        padding: 0.6875rem 1.25rem;
         font-size: 0.875rem; }
         .main-menu .pos-menu-vertical .menu-content .menu-item > a:hover {
           background: #f5f5f5; }
@@ -17132,10 +17136,13 @@ body:not(.page-index) .sticky-inner.absolute-header {
   .slider-arrows-top .slick-next {
     right: 0.625rem; } }
 .navtab-products {
+  white-space: nowrap;
+  overflow-y: hidden;
   font-size: 0; }
   .navtab-products li {
     display: inline-block;
-    line-height: 1; }
+    line-height: 1;
+    margin-bottom: 0.625rem; }
 
 .testimonial-item .testimonial-item-inner .author {
   padding-left: 3.125rem;
@@ -17259,6 +17266,8 @@ body:not(.page-index) .sticky-inner.absolute-header {
       .post-item.design-1 .post-content .read_more a i, .post-item.design-2 .post-content .read_more a i, .post-item.design-3 .post-content .read_more a i {
         vertical-align: -2px;
         color: var(--hovercolor); }
+  .post-item.design-2 .post-category a {
+    display: none; }
   @media (min-width: 768px) {
     .post-item.design-2 .post-content {
       position: absolute;
@@ -17297,8 +17306,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
         line-height: 1.75rem;
         border-radius: 1.875rem;
         padding: 0 0.9375rem;
-        margin-bottom: 1.25rem;
-        display: inline-block; }
+        margin-bottom: 1.25rem; }
         .post-item.design-2 .post-content .post-category a:hover {
           background: var(--hovercolor);
           color: #ffffff; }

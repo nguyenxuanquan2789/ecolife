@@ -153,7 +153,7 @@
 			<label class="control-label col-lg-3">{l s='Font-Awesome Icon' mod='posvegamenu'}</label>
 			<div class="col-lg-9">
 				<input type="text" class="icon_class fixed-width-xl" id="icon_class" name="icon_class" value="{$menu->icon_class|escape:'html':'UTF-8'}"/>
-				<p>{l s='Put class icon of Font-Awesome at :' mod='posvegamenu'} <a href="http://fortawesome.github.io/Font-Awesome/3.2.1/icons/">http://fortawesome.github.io/Font-Awesome/3.2.1/icons/.</a>ex: <span class="o-40">&lt;i class="</span>fab fa-angellist<span class="o-40">"&gt;&lt;/i&gt;</span></p>   
+				<p>{l s='Put class icon of Font-Awesome at :' mod='posvegamenu'} <a href="https://fontawesome.com/v4.7/icons/">https://fontawesome.com/v4.7/icons</a> ex: <span>&lt;i class="</span>fa fa-camera<span>"&gt;&lt;/i&gt;</span></p>   
 			</div>
 		</div>
 		<div class="form-group lab-img-icon">

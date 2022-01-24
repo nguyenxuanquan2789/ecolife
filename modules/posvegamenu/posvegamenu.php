@@ -1263,14 +1263,16 @@ class Posvegamenu extends Module
 		$submenus = PosVegamenuClass::getMenus();
 		foreach ($submenus as $key => $submenu)
 		{
-			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle{ 
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle,
+					.mobile-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle{ 
 				'.($submenus[$key]['subtitle_bg_color'] != '' ? 'background: '.$submenus[$key]['subtitle_bg_color'].';' : '').'
 				'.($submenus[$key]['subtitle_color'] != '' ? 'color: '.$submenus[$key]['subtitle_color'].';' : '').'
 				'.($submenus[$key]['subtitle_fontsize'] != 0 ? 'font-size: '.$submenus[$key]['subtitle_fontsize'].'px;' : '').'
 				'.($submenus[$key]['subtitle_lineheight'] != 0 ? 'line-height: '.$submenus[$key]['subtitle_lineheight'].'px;' : '').'
 				text-transform: '.$this->convertTransform($submenus[$key]['subtitle_transform']).';
 			}';
-			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle:after{ 
+			$css .= '.main-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle:after,
+					.mobile-menu .pos-menu-vertical .menu-content .menu-item.menu-item'.$submenus[$key]['id_posvegamenu_item'].' > a .menu-subtitle:after{ 
 				'.($submenus[$key]['subtitle_bg_color'] != '' ? 'border-right-color: '.$submenus[$key]['subtitle_bg_color'].';' : '').'
 			}';
 			$submenu_config = PosVegamenuSubmenuClass::getSubmenuConfig($submenus[$key]['id_posvegamenu_item']);
