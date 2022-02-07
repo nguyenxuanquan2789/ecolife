@@ -55,6 +55,7 @@ class PosLinksWidget extends WidgetHelper {
 	                ),
 	            )
 	        );
+			
 	        $this->addResponsiveControl(
             	'text_align',
 	            [
@@ -138,6 +139,21 @@ class PosLinksWidget extends WidgetHelper {
 	                'title_field' => '{{{ title }}}',
 	            )
 	        );
+			$this->addControl(
+            'display_link',
+                [
+                    'label' => __('Display'),
+                    'type' => ControlsManager::SELECT,
+                    'default' => 'block',
+                    'options' => [ 
+                        'block' => __('Block'),
+                        'inline' => __('Inline (auto)')
+                    ],
+                    'prefix_class' => 'display-',
+                    'render_type' => 'template',
+                    'frontend_available' => true
+                ]
+            );
 		$this->endControlsSection();
 		
 		$this->startControlsSection(
@@ -228,6 +244,39 @@ class PosLinksWidget extends WidgetHelper {
 					'selector' 		=> '{{WRAPPER}} .pos-links-widget .links-widget-content a',
 				]
 			);
+			$this->addControl(
+				'padding',
+				[
+					'label' => $this->l( 'Padding' ),
+					'type' => ControlsManager::DIMENSIONS,
+					'size_units' => [ 'px', '%', 'em' ],
+					'selectors' => [
+						'{{WRAPPER}} .pos-links-widget .links-widget-content a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};', 
+					],
+				]
+			);
+			$this->addControl(
+				'margin',
+				[
+					'label' => $this->l( 'margin' ),
+					'type' => ControlsManager::DIMENSIONS,
+					'size_units' => [ 'px', '%', 'em' ],
+					'selectors' => [
+						'{{WRAPPER}} .pos-links-widget .links-widget-content a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+	            GroupControlBorder::getType(),
+	            array(
+	                'name' => 'border',
+	                'label' => $this->l('Border'),
+	                'placeholder' => '1px',
+	                'default' => '1px',
+	                'selector' => '{{WRAPPER}} .pos-links-widget .links-widget-content a'
+	            )
+	        );
+
 			$this->startControlsTabs('tabs_button_style');
 
 	        $this->startControlsTab(

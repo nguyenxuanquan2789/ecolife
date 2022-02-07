@@ -13,7 +13,7 @@
 			<i class="material-icons remove">&#xE316;</i>
 		</span>
     </h2>
-	<ul id="footer_linkslist_{$id}" class="links-widget-content collapse">
+	<ul id="footer_linkslist_{$id}" class="{if !$title}not-title-links{/if} links-widget-content collapse">
 		{foreach from=$links item=link}
 		<li>
 			{if $link.title}
