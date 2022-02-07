@@ -102,6 +102,7 @@ class PosLatestPostWidget extends WidgetHelper {
 
 		$slick_options = [
 			'slidesToShow' => (int) $settings['items'],
+			'rows'         => (int) $settings['rows'] ? $settings['rows'] : 1,
 			'autoplay'     => ($settings['autoplay'] == 'yes') ? true : false,
 			'infinite'     => ($settings['infinite'] == 'yes') ? true : false,
 			'arrows'       => ($settings['arrows'] == 'yes') ? true : false,

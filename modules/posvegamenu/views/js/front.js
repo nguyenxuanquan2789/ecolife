@@ -26,8 +26,17 @@
 * to avoid any conflicts with others containers.
 */
 
-$(document).ready(function()
-{	
+$(document).ready(function(){
+	posVerticalMenu();
+	window.top.ceFrontend.hooks.addAction('frontend/element_ready/widget', function($scope, $) {
+        var widget = $scope.data('element_type');
+
+        if (widget == 'pos_menu.default') {
+        	posVerticalMenu(); 
+        }
+    });
+});
+var posVerticalMenu = function(){	
 	activeMobileVetical();
 	$(window).resize(function(){
 		if($(window).width() < 992)
@@ -127,7 +136,7 @@ $(document).ready(function()
 		});
 	} 
 	
-});
+};
 function activeMobileVetical(){
 	
 	$('.pos-menu-vertical .menu-item > .icon-drop-mobile').on('click', function(){

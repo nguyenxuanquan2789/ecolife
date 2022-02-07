@@ -329,6 +329,7 @@ class PosTestimonialsWidget extends WidgetHelper {
 			'speed'          => ($settings['transition_speed']) ? (int)$settings['transition_speed'] : 500,
 			'arrows'         => ($settings['arrows'] == 'yes') ? true : false,
 			'dots'           => ($settings['dots'] == 'yes') ? true : false, 
+			'rows'           => (int) $settings['rows'] ? $settings['rows'] : 1,
 		]; 
 
 		$responsive = array();

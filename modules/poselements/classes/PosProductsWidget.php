@@ -215,7 +215,37 @@ class PosProductsWidget extends WidgetHelper {
 		
 		//Slider Setting
 		$this->addCarouselControls($this->getName(), 4);
-
+		
+		
+		$this->startControlsSection(
+			'style_section',
+			[
+				'label' => $this->l( 'Style' ),
+				'tab' => ControlsManager::TAB_STYLE,
+				'condition' => [
+					'product_display' => 'list',
+				],
+			]
+		);	
+			$this->addControl(
+				'padding',
+				[
+					'label' => $this->l( 'Padding' ),
+					'type' => ControlsManager::DIMENSIONS,
+					'size_units' => [ 'px', '%', 'em' ],
+					'selectors' => [
+						'{{WRAPPER}} .style_product_list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'button_border',
+					'selector' 		=> '{{WRAPPER}} .style_product_list',
+				]
+			);
+		$this->endControlsSection();
 
 	}
 	protected function render() {
