@@ -99,8 +99,8 @@ var posVerticalMenu = function(){
 		}
 		e.preventDefault();
 	});
- 	var count_block = $('#_desktop_vegamenu .pos-menu-vertical .menu-content li').length; 
-	var number_blocks = parseInt($('.pos-menu-vertical').attr('data-more-less'));
+ 	var count_block = $('#_desktop_vegamenu .pos-menu-vertical .menu-content > li').length; 
+	var number_blocks = parseInt($('#_desktop_vegamenu .pos-menu-vertical').attr('data-more-less'));
 	if($(window).width() < 1199)
 	{
 

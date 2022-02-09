@@ -17352,7 +17352,8 @@ body:not(.page-index) .sticky-inner.absolute-header {
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: flex; }
+      display: flex;
+      align-items: flex-start; }
       .post-item.design-3 .post-image {
         width: 45%;
         max-width: 330px;
@@ -17457,8 +17458,8 @@ body:not(.page-index) .sticky-inner.absolute-header {
     text-align: left; }
     .pos-sale-product-widget .style_product_list_sale .img_block {
       flex: 0 0 auto;
-      width: 45%;
-      max-width: 25rem; }
+      width: 48.8%;
+      max-width: 26rem; }
     .pos-sale-product-widget .style_product_list_sale .product_desc {
       padding: 1.25rem 1.875rem;
       flex: 1;
@@ -17522,6 +17523,14 @@ body:not(.page-index) .sticky-inner.absolute-header {
   display: block;
   margin: 1.875rem 0 0 0; }
 
+.design-countdown-2 .pos-sale-product-widget .js-product-miniature .product_desc .availability {
+  margin-top: 1rem; }
+.design-countdown-2 .pos-sale-product-widget .js-product-miniature .product_desc .cart {
+  display: none; }
+.design-countdown-2 .pos-sale-product-widget .js-product-miniature .product_desc .manufacturer a {
+  font-size: 0.75rem; }
+.design-countdown-2 .pos-sale-product-widget .js-product-miniature .product_desc .product_name {
+  font-size: 14px; }
 .design-countdown-2 .pos-sale-product-widget .is-countdown {
   display: inline-flex;
   align-items: center;

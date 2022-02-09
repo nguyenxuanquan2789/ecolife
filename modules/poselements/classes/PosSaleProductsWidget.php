@@ -201,7 +201,7 @@ class PosSaleProductsWidget extends WidgetHelper {
 			$this->addControl(
 				'design_countdown',
 				[
-					'label' => $this->l( 'Countdown design' ),
+					'label' => $this->l( 'design' ),
 					'type' => ControlsManager::SELECT,
 					'options' => $designs_countdown, 
 					'prefix_class' => 'design-countdown-',

@@ -17952,6 +17952,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
     &.design-3 {
         @media (min-width: 768px) {
             @include flex;
+			align-items: flex-start;
             .post-image {
                 width: 45%;
                 max-width: 330px;
@@ -18079,8 +18080,8 @@ body:not(.page-index) .sticky-inner.absolute-header {
 			text-align:left; 
 			.img_block {
 				flex: 0 0 auto;
-				width: 45%;
-				max-width: 25rem;
+				width: 48.8%;
+				max-width: 26rem; 
 			}
 			.product_desc {
 				padding: 1.25rem 1.875rem;
@@ -18164,6 +18165,23 @@ body:not(.page-index) .sticky-inner.absolute-header {
 }
 .design-countdown-2 {
     .pos-sale-product-widget {
+		.js-product-miniature {
+			.product_desc {
+				.availability {
+					margin-top: 1rem; 
+				}
+				.cart {
+					display:none;  
+				}
+				.manufacturer a {
+					font-size: 0.75rem;
+				}
+				.product_name {
+					font-size: 14px; 
+				}
+			
+			} 
+		}
         .is-countdown {
             display: inline-flex;
             align-items: center;
