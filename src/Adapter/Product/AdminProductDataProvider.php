@@ -387,10 +387,10 @@ class AdminProductDataProvider extends AbstractAdminQueryBuilder implements Prod
                 true
             );
 
-            if ($formatCldr) {
-                $product['price'] = $localeCldr->formatPrice($product['price'], $currency->iso_code);
-                $product['price_final'] = $localeCldr->formatPrice($product['price_final'], $currency->iso_code);
-            }
+            if ($formatCldr && $product['price'] != null && $product['price_final'] != null) {
+			  $product['price'] = $localeCldr->formatPrice($product['price'], $currency->iso_code);
+			  $product['price_final'] = $localeCldr->formatPrice($product['price_final'], $currency->iso_code);
+			}
             $product['image'] = $this->imageManager->getThumbnailForListing($product['id_image']);
             $product['image_link'] = Context::getContext()->link->getImageLink($product['link_rewrite'], $product['id_image']);
         }

@@ -276,6 +276,17 @@ class PosLinksWidget extends WidgetHelper {
 	                'selector' => '{{WRAPPER}} .pos-links-widget .links-widget-content a'
 	            )
 	        );
+			 $this->addControl(
+	            'link_border_radius',
+	            array(
+	                'label' => __('Border Radius', 'elementor'),
+	                'type' => ControlsManager::DIMENSIONS,
+	                'size_units' => array('px', '%'),
+	                'selectors' => array(
+	                    '{{WRAPPER}} .pos-links-widget .links-widget-content a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+	                ),
+	            )
+	        );
 
 			$this->startControlsTabs('tabs_button_style');
 

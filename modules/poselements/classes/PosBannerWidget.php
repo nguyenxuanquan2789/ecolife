@@ -118,7 +118,7 @@ class PosBannerWidget extends WidgetHelper {
 					'label' => $this->l( 'Horizontal Alignment' ),
 					'type' => ControlsManager::CHOOSE,
 					'options' => [
-						'left' => [
+						'flex-start' => [
 							'title' => $this->l( 'Left' ),
 							'icon' => 'fa fa-align-left',
 						],
@@ -126,7 +126,7 @@ class PosBannerWidget extends WidgetHelper {
 							'title' => $this->l( 'Center' ),
 							'icon' => 'fa fa-align-center',
 						],
-						'right' => [
+						'flex-end' => [
 							'title' => $this->l( 'Right' ),
 							'icon' => 'fa fa-align-right',
 						],
@@ -134,7 +134,7 @@ class PosBannerWidget extends WidgetHelper {
 					'default' => 'center',
 					'toggle' => true,
 					'selectors' => [
-						'{{WRAPPER}} .banner-content' => 'text-align: {{VALUE}};',
+						'{{WRAPPER}} .banner-content' => 'align-items: {{VALUE}};',
 					],
 				]
 			);
@@ -144,7 +144,7 @@ class PosBannerWidget extends WidgetHelper {
 					'label' => $this->l( 'Vertical Alignment' ),
 					'type' => ControlsManager::CHOOSE,
 					'options' => [
-						'left' => [
+						'flex-start' => [
 							'title' => $this->l( 'Top' ),
 							'icon' => 'fa fa-long-arrow-up',
 						],
@@ -152,7 +152,7 @@ class PosBannerWidget extends WidgetHelper {
 							'title' => $this->l( 'Middle' ),
 							'icon' => 'fa fa-arrows-h',
 						],
-						'right' => [
+						'flex-end' => [
 							'title' => $this->l( 'Bottom' ),
 							'icon' => 'fa fa-long-arrow-down',
 						],
@@ -160,7 +160,7 @@ class PosBannerWidget extends WidgetHelper {
 					'default' => 'center',
 					'toggle' => true,
 					'selectors' => [
-						'{{WRAPPER}} .banner-content' => 'vertical-align: {{VALUE}};',
+						'{{WRAPPER}} .banner-content' => 'justify-content: {{VALUE}};',
 					],
 				]
 			);

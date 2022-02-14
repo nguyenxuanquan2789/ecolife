@@ -270,27 +270,14 @@ class PosTabProductsWidget extends WidgetHelper {
 					],
 				]
 			);
-			$this->addResponsiveControl(
-				'title_size',
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
 				[
-					'label' => $this->l( 'Title size' ),
-					'type' => ControlsManager::SLIDER,
-					'size_units' => [ 'px' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 100,
-						],
-					],
-					'default' => [
-						'unit' => 'px',
-						'size' => 15,
-					],
-					'selectors' => [
-						'{{WRAPPER}} .tab-titles li a' => 'font-size: {{SIZE}}{{UNIT}};',
-					],
+					'name' => 'tab_title_typography',
+					'selector' => '{{WRAPPER}} .tab-titles li a',
 				]
 			);
+			
 			$this->addResponsiveControl(
 				'title_padding',
 				[
