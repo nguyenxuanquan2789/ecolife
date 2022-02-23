@@ -37,11 +37,11 @@ class PosHeaderSettingsWidget extends WidgetHelper {
 				[
 					'label' => $this->l( 'Settings icon'),
 					'type' => ControlsManager::SELECT,
-					'default' => 'ecicon-stroke-Settings',
+					'default' => 'icon-rt-settings-outline',
 					'options' => [
-						'ecicon-ion-android-settings' => $this->l( 'Icon 1'),
-						'ecicon-stroke-Settings' => $this->l( 'Icon 2'),
-						'ecicon-ion-ios-settings-strong' => $this->l( 'Icon 3')
+						'icon-rt-settings-outline' => $this->l( 'Icon 1'),
+						'icon-rt-settings' => $this->l( 'Icon 2'),
+						'icon-rt-bars-solid' => $this->l( 'Icon 3')
 					],
 				]
 				
@@ -87,7 +87,29 @@ class PosHeaderSettingsWidget extends WidgetHelper {
 	            )
 	        );
 		$this->endControlsSection();
-		
+		$this->startControlsSection(
+            'section_general',
+            [
+                'label' => __('General'),
+                'tab' => ControlsManager::TAB_STYLE,
+            ]
+        );
+            $this->addControl(
+            'setting_width',
+                [
+                    'label' => __('Width'),
+                    'type' => ControlsManager::SELECT,
+                    'default' => 'inline',
+                    'options' => [ 
+                        'fullwidth' => __('Full width 100%'),
+                        'inline' => __('Inline (auto)')
+                    ],
+                    'prefix_class' => 'pewidth-',
+                    'render_type' => 'template',
+                    'frontend_available' => true
+                ]
+            );
+        $this->endControlsSection();
 		$this->startControlsSection(
 			'button_section',
 			[

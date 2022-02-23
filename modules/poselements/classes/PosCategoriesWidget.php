@@ -122,7 +122,429 @@ class PosCategoriesWidget extends WidgetHelper {
 				]
 			);
 		$this->endControlsSection(); 
-		 
+		 // Start for style
+        $this->startControlsSection(
+            'section_general',
+            [
+                'label' => __('Item categories'),
+                'tab' => ControlsManager::TAB_STYLE,
+            ]
+        );
+			$this->addResponsiveControl(
+            'text_align',
+            array(
+                'label' => __('Alignment', 'elementor'),
+                'type' => ControlsManager::CHOOSE,
+                'options' => array(
+                    'left' => array(
+                        'title' => __('Left', 'elementor'),
+                        'icon' => 'fa fa-align-left',
+                    ),
+                    'center' => array(
+                        'title' => __('Center', 'elementor'),
+                        'icon' => 'fa fa-align-center',
+                    ),
+                    'right' => array(
+                        'title' => __('Right', 'elementor'),
+                        'icon' => 'fa fa-align-right',
+                    ),
+                ),
+                'selectors' => array(
+                    '{{WRAPPER}} .category-item > div' => 'text-align: {{VALUE}};',
+                ),
+            )
+        );
+            $this->addControl(
+				'item_background',
+				[
+					'label' 		=> $this->l('background'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .category-item > div' => 'background: {{VALUE}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+			'item_padding',
+				[
+					'label' 		=> $this->l('Padding'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .category-item > div' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+				'item_border_radius',
+				[
+					'label' 		=> $this->l('Border Radius'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .category-item > div' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'item_border',
+					'selector' 		=> '{{WRAPPER}} .category-item > div',
+				]
+			);
+        $this->endControlsSection();
+		$this->startControlsSection(
+            'section_style_image',
+            array(
+                'label' => __('Image'),
+                'tab' => ControlsManager::TAB_STYLE,
+            )
+        );
+
+        $this->addResponsiveControl(
+			'images_margin',
+			[
+				'label' 		=> $this->l('Margin'),
+				'type' 			=> ControlsManager::DIMENSIONS,
+				'size_units' 	=> [ 'px', '%' ],
+				'selectors' 	=> [
+					'{{WRAPPER}} .category-item > div .category-image' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->addControl(
+            'image_size',
+            array(
+                'label' => __('Image Size'),
+                'type' => ControlsManager::SLIDER,
+                'default' => array(
+                    'unit' => '%',
+                ),
+                'size_units' => array('%'),
+                'range' => array(
+                    '%' => array(
+                        'min' => 5,
+                        'max' => 100,
+                    ),
+                ),
+                'selectors' => array(
+                    '{{WRAPPER}} .category-item > div .category-image img' => 'width: {{SIZE}}{{UNIT}};',
+                ),
+            )
+        );
+		$this->addResponsiveControl(
+			'img_border_radius',
+			[
+				'label' 		=> $this->l('Border Radius'),
+				'type' 			=> ControlsManager::DIMENSIONS,
+				'size_units' 	=> [ 'px', '%' ],
+				'selectors' 	=> [
+					'{{WRAPPER}} .category-item > div .category-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->addGroupControl(
+			GroupControlBorder::getType(),
+			[
+				'name' 			=> 'img_border',
+				'selector' 		=> '{{WRAPPER}} .category-item > div .category-image',
+			]
+		);
+		$this->addControl(
+		'hover_animation',
+			[
+				'label' => __('Hover animation'),
+				'type' => ControlsManager::SELECT,
+				'default' => 'animation',
+				'options' => [ 
+					'animation' => __('animation'),
+					'none' => __('none')
+				],
+				'prefix_class' => 'hover-',
+				'render_type' => 'template',
+				'frontend_available' => true
+			]
+		);
+		
+        $this->endControlsSection();
+        $this->startControlsSection(
+			'section_name_cate',
+			[
+				'label' 		=> $this->l('Name'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+
+			$this->addControl(
+				'name_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .name' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addControl(
+				'name_hover_color',
+				[
+					'label' 		=> $this->l('Hover Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .name:hover' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'name_typo',
+					'selector' 		=> '{{WRAPPER}} .categories-container .category-item > div .category-content .name',
+				]
+			);
+			$this->addResponsiveControl(
+				'name_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'selectors' => [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .name' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+		$this->endControlsSection();
+		$this->startControlsSection(
+			'section_count_style',
+			[
+				'label' 		=> $this->l('Count Products	'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+		
+			$this->addControl(
+				'count_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .count' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'count_typo',
+					'selector' 		=> '{{WRAPPER}} .categories-container .category-item > div .category-content .count',
+				]
+			);
+			$this->addResponsiveControl(
+				'count_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 15,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .count' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+
+        $this->endControlsSection();
+
+		$this->startControlsSection(
+			'section_subcate_style',
+			[
+				'label' 		=> $this->l('subcategories'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+
+			$this->addControl(
+				'subcate_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content ul li a' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addControl(
+				'subcate_hover_color',
+				[
+					'label' 		=> $this->l('Hover Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content ul li a:hover' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'subcate_typo',
+					'selector' 		=> '{{WRAPPER}} .categories-container .category-item > div .category-content ul li a',
+				]
+			);
+			$this->addResponsiveControl(
+				'subcate_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 15,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content ul' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+
+        $this->endControlsSection();
+
+        $this->startControlsSection(
+			'section_link',
+			[
+				'label' 		=> $this->l('Link View'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'link_typo',
+					'selector' 		=> '{{WRAPPER}} .categories-container .category-item > div .category-content .link',
+				]
+			);
+			$this->addResponsiveControl(
+				'link_padding',
+				[
+					'label' 		=> $this->l('Padding'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .link' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+				'link_border_radius',
+				[
+					'label' 		=> $this->l('Border Radius'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .categories-container .category-item > div .category-content .link' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'link_border',
+					'selector' 		=> '{{WRAPPER}} .categories-container .category-item > div .category-content .link',
+				]
+			);
+			$this->startControlsTabs('tabs_link_style');
+				$this->startControlsTab(
+					'tab_link_normal',
+					[
+						'label' 		=> $this->l('Normal'),
+					]
+				);
+					$this->addControl(
+						'link_color',
+						[
+							'label' 		=> $this->l('Color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .categories-container .category-item > div .category-content .link' => 'color: {{VALUE}};',
+							],
+						]
+					);
+
+					$this->addControl(
+						'link_background',
+						[
+							'label' 		=> $this->l('Background color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .categories-container .category-item > div .category-content .link' => 'background-color: {{VALUE}};',
+							],
+						]
+					);
+					
+					
+				$this->endControlsTab();
+				$this->startControlsTab(
+					'tab_hover_normal',
+					[
+						'label' 		=> $this->l('Hover'),
+					]
+				);
+					$this->addControl(
+						'link_hover_color',
+						[
+							'label' 		=> $this->l('Color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .categories-container .category-item > div .category-content .link:hover , {{WRAPPER}} .categories-container .category-item > div .category-content .link:focus' => 'color: {{VALUE}};',
+							],
+						]
+					);
+					$this->addControl(
+						'link_hover_background',
+						[
+							'label' 		=> $this->l('Background color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .categories-container .category-item > div .category-content .link:hover, {{WRAPPER}} .categories-container .category-item > div .category-content .link:focus' => 'background-color: {{VALUE}};',
+							],
+						]
+					);
+					$this->addControl(
+						'link_hover_border_color',
+						[
+							'label' 		=> $this->l('Border color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .categories-container .category-item > div .category-content .link:hover, {{WRAPPER}} .categories-container .category-item > div .category-content .link:focus' => 'border-color: {{VALUE}};',
+							],
+						]
+					);
+					
+				$this->endControlsTab();
+			$this->endControlsTabs();
+        $this->endControlsSection();
 		
 		//Slider Setting
 		$this->addCarouselControls($this->getName() , 4);
@@ -251,9 +673,6 @@ class PosCategoriesWidget extends WidgetHelper {
 										if($settings['show_count']) {
 											$html .= '<p class="count">'. $category->getProducts(null, null, null, null, null, true) .' Products</p>';
 										}
-										if($settings['show_link']) {
-											$html .= '<a class="link" href="'. $category_link .'">'. $this->l( 'View all' ) .'</a>';
-										}
 										if($settings['show_subcategories']) { 
 											$subcategories = $category->getSubCategories($id_lang , true);
 											$limit = 99;
@@ -266,6 +685,10 @@ class PosCategoriesWidget extends WidgetHelper {
 											}
 											$html .= '</ul>';
 										}
+										if($settings['show_link']) {
+											$html .= '<a class="link" href="'. $category_link .'">'. $this->l( 'View all' ) .'</a>';
+										}
+										
 										
 										
 									$html .= '</div>';
@@ -283,9 +706,6 @@ class PosCategoriesWidget extends WidgetHelper {
 										if($settings['show_count']) {
 											$html .= '<p class="count">'. $category->getProducts(null, null, null, null, null, true) .' Products</p>';
 										}
-										if($settings['show_link']) {
-											$html .= '<a class="link" href="'. $category_link .'">'. $this->l( 'View all' ) .'</a>';
-										}
 										if($settings['show_subcategories']) { 
 											$subcategories = $category->getSubCategories($id_lang , true);
 											$limit = 99;
@@ -298,6 +718,10 @@ class PosCategoriesWidget extends WidgetHelper {
 											}
 											$html .= '</ul>';
 										}
+										if($settings['show_link']) {
+											$html .= '<a class="link" href="'. $category_link .'">'. $this->l( 'View all' ) .'</a>';
+										}
+										
 										
 										
 									$html .= '</div>';

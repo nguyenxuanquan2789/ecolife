@@ -397,13 +397,13 @@ class PosThemeoptions extends Module implements WidgetInterface
         $title_block_font_color = Configuration::get($this->name . 'g_title_font_color');
         $title_block_font_tranform = $this->convertTransform(Configuration::get($this->name . 'g_title_font_transform'));
         $title_block_font_size_column = Configuration::get($this->name . 'g_title_font_size_column');
-        $css .='.pos_title h2{
+        $css .='.pos-title{
             font-family: '.$title_block_font_family.';
             font-size: '.$title_block_font_size.'px;
             color: '.$title_block_font_color.';
             text-transform: '.$title_block_font_tranform.';
         }';
-        $css .= '.pos_title_column h2{  
+        $css .= '.pos-title-column h4{   
             font-size: '.$title_block_font_size_column.'px;
         }';
         $button_color = Configuration::get($this->name . 'g_button_color');

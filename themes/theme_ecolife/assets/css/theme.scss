@@ -12156,23 +12156,32 @@ body#checkout section#checkout-personal-information-step {
     margin-top: 1.25rem;
 }
 //list categories
+.hover-animation {
+	.categories-container {
+		.category-item {
+			> div {
+				.category-image {
+					overflow: hidden;
+				}
+				&:hover {
+					.category-image {
+						img {
+							@include pos-transform(scale(1.1));
+							@include pos-transition(300ms);
+						}
+					} 
+				}
+			}
+		}
+	}
+}
 .categories-container {
     .category-item {
         > div {
             position: relative;
             .category-image {
-                overflow: hidden;
                 img {
-                    width: 100%;
                     @include pos-transition(300ms);
-                }
-            }
-            &:hover {
-                .category-image {
-                    img {
-                        @include pos-transform(scale(1.1));
-                        @include pos-transition(300ms);
-                    }
                 }
             }
             .category-content {
@@ -12238,7 +12247,6 @@ body#checkout section#checkout-personal-information-step {
         }
         .style2 {
 			.category-image {
-				border:$main-border;
 				border-radius:3px;
 			}
             .category-content {
@@ -12255,7 +12263,7 @@ body#checkout section#checkout-personal-information-step {
                 flex: 0 0 auto;
                 width: 45%;
                 max-width: 9.375rem;
-                margin-right: 1.25rem;
+                margin-right: 1.25rem; 
             }
             .category-content {
                 flex: 1;
@@ -17040,6 +17048,9 @@ body:not(.page-index) .sticky-inner.absolute-header {
         section {
             overflow: hidden;
         }
+		.elementor-editor-column-settings {
+			transform: translateY(100%);
+		}
         .bg_before {
             &:before {
                 content: '';
@@ -17052,9 +17063,6 @@ body:not(.page-index) .sticky-inner.absolute-header {
                 z-index: 0;
                 pointer-events: none;
             }
-			.elementor-editor-column-settings {
-				transform: translateY(100%);
-			}
         }
     }
 }
