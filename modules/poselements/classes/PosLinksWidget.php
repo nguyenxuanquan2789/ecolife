@@ -348,10 +348,7 @@ class PosLinksWidget extends WidgetHelper {
 	                'selectors' => array(
 	                    '{{WRAPPER}} .pos-links-widget .links-widget-content a:hover' => 'background-color: {{VALUE}};',
 	                ),
-	                'scheme' => array(
-	                    'type' => SchemeColor::getType(),
-	                    'value' => SchemeColor::COLOR_1,
-	                ),
+	               
 	            )
 	        );
 	        $this->endControlsTab();
