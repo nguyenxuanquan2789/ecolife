@@ -14980,8 +14980,21 @@ body:not(.page-index) .sticky-inner.absolute-header {
     .elementor-widget-pos_settings .pos-dropdown-menu a img {
       vertical-align: -1px; }
 
-.pos-producttabs-widget .tab-titles li a {
-  font-size: 0.875rem; }
+.pos-producttabs-widget .navtab-products {
+  white-space: nowrap;
+  overflow-y: hidden;
+  font-size: 0; }
+  .pos-producttabs-widget .navtab-products li {
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 0.625rem; }
+    .pos-producttabs-widget .navtab-products li a {
+      font-size: 0.875rem; }
+.pos-producttabs-widget .tab-content .tab-pane:not(.active) {
+  display: block;
+  height: 0;
+  overflow-y: hidden;
+  min-height: 0; }
 
 .pos-search__input,
 .pos-search__submit {
@@ -17170,15 +17183,6 @@ body:not(.page-index) .sticky-inner.absolute-header {
     left: auto; }
   .slider-arrows-top .slick-next {
     right: 0.625rem; } }
-.navtab-products {
-  white-space: nowrap;
-  overflow-y: hidden;
-  font-size: 0; }
-  .navtab-products li {
-    display: inline-block;
-    line-height: 1;
-    margin-bottom: 0.625rem; }
-
 .testimonial-item .testimonial-item-inner .author {
   padding-left: 3.125rem;
   position: relative;

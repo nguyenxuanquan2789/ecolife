@@ -1,8 +1,8 @@
 <div class="pos-producttabs-widget">
   <ul class="tab-titles nav navtab-products">
     {foreach from=$tab_titles item=tab_title name=posTab}
-      <li class="nav-item {if $smarty.foreach.posTab.index == 0}active{/if}">
-        <a class="nav-link" data-toggle="tab" href="#tab{$tab_title.id}">{$tab_title.title}</a>
+      <li class="nav-item">
+        <a class="nav-link {if $smarty.foreach.posTab.index == 0}active{/if}" data-toggle="tab" href="#tab{$tab_title.id}">{$tab_title.title}</a>
       </li>
     {/foreach}
   </ul>

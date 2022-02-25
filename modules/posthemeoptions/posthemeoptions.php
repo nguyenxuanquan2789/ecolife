@@ -73,6 +73,7 @@ class PosThemeoptions extends Module implements WidgetInterface
     public function install()
     {
         //General
+        Configuration::updateValue($this->name . 'container_width', '');
         Configuration::updateValue($this->name . 'g_main_color', '#4fb68d');
         Configuration::updateValue($this->name . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
         Configuration::updateValue($this->name . 'g_body_gfont_name', '"Open Sans", sans-serif');
@@ -374,7 +375,14 @@ class PosThemeoptions extends Module implements WidgetInterface
     public function generateCss()
     {
         $css = '';
-        $main_color = Configuration::get($this->name . 'g_main_color');
+		$container_width = Configuration::get($this->name . 'container_width');
+        $css .='
+		@media (min-width: 1200px) {
+        .container {  	
+			width: '.$container_width.';
+			
+        }}';
+        $main_color = Configuration::get($this->name . 'g_main_color'); 
         $css .='
          :root {  
             --hovercolor: '.$main_color.'; 
@@ -388,9 +396,6 @@ class PosThemeoptions extends Module implements WidgetInterface
             font-family: '.$body_font_family.';
             font-size: '.$body_font_size.'px;
             color: '.$body_font_color.';
-        }';
-         $css .= '{
-            font-size: '.$body_font_size.'px;
         }';
         $title_block_font_family = Configuration::get($this->name . 'g_title_gfont_name');
         $title_block_font_size = Configuration::get($this->name . 'g_title_font_size');
