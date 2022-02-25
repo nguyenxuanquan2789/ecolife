@@ -124,6 +124,7 @@ modules/posmegamenu/views/css/posmegamenu_s_*.css
 modules/posvegamenu/views/css/posvegamenu_s_*.css
 modules/posthemeoptions/views/css/posthemeoptions_s_*.css
 modules/creativeelements/views/css/ce/*
+modules/smartblog/images/*
 
 # Vendors and dependencies
 
@@ -139,12 +140,6 @@ translations/*
 mails/*
 !mails/themes/
 !mails/_partials/
-themes/default-bootstrap/lang/*
-themes/default-bootstrap/modules/*/translations/*.php
-themes/default-bootstrap/mails/*
-!themes/default-bootstrap/mails/en/
-themes/default-bootstrap/modules/*/mails/*
-!themes/default-bootstrap/modules/*/mails/en
 
 # MISC
 
