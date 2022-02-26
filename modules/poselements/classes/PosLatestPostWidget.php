@@ -70,7 +70,398 @@ class PosLatestPostWidget extends WidgetHelper {
 			);
 
 		$this->endControlsSection();
+		 // Start for style
+        $this->startControlsSection(
+            'section_item',
+            [
+                'label' => __('Item blog'),
+                'tab' => ControlsManager::TAB_STYLE,
+            ]
+        );
+			$this->addResponsiveControl(
+            'text_align',
+            array(
+                'label' => __('Alignment', 'elementor'),
+                'type' => ControlsManager::CHOOSE,
+                'options' => array(
+                    'left' => array(
+                        'title' => __('Left', 'elementor'),
+                        'icon' => 'fa fa-align-left',
+                    ),
+                    'center' => array(
+                        'title' => __('Center', 'elementor'),
+                        'icon' => 'fa fa-align-center',
+                    ),
+                    'right' => array(
+                        'title' => __('Right', 'elementor'),
+                        'icon' => 'fa fa-align-right',
+                    ),
+                ),
+                'selectors' => array(
+                    '{{WRAPPER}} .post-item' => 'text-align: {{VALUE}};',
+                ),
+            )
+        );
+            $this->addControl(
+				'item_background',
+				[
+					'label' 		=> $this->l('background'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item' => 'background: {{VALUE}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+			'item_padding',
+				[
+					'label' 		=> $this->l('Padding'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+				'item_border_radius',
+				[
+					'label' 		=> $this->l('Border Radius'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'item_border',
+					'selector' 		=> '{{WRAPPER}} .post-item',
+				]
+			);
+        $this->endControlsSection();
+		$this->startControlsSection(
+            'section_style_image',
+            array(
+                'label' => __('Image'),
+                'tab' => ControlsManager::TAB_STYLE,
+            )
+        );
 
+        $this->addResponsiveControl(
+			'images_margin',
+			[
+				'label' 		=> $this->l('Margin'),
+				'type' 			=> ControlsManager::DIMENSIONS,
+				'size_units' 	=> [ 'px', '%' ],
+				'selectors' 	=> [
+					'{{WRAPPER}} .post-item .post-image' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->addResponsiveControl(
+			'img_border_radius',
+			[
+				'label' 		=> $this->l('Border Radius'),
+				'type' 			=> ControlsManager::DIMENSIONS,
+				'size_units' 	=> [ 'px', '%' ],
+				'selectors' 	=> [
+					'{{WRAPPER}} .post-item .post-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->addGroupControl(
+			GroupControlBorder::getType(),
+			[
+				'name' 			=> 'img_border',
+				'selector' 		=> '{{WRAPPER}} .post-item .post-image',
+			]
+		);
+		$this->addControl(
+		'hover_animation',
+			[
+				'label' => __('Hover animation'),
+				'type' => ControlsManager::SELECT,
+				'default' => 'animation',
+				'options' => [ 
+					'animation' => __('animation'),
+					'none' => __('none')
+				],
+				'prefix_class' => 'hover-',
+				'render_type' => 'template',
+				'frontend_available' => true
+			]
+		);
+		
+        $this->endControlsSection();
+        $this->startControlsSection(
+			'section_name_blog',
+			[
+				'label' 		=> $this->l('Name'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+
+			$this->addControl(
+				'name_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .post-title' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addControl(
+				'name_hover_color',
+				[
+					'label' 		=> $this->l('Hover Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .post-title:hover' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'name_typo',
+					'selector' 		=> '{{WRAPPER}} .post-item .post-content .post-title',
+				]
+			);
+			$this->addResponsiveControl(
+				'name_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'selectors' => [
+						'{{WRAPPER}} .post-item .post-content .post-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+		$this->endControlsSection();
+		$this->startControlsSection(
+			'section_meta_style',
+			[
+				'label' 		=> $this->l('meta'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+		
+			$this->addControl(
+				'count_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .post-meta' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'count_typo',
+					'selector' 		=> '{{WRAPPER}} .post-item .post-content .post-meta',
+				]
+			);
+			$this->addResponsiveControl(
+				'count_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 15,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .post-item .post-content .post-meta' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+
+        $this->endControlsSection();
+
+		$this->startControlsSection(
+			'section_desc_style',
+			[
+				'label' 		=> $this->l('desc'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+
+			$this->addControl(
+				'desc_color',
+				[
+					'label' 		=> $this->l('Color'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .post-description' => 'color: {{VALUE}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'desc_typo',
+					'selector' 		=> '{{WRAPPER}} .post-item .post-content .post-description',
+				]
+			);
+			$this->addResponsiveControl(
+				'desc_spacing',
+				[
+					'label' => $this->l( 'Spacing' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 15,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .post-item .post-content .post-description' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					],
+				]
+			);
+
+        $this->endControlsSection();
+
+        $this->startControlsSection(
+			'section_link',
+			[
+				'label' 		=> $this->l('Read more'),
+				'tab' 			=> ControlsManager::TAB_STYLE,
+			]
+		);
+			$this->addGroupControl(
+				GroupControlTypography::getType(),
+				[
+					'name' 			=> 'link_typo',
+					'selector' 		=> '{{WRAPPER}} .post-item .post-content .read_more a',
+				]
+			);
+			$this->addResponsiveControl(
+				'link_padding',
+				[
+					'label' 		=> $this->l('Padding'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .read_more a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+				'link_border_radius',
+				[
+					'label' 		=> $this->l('Border Radius'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .post-item .post-content .read_more a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'link_border',
+					'selector' 		=> '{{WRAPPER}} .post-item .post-content .read_more a',
+				]
+			);
+			$this->startControlsTabs('tabs_link_style');
+				$this->startControlsTab(
+					'tab_link_normal',
+					[
+						'label' 		=> $this->l('Normal'),
+					]
+				);
+					$this->addControl(
+						'link_color',
+						[
+							'label' 		=> $this->l('Color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .post-item .post-content .read_more a' => 'color: {{VALUE}};',
+							],
+						]
+					);
+
+					$this->addControl(
+						'link_background',
+						[
+							'label' 		=> $this->l('Background color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .post-item .post-content .read_more a' => 'background-color: {{VALUE}};',
+							],
+						]
+					);
+					
+					
+				$this->endControlsTab();
+				$this->startControlsTab(
+					'tab_hover_normal',
+					[
+						'label' 		=> $this->l('Hover'),
+					]
+				);
+					$this->addControl(
+						'link_hover_color',
+						[
+							'label' 		=> $this->l('Color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .post-item .post-content .read_more a:hover , {{WRAPPER}} .post-item .post-content .read_more a:focus' => 'color: {{VALUE}};',
+							],
+						]
+					);
+					$this->addControl(
+						'link_hover_background',
+						[
+							'label' 		=> $this->l('Background color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .post-item .post-content .read_more a:hover, {{WRAPPER}} .post-item .post-content .read_more a:focus' => 'background-color: {{VALUE}};',
+							],
+						]
+					);
+					$this->addControl(
+						'link_hover_border_color',
+						[
+							'label' 		=> $this->l('Border color'),
+							'type' 			=> ControlsManager::COLOR,
+							'selectors' 	=> [
+								'{{WRAPPER}} .post-item .post-content .read_more a:hover, {{WRAPPER}} .post-item .post-content .read_more a:focus' => 'border-color: {{VALUE}};',
+							],
+						]
+					);
+					
+				$this->endControlsTab();
+			$this->endControlsTabs();
+        $this->endControlsSection();
 		//Slider Setting
 		$this->addCarouselControls($this->getName() , 3);
 	}

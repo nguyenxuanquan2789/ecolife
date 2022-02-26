@@ -24,6 +24,29 @@ $this->fields_form[]['form'] = array(
             'class' => 'fixed-width-md',
             'desc' => $this->l('Set maxium width of page. You must provide px or percent suffix (example 1240px or 100%)'),
         ),
+		array(
+            'type' => 'select',
+            'label' => $this->l('Sidebar width'),
+            'name' => 'sidebar',
+            'options' => array (
+                'query' => array(
+                    '1' => array(
+                        'id' => 'normal',
+                        'name' => 'normal'
+                    ),
+					'2' => array(
+                        'id' => 'narrow', 
+                        'name' => 'narrow'
+                    ),
+                    '3' => array(
+                        'id' => 'wide',
+                        'name' => 'wide'
+                    ),
+                ),
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
         array(
             'type' => 'infoheading',
             'label' => $this->l('Body background'),
