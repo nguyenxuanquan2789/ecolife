@@ -12203,6 +12203,8 @@ body#checkout section#checkout-personal-information-step {
                 }
             }
             .category-content {
+				display: flex;
+				flex-direction: column;
                 .name {
                     font-size: 1.125rem;
                     font-weight: $font-weight-semibold;
@@ -12218,20 +12220,24 @@ body#checkout section#checkout-personal-information-step {
                     margin-bottom: 0.9375rem;
                     line-height: 1;
                 }
-                ul li {
-                    a {
-                        color: #888;
-                        font-size: 0.875rem;
-                        text-transform: capitalize;
-                        margin-bottom: 0.9375rem;
-                        line-height: 1;
-                        display: block;
-                        &:hover {
-                            color: var(--hovercolor);
-                            @include pos-transform(translateX(10px));
-                        }
-                    }
-                }
+                ul {
+					display: flex;
+					flex-direction: column; 
+					li {
+						a {
+							color: #888;
+							font-size: 0.875rem;
+							text-transform: capitalize;
+							margin-bottom: 0.9375rem;
+							line-height: 1;
+							display: block;
+							&:hover {
+								color: var(--hovercolor);
+								@include pos-transform(translateX(10px));
+							}
+						}
+					}
+				}
                 .link {
                     color: $main-color;
                     font-size: 0.875rem;
@@ -12258,9 +12264,11 @@ body#checkout section#checkout-personal-information-step {
         .style1 {
             .category-content {
                 position: absolute;
-                left: 1.875rem;
-                top: 50%;
-                @include pos-transform(translateY(-50%));
+                padding: 1.875rem;
+                top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
             }
         }
         .style2 {
@@ -12273,7 +12281,6 @@ body#checkout section#checkout-personal-information-step {
         }
         .style3 {
             @include flex;
-            align-items: center;
             flex-wrap: nowrap;
             padding: 1.25rem;
             border: $main-border;
@@ -14103,6 +14110,7 @@ button.add-to-cart {
             background: #f5f5f5f;
             opacity: 0;
             border-width: 2px;
+			cursor: pointer;
             @include pos-transition(300ms);
             &:hover {
             }
@@ -16962,8 +16970,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
                 cursor: pointer;
             }
             img {
-                width: 100%;
-                padding: 0 1.25rem;
+                width: 100%; 
                 &.img-icon {
                     margin-right: 5px;
                     display: inline-block;
@@ -17394,6 +17401,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
         border-radius: 50%;
         position: absolute;
         top: 50%;
+		cursor: pointer;
         @include pos-transform(translateY(-50%));
         z-index: 1;
         font-size: 0;
@@ -17489,7 +17497,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
             display: inline-block;
         }
 		.slideshow-content {
-			max-width:600px;
+			max-width:630px;
 			display:inline-block;	
 		}
     }
@@ -17718,6 +17726,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
         width: 2.125rem;
         height: 2.125rem;
         z-index: 1;
+		cursor: pointer;
     }
 
     .slick-dots {
@@ -17954,6 +17963,9 @@ body:not(.page-index) .sticky-inner.absolute-header {
 			 display:none;
 		}
         @media (min-width: 768px) {
+			.post-image {
+				margin-bottom: 0;
+			}
             .post-content {
                 position: absolute;
                 top: 0;
@@ -18163,10 +18175,10 @@ body:not(.page-index) .sticky-inner.absolute-header {
 				}
 				.variant-links {
 					position: static; 
+					padding: 0; 
 					padding-top:1.5rem; 
 					opacity: 1;
 					visibility: visible;
-					padding: 0;
 					background: none;
 				}
 			}
