@@ -339,6 +339,19 @@ class PosHeaderSearchWidget extends WidgetBase {
                 ],
             ]
         );
+		$this->addControl(
+            'icon_color_minimal',
+            [
+                'label' => __('Icon Color'),
+                'type' => ControlsManager::COLOR, 
+                'selectors' => [
+                    '{{WRAPPER}} .icon-minimal' => 'color: {{VALUE}}',
+                ],
+				'condition' => [
+                    'search_type' => 'minimal',
+                ],
+            ]
+        );
 
         $this->addGroupControl(
             GroupControlTypography::getType(),

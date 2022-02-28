@@ -375,7 +375,7 @@ class PosTabProductsWidget extends WidgetHelper {
 							'type' => ControlsManager::COLOR,
 							'default' => '',
 							'selectors' => [
-								'{{WRAPPER}} .tab-titles li.active a, {{WRAPPER}} .tab-titles li:hover a' => 'fill: {{VALUE}}; color: {{VALUE}};',
+								'{{WRAPPER}} .tab-titles li a.active, {{WRAPPER}} .tab-titles li a:hover' => 'fill: {{VALUE}}; color: {{VALUE}};',
 							],
 						]
 					);
@@ -386,7 +386,7 @@ class PosTabProductsWidget extends WidgetHelper {
 							'type' => ControlsManager::COLOR,
 							'default' => '',
 							'selectors' => [
-								'{{WRAPPER}} .tab-titles li.active a, {{WRAPPER}} .tab-titles li:hover a' => 'background-color: {{VALUE}};',
+								'{{WRAPPER}} .tab-titles li a.active, {{WRAPPER}} .tab-titles li a:hover' => 'background-color: {{VALUE}};',
 							],
 						]
 					);
@@ -397,7 +397,7 @@ class PosTabProductsWidget extends WidgetHelper {
 							'type' => ControlsManager::COLOR,
 							'default' => '',
 							'selectors' => [
-								'{{WRAPPER}} .tab-titles li.active a, {{WRAPPER}} .tab-titles li:hover a' => 'border-color: {{VALUE}};',
+								'{{WRAPPER}} .tab-titles li a.active, {{WRAPPER}} .tab-titles li a:hover' => 'border-color: {{VALUE}};',
 							],
 						]
 					);

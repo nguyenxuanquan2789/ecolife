@@ -15170,9 +15170,29 @@ body:not(.page-index) .sticky-inner.absolute-header {
     }
 }
 //product-tab
-.pos-producttabs-widget .tab-titles li a { 
-	font-size: 0.875rem;
-}
+.pos-producttabs-widget {
+	.navtab-products {
+		white-space: nowrap; 
+		overflow-y: hidden;
+		font-size: 0;
+		li {
+			display: inline-block;
+			line-height: 1;
+			margin-bottom:0.625rem; 
+			a { 
+				font-size: 0.875rem;
+			}
+		}
+	}
+	.tab-content {
+		.tab-pane:not(.active) {
+			display: block;
+			height: 0;
+			overflow-y: hidden;
+			min-height: 0;
+		}
+	}
+} 
 //search
 .pos-search__input,
 .pos-search__submit {
@@ -17742,16 +17762,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
 		}
 	}
 }
-.navtab-products {
-    white-space: nowrap; 
-    overflow-y: hidden;
-    font-size: 0;
-    li {
-        display: inline-block;
-        line-height: 1;
-		margin-bottom:0.625rem; 
-    }
-}
+
 //testimonial
 .testimonial-item .testimonial-item-inner {
     .author {
