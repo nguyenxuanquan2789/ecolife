@@ -74,6 +74,7 @@ class PosThemeoptions extends Module implements WidgetInterface
     {
         //General
         Configuration::updateValue($this->name . 'container_width', '');
+        Configuration::updateValue($this->name . 'sidebar', 'normal');
         Configuration::updateValue($this->name . 'g_main_color', '#4fb68d');
         Configuration::updateValue($this->name . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
         Configuration::updateValue($this->name . 'g_body_gfont_name', '"Open Sans", sans-serif');
@@ -534,6 +535,7 @@ class PosThemeoptions extends Module implements WidgetInterface
 
 		$smart_vals = array(
             'body_class' => $body_class,
+			'sidebar_width' => Configuration::get($this->name . 'sidebar'), 
             'header_sticky' => Configuration::get($this->name . 'header_sticky'),
             'header_template' => Configuration::get($this->name . 'header_template'),
             'home_template' => Configuration::get($this->name . 'home_template'),

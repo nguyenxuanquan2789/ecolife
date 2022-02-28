@@ -130,30 +130,7 @@ class PosCategoriesWidget extends WidgetHelper {
                 'tab' => ControlsManager::TAB_STYLE,
             ]
         );
-			$this->addResponsiveControl(
-            'text_align',
-            array(
-                'label' => __('Alignment', 'elementor'),
-                'type' => ControlsManager::CHOOSE,
-                'options' => array(
-                    'left' => array(
-                        'title' => __('Left', 'elementor'),
-                        'icon' => 'fa fa-align-left',
-                    ),
-                    'center' => array(
-                        'title' => __('Center', 'elementor'),
-                        'icon' => 'fa fa-align-center',
-                    ),
-                    'right' => array(
-                        'title' => __('Right', 'elementor'),
-                        'icon' => 'fa fa-align-right',
-                    ),
-                ),
-                'selectors' => array(
-                    '{{WRAPPER}} .category-item > div' => 'text-align: {{VALUE}};',
-                ),
-            )
-        );
+		
             $this->addControl(
 				'item_background',
 				[
@@ -265,6 +242,76 @@ class PosCategoriesWidget extends WidgetHelper {
 				'prefix_class' => 'hover-',
 				'render_type' => 'template',
 				'frontend_available' => true
+			]
+		);
+		
+        $this->endControlsSection();
+		$this->startControlsSection(
+            'section_style_content',
+            array(
+                'label' => __('content'),
+                'tab' => ControlsManager::TAB_STYLE,
+            )
+        );
+		$this->addResponsiveControl(
+		'content_padding',
+			[
+				'label' 		=> $this->l('Padding'),
+				'type' 			=> ControlsManager::DIMENSIONS,
+				'size_units' 	=> [ 'px', '%' ],
+				'selectors' 	=> [
+					'{{WRAPPER}} .categories-container .category-item .category-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+        $this->addResponsiveControl(
+            'hor_align',
+            array(
+                'label' => __('Alignment', 'elementor'),
+                'type' => ControlsManager::CHOOSE,
+                'options' => array(
+                    'flex-start' => array(
+                        'title' => __('Left', 'elementor'),
+                        'icon' => 'fa fa-align-left',
+                    ),
+                    'center' => array(
+                        'title' => __('Center', 'elementor'),
+                        'icon' => 'fa fa-align-center',
+                    ),
+                    'flex-end' => array(
+                        'title' => __('Right', 'elementor'),
+                        'icon' => 'fa fa-align-right',
+                    ),
+                ),
+                'selectors' => array(
+                    '{{WRAPPER}} .categories-container .category-item .category-content,{{WRAPPER}} .categories-container .category-item .category-content ul' => 'align-items: {{VALUE}};',
+                ),
+            )
+        );
+		$this->addControl(
+			'ver_align',
+			[
+				'label' => $this->l( 'Vertical Alignment' ),
+				'type' => ControlsManager::CHOOSE,
+				'options' => [
+					'flex-start' => [
+						'title' => $this->l( 'Top' ),
+						'icon' => 'fa fa-long-arrow-up',
+					],
+					'center' => [
+						'title' => $this->l( 'Middle' ),
+						'icon' => 'fa fa-arrows-h',
+					],
+					'flex-end' => [
+						'title' => $this->l( 'Bottom' ),
+						'icon' => 'fa fa-long-arrow-down',
+					],
+				],
+				'default' => 'center',
+				'toggle' => true,
+				'selectors' => [
+					'{{WRAPPER}} .categories-container .category-item .category-content' => 'justify-content: {{VALUE}};',
+				],
 			]
 		);
 		

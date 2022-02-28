@@ -31,8 +31,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}" class="{if $page.page_name == 'index'}page-index{/if} {$page.body_classes|classnames} {$postheme.body_class}">
-
+  <body id="{$page.page_name}" class="{if $postheme.sidebar_width == 'narrow'}sidebar_narrow {elseif $postheme.sidebar_width == 'wide'}sidebar_wide{/if} {if $page.page_name == 'index'}page-index{/if} {$page.body_classes|classnames} {$postheme.body_class}">
     {block name='hook_after_body_opening_tag'} 
       {hook h='displayAfterBodyOpeningTag'}
     {/block}

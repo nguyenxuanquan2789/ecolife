@@ -1341,6 +1341,7 @@ span.smart-blog-reply-icon {
 }
 #module-smartblog-details .articleContent img{
     max-width: 100%;
+	width:100%;
     height: auto;
 	margin-bottom:20px;
 }
