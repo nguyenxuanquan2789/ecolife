@@ -101,40 +101,40 @@ var posVerticalMenu = function(){
 	});
  	var count_block = $('#_desktop_vegamenu .pos-menu-vertical .menu-content > li').length; 
 	var number_blocks = parseInt($('#_desktop_vegamenu .pos-menu-vertical').attr('data-more-less'));
-	if($(window).width() < 1199)
+	if($(window).width() > 1024)
 	{
-
+		//console.log(number_blocks);
+		if(count_block < number_blocks){
+			return false; 
+		} else {
+			$('#_desktop_vegamenu .pos-menu-vertical .menu-item').each(function(i,n){
+				if(i == number_blocks ) {
+					$('.pos-menu-vertical .menu-content').append('<li class="menu-item"><a href="javascript:void(0)" class="view_more"><span> + ' + MORE + '</span></a></li>'); 
+				}
+				if(i> (number_blocks -1) ) {
+					$(this).addClass('hide_menu_block');
+				}
+			})
+			$('#_desktop_vegamenu .pos-menu-vertical .hide_menu_block').hide();
+			$('#_desktop_vegamenu .pos-menu-vertical .view_more').click(function() {
+				$(this).toggleClass('active');
+				if($(this).hasClass('active')){
+					$(this).addClass('open_menu');
+					$(this).html('<span><em class="closed-menu"> - '+ CLOSE +'</em></span>');
+					$('.hide_menu_block').slideDown();	
+				}
+				else
+				{
+					$(this).removeClass('open_menu').addClass('close_menu');
+					$(this).html('<span><em class="closed-menu"> + '+ MORE +'</em></span>'); 
+					$('.hide_menu_block').slideUp();
+					
+				}
+		
+			});
+		} 
 	}
-	//console.log(number_blocks);
-	if(count_block < number_blocks){
-		return false; 
-	} else {
-		$('#_desktop_vegamenu .pos-menu-vertical .menu-item').each(function(i,n){
-			if(i == number_blocks ) {
-				$('.pos-menu-vertical .menu-content').append('<li class="menu-item"><a href="javascript:void(0)" class="view_more"><span> + ' + MORE + '</span></a></li>'); 
-			}
-			if(i> (number_blocks -1) ) {
-				$(this).addClass('hide_menu_block');
-			}
-		})
-		$('#_desktop_vegamenu .pos-menu-vertical .hide_menu_block').hide();
-		$('#_desktop_vegamenu .pos-menu-vertical .view_more').click(function() {
-			$(this).toggleClass('active');
-			if($(this).hasClass('active')){
-				$(this).addClass('open_menu');
-				$(this).html('<span><em class="closed-menu"> - '+ CLOSE +'</em></span>');
-				$('.hide_menu_block').slideDown();	
-			}
-			else
-			{
-				$(this).removeClass('open_menu').addClass('close_menu');
-				$(this).html('<span><em class="closed-menu"> + '+ MORE +'</em></span>'); 
-				$('.hide_menu_block').slideUp();
-				
-			}
 	
-		});
-	} 
 	
 };
 function activeMobileVetical(){

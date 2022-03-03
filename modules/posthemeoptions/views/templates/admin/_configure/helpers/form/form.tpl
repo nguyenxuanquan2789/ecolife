@@ -876,6 +876,34 @@
 											<option value="organic2">Organic 2</option>
 											<option value="organic3">Organic 3</option>
 											<option value="organic4">Organic 4</option>
+											<option value="digital1">Digital 1</option>
+											<option value="digital2">Digital 2</option>
+											<option value="digital3">Digital 3</option>
+											<option value="digital4">Digital 4</option>
+											<option value="marketplace1">Marketplace 1</option>
+											<option value="marketplace2">Marketplace 2</option>
+											<option value="marketplace3">Marketplace 3</option>
+											<option value="marketplace4">Marketplace 4</option>
+											<option value="furniture1">Furniture 1</option>
+											<option value="furniture2">Furniture 2</option>
+											<option value="furniture3">Furniture 3</option>
+											<option value="furniture4">Furniture 4</option>
+											<option value="book1">Book 1</option>
+											<option value="book2">Book 2</option>
+											<option value="book3">Book 3</option>
+											<option value="book4">Book 4</option>
+											<option value="fashion1">Fashion 1</option>
+											<option value="fashion2">Fashion 2</option>
+											<option value="fashion3">Fashion 3</option>
+											<option value="fashion4">Fashion 4</option>
+											<option value="jewelry1">Jewelry 1</option>
+											<option value="jewelry2">Jewelry 2</option>
+											<option value="jewelry3">Jewelry 3</option>
+											<option value="jewelry4">Jewelry 4</option>
+											<option value="cosmetic1">Cosmetic 1</option>
+											<option value="cosmetic2">Cosmetic 2</option>
+											<option value="cosmetic3">Cosmetic 3</option>
+											<option value="cosmetic4">Cosmetic 4</option>
 										</select>
 										<a href="http://demo.posthemes.com/pos_ecolifedemo/#section-page" class="pos-demos" target="_blank">View our list demo</a>
 										<div class="import-processing"></div>
@@ -1066,6 +1094,7 @@
 				success: function(resp) {
 					$('.btn-import').removeClass('loading').addClass('btn-success');
 					$('.btn-import span').text(resp.data.message);
+					location.reload();
 				}
 			})
 		});
