@@ -116,6 +116,11 @@ global_settings:
         - ps_facetedsearch
         - blocktags
         - ps_advertising
+      displayRightColumn:
+        - smartblogsearch
+        - smartblogrecentposts
+        - smartblogtag
+        - ps_advertising 
       displayProductAdditionalInfo:
         - ps_sharebuttons
       displayAfterButtonCart:

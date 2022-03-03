@@ -13,7 +13,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
     {
         parent::__construct();
         
-        $this->templates = 'https://tungxu.site/prestashop/import-data/';
+        $this->templates = 'http://demo.posthemes.com/ecolife_data/';
 		if ((bool)Tools::getValue('ajax')){
 			$this->ajaxImportData(Tools::getValue('layout'));
 		}else{
@@ -26,8 +26,11 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 
     	require_once _PS_MODULE_DIR_.$this->parent_module.'/'.$this->parent_module.'.php';
     	$files = array(
-    	'header.json', 'home.json', 'footer.json'
+    	'header-'.$layout.'.json', 'home-'.$layout.'.json', 'footer-'.$layout.'.json'
     	);
+
+        $themeoption = 'posthemeoptions';
+        $vegamenu = 'posvegamenu';
         
 		foreach ($files as $file){
 			$_FILES['file']['tmp_name'] = $this->templates. $layout. '/'. $file;
@@ -39,25 +42,197 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 		}
         
         $prefixname  = 'posthemeoptions';
-    	if($layout == 'organic1'){
-    		//Theme settings
-    		Configuration::updateValue($prefixname . 'p_display', '1');
+    	if($layout == 'organic1' || $layout == 'organic2' || $layout == 'organic3' || $layout == 'organic4'){
+    		//Theme settings 
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#4fb68d');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#4fb68d');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);
             $images = array();
     	}
-    	if($layout == 'organic2'){
+    	if($layout == 'digital1' || $layout == 'digital2'){
     		//Theme settings
-    		Configuration::updateValue($prefixname . 'p_display', '2');
-    		$images = array();
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0090F0');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array();
     	}
-    	if($layout == 'organic3'){
+    	if($layout == 'digital3'){
     		//Theme settings
-    		Configuration::updateValue($prefixname . 'p_display', '3');
-    		$images = array();
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0090F0');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 0);
+            $images = array(); 
     	}
-		if($layout == 'organic4'){
+		if($layout == 'digital4'){
     		//Theme settings
-    		Configuration::updateValue($prefixname . 'p_display', '4');
-    		$images = array();
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0090F0');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'furniture1'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#ef1e1e');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);
+            $images = array();
+    	}
+    	if($layout == 'furniture2'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#ef1e1e');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'furniture3' || $layout == 'furniture4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#ef1e1e');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'marketplace1' || $layout == 'marketplace4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '1740px');
+			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#eb3e32');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#eb3e32');
+			Configuration::updateValue($vegamenu . '_behaviour', 1);
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array();
+    	}
+    	if($layout == 'marketplace2'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '1740px');
+			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#e6a303');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#e6a303');
+			Configuration::updateValue($vegamenu . '_behaviour', 1); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'marketplace3'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '1740px');
+			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#eb3e32');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#eb3e32');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'book1'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#2579f7');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array();
+    	}
+    	if($layout == 'book2' || $layout == 'book3'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#2579f7');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array(); 
+    	}
+		if($layout == 'book4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#2579f7');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 0);
+            $images = array(); 
+    	}
+		if($layout == 'cosmetic1' || $layout == 'cosmetic2' || $layout == 'cosmetic3' || $layout == 'cosmetic4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#c0b07d');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#c0b07d');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+    	if($layout == 'fashion1' || $layout == 'fashion2' || $layout == 'fashion3' || $layout == 'fashion4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#ef1e1e');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'jewelry1' || $layout == 'jewelry2' || $layout == 'jewelry3' || $layout == 'jewelry4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#c1906f');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#c1906f');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
     	}
         $error = false;
 		if(!empty($images))

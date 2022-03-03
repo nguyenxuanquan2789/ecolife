@@ -66,6 +66,7 @@ class Posvegamenu extends Module
 
 	public function install()
 	{
+		Configuration::updateValue($this->name . '_behaviour', 2); 
 		Configuration::updateValue($this->name . '_bg', 1);
         Configuration::updateValue($this->name . '_bg_color', 0);
         Configuration::updateValue($this->name . '_bg_image', '');
@@ -113,6 +114,7 @@ class Posvegamenu extends Module
 
 	public function uninstall()
 	{
+		Configuration::deleteByName($this->name . '_behaviour');
 		Configuration::deleteByName($this->name . '_bg');
         Configuration::deleteByName($this->name . '_bg_color');
         Configuration::deleteByName($this->name . '_bg_image');
