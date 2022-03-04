@@ -30,7 +30,7 @@
 </header>
 {/block}
 {block name='page_map'}
-{hook h="displayContactPageBuilder"} 
+{hook h="displayMapcontact"} 
 {/block}
 {if $layout === 'layouts/layout-left-column.tpl'}
   {block name="left_column"}

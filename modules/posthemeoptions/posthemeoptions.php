@@ -409,6 +409,9 @@ class PosThemeoptions extends Module implements WidgetInterface
             color: '.$title_block_font_color.';
             text-transform: '.$title_block_font_tranform.';
         }';
+		$css .='.pos-title{
+            font-family: '.$title_block_font_family.';
+        }';
         $css .= '.pos-title-column h4{   
             font-size: '.$title_block_font_size_column.'px;
         }';
