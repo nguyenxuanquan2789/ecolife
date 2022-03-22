@@ -430,7 +430,7 @@ class PosThemeoptions extends Module implements WidgetInterface
         $ptitle_color = Configuration::get($this->name . 'ptitle_color');
         if($ptitle_bg_image){
             $css .= '.page-title-wrapper{  
-                background-image: '.$ptitle_bg_image.';   
+                background-image: url('.$ptitle_bg_image.');   
             }';
         }
         if($ptitle_color){
