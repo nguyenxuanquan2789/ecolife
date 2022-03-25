@@ -215,6 +215,7 @@ class PosTabProductsWidget extends WidgetHelper {
 					'label' => $this->l( 'Title type' ),
 					'type' => ControlsManager::SELECT,
 					'default' => 'normal',
+					'prefix_class' => 'title-',
 					'options' => [
 						'normal'  => $this->l( 'Normal' ),
 						'absolute' => $this->l( 'Absolute' ),

@@ -207,7 +207,7 @@ class PosCategoriesWidget extends WidgetHelper {
                     ),
                 ),
                 'selectors' => array(
-                    '{{WRAPPER}} .category-item > div .category-image img' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .category-item > div .category-image' => 'width: {{SIZE}}{{UNIT}};',
                 ),
             )
         );
