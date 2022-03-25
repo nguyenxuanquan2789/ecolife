@@ -301,6 +301,44 @@ $this->fields_form[]['form'] = array(
             ),
         ),
         array(
+            'type' => 'switch',
+            'label' => $this->l('Use no border'),
+            'name' => 'p_border',
+            'class' => 'fixed-width-xs',
+            'values' => array(
+                array(
+                    'id' => 'p_border_on',
+                    'value' => 1,
+                    'label' => $this->l('Yes')
+                    ),
+                array(
+                    'id' => 'p_border_off',
+                    'value' => 0,
+                    'label' => $this->l('No')
+                )
+            ),
+            'desc' => $this->l('Border arround product box')
+        ),
+        array(
+            'type' => 'switch',
+            'label' => $this->l('Use no padding'),
+            'name' => 'p_padding',
+            'class' => 'fixed-width-xs',
+            'values' => array(
+                array(
+                    'id' => 'p_padding_on',
+                    'value' => 1,
+                    'label' => $this->l('Yes')
+                    ),
+                array(
+                    'id' => 'p_padding_off',
+                    'value' => 0,
+                    'label' => $this->l('No')
+                )
+            ),
+            'desc' => $this->l('There is no padding between products')
+        ),
+        array(
             'type' => 'color2',
             'label' => $this->l('Product name color'),
             'name' => 'p_name_color',

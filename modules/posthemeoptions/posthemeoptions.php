@@ -544,6 +544,8 @@ class PosThemeoptions extends Module implements WidgetInterface
             'home_template' => Configuration::get($this->name . 'home_template'),
             'footer_template' => Configuration::get($this->name . 'footer_template'),
 			'grid_type' => isset($_GET['gt']) ? $_GET['gt'] : Configuration::get($this->name . 'p_display'),
+            'grid_border' => Configuration::get($this->name . 'p_border'),
+            'grid_padding' => Configuration::get($this->name . 'p_padding'),
 			'name_length' => Configuration::get($this->name . 'p_name_length'),
 			'cate_layout' => isset($_GET['ft']) ? $_GET['ft'] : Configuration::get($this->name . 'cp_layout'),
             'cate_default_display' => Configuration::get($this->name . 'cp_display'),

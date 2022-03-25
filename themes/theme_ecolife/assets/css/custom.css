@@ -2342,4 +2342,7 @@
 .jackInTheBox {
   animation-name: jackInTheBox; }
 
+.contact-display-1-row .title-contact{
+  display: inline;
+}
 /*# sourceMappingURL=animate.css.map */

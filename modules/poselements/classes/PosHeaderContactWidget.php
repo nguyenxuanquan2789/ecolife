@@ -247,6 +247,20 @@ class PosHeaderContactWidget extends WidgetBase
         );
 
         $this->addControl(
+            'content_display',
+            array(
+                'label' => $this->l('Content display'),
+                'type' => ControlsManager::SELECT,
+                'options' => array(
+                    '2-row' => $this->l('2 rows'),
+                    '1-row' => $this->l('1 row'),
+                ),
+                'default' => '2-row',
+                'prefix_class' => 'contact-display-', 
+            )
+        );
+
+        $this->addControl(
             'content_vertical_alignment',
             array(
                 'label' => $this->l('Vertical Alignment'),
@@ -283,6 +297,7 @@ class PosHeaderContactWidget extends WidgetBase
                 ),
                 'selectors' => array(
                     '{{WRAPPER}} .box-contact .title-contact' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}.contact-display-1-row .box-contact .title-contact' => 'margin-right: {{SIZE}}{{UNIT}};',
                 ),
             )
         );

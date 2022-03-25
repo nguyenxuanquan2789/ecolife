@@ -399,7 +399,25 @@ class PosHeaderMenuWidget extends WidgetBase {
 					]
 				]
 			);
-		
+			
+			$this->addControl(
+				'title_space_right_icon',
+				[
+					'label' => $this->l( 'Space right icon' ),
+					'type' => ControlsManager::SLIDER,
+					'size_units' => [ 'px' ],
+					'range' => [
+						'px' => [
+							'min' => 1,
+							'max' => 200,
+						]
+					],
+					'selectors' => [
+						'{{WRAPPER}} .pos-menu-vertical .title_vertical:after' => 'margin-left: {{SIZE}}{{UNIT}}',  
+					]
+				]
+			);
+
 			$this->addGroupControl(
 				GroupControlTypography::getType(),
 				[
