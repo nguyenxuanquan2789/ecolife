@@ -398,6 +398,37 @@ class PosThemeoptions extends Module implements WidgetInterface
             font-size: '.$body_font_size.'px;
             color: '.$body_font_color.';
         }';
+        $body_bg_color = Configuration::get($this->name . 'g_body_bg_color');
+        $body_bg_image = Configuration::get($this->name . 'g_body_bg_image');
+        $body_bg_repeat = Configuration::get($this->name . 'g_body_bg_repeat');
+        $body_bg_attachment = Configuration::get($this->name . 'g_body_bg_attachment');
+        $body_bg_size = Configuration::get($this->name . 'g_body_bg_size');
+        if($body_bg_color || $body_bg_image){
+            $css .= 'body{';
+                if($body_bg_color){
+                    $css .= 'background-color: '.$body_bg_color.';';
+                }
+                if($body_bg_image){
+                    $css .= 'background-image: src('.$body_bg_image.');';
+                }
+                if($body_bg_repeat){
+                    if($body_bg_repeat == 'x' || $body_bg_repeat == 'y'){
+                        $css .= 'background-repeat: repeat-'.$body_bg_repeat.';';
+                    }elseif($body_bg_repeat == 'xy'){
+                        $css .= 'background-repeat: repeat;';
+                    }else{
+                        $css .= 'background-repeat: no-repeat;';
+                    }
+                }
+                if($body_bg_attachment){
+                    $css .= 'background-attachment: '.$body_bg_attachment.';';
+                }
+                if($body_bg_size){
+                    $css .= 'background-repeat: '.$body_bg_size.';';
+                }
+            $css .= '}';
+        }
+        
         $title_block_font_family = Configuration::get($this->name . 'g_title_gfont_name');
         $title_block_font_size = Configuration::get($this->name . 'g_title_font_size');
         $title_block_font_color = Configuration::get($this->name . 'g_title_font_color');

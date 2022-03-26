@@ -2345,4 +2345,13 @@
 .contact-display-1-row .title-contact{
   display: inline;
 }
+@media (max-width: 1600px) and (min-width: 1024px){
+  .banner-left{
+    max-width: 52%;
+  }
+  .banner-right{
+    max-width: 46%;
+  }
+}
+
 /*# sourceMappingURL=animate.css.map */

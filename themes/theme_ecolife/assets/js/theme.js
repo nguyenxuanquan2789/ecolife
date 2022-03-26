@@ -599,6 +599,12 @@ var posthemes = {
 	 
 	},
 	initSlider: function(){
+		$('.product_accessoriesslide').on('init', function(event, slick, currentSlide){
+			var slideToShow = $(this).find('.slick-active').length - 1;
+			$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+			$(this).find('.slick-active').eq(0).addClass('first-active');
+			$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
+		});
 		$('.product_accessoriesslide').not('.slick-initialized').slick({
 		   slidesToShow: 5,
 		   slidesToScroll: 1,
@@ -612,6 +618,18 @@ var posthemes = {
 			{breakpoint: 359, settings: { slidesToShow: 1}}
 			]
 		});
+		$('.product_accessoriesslide').on('afterChange', function(event, slick, currentSlide){
+			var slideToShow = $(this).find('.slick-active').length - 1;
+			$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+			$(this).find('.slick-active').eq(0).addClass('first-active');
+			$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
+		});
+		$('.product_categoryslide').on('init', function(event, slick, currentSlide){
+			var slideToShow = $(this).find('.slick-active').length - 1;
+			$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+			$(this).find('.slick-active').eq(0).addClass('first-active');
+			$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
+		});
 		$('.product_categoryslide').not('.slick-initialized').slick({ 
 		   slidesToShow: 5,
 		   slidesToScroll: 1,
@@ -624,6 +642,12 @@ var posthemes = {
 			{breakpoint: 575, settings: { slidesToShow: 2}},
 			{breakpoint: 359, settings: { slidesToShow: 1}}
 			]
+		});
+		$('.product_categoryslide').on('afterChange', function(event, slick, currentSlide){
+			var slideToShow = $(this).find('.slick-active').length - 1;
+			$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+			$(this).find('.slick-active').eq(0).addClass('first-active');
+			$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
 		});
 	}
 };

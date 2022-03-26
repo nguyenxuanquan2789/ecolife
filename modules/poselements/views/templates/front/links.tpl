@@ -1,5 +1,5 @@
 <div class="pos-links-widget">
-	{if $title_url.url}	
+	{if $title}	
 	<h2 class="links-widget-title hidden-sm-down">
 		{if $title_url.url}<a href="{$title_url.url}">{/if}
 			<span>{$title}</span>

@@ -95,6 +95,12 @@ $(document).ready(function(){
 })
 
 function initSlider($carousel){
+	$carousel.on('init', function(event, slick, currentSlide){
+		var slideToShow = $(this).find('.slick-active').length - 1;
+		$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+		$(this).find('.slick-active').eq(0).addClass('first-active');
+		$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
+	});
 	var savedOptions = $carousel.data('slider_options'),
 		responsive = $carousel.data('slider_responsive'),
 		defaultOptions = {
@@ -146,6 +152,14 @@ function initSlider($carousel){
         },
         slickOptions = $.extend({}, defaultOptions, $carousel.data('slider_options'));
 	$carousel.not('.slick-initialized').slick(slickOptions);
+	
+	$carousel.on('afterChange', function(event, slick, currentSlide){
+		var slideToShow = $(this).find('.slick-active').length - 1;
+		$(this).find('.slick-slide').removeClass('first-active').removeClass('last-active');
+		$(this).find('.slick-active').eq(0).addClass('first-active');
+		$(this).find('.slick-active').eq(slideToShow).addClass('last-active');
+	});
+	
 }
 function specificPriceCountdown(){
 	$( ".specific-prices-timer" ).each(function( index ) {

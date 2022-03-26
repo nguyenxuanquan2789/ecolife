@@ -18,6 +18,25 @@ $this->fields_form[]['form'] = array(
             'name'=> 'layout'
         ),
         array(
+            'type' => 'select',
+            'label' => $this->l('Layout'),
+            'name' => 'layout',
+            'options' => array (
+                'query' => array(
+                    '1' => array(
+                        'id' => 'wide',
+                        'name' => 'Wide'
+                    ),
+					'2' => array(
+                        'id' => 'boxed', 
+                        'name' => 'Boxed'
+                    ),
+                ),
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
+        array(
             'type' => 'text',
             'label' => $this->l('Container max width'),
             'name' => 'container_width',
@@ -49,7 +68,7 @@ $this->fields_form[]['form'] = array(
         ),
         array(
             'type' => 'infoheading',
-            'label' => $this->l('Body background'),
+            'label' => $this->l('Body font & color'),
             'name'=> 'body'
         ),
         array(
@@ -80,7 +99,87 @@ $this->fields_form[]['form'] = array(
             'type' => 'color2',
             'label' => $this->l('Body font color'),
             'name' => 'g_body_font_color',
-        ),  
+        ), 
+        array(
+            'type' => 'infoheading',
+            'label' => $this->l('Body background'),
+            'name'=> 'bodybg'
+        ), 
+        array(
+            'type' => 'color2',
+            'label' => $this->l('Body background color'),
+            'name' => 'g_body_bg_color',
+        ),
+        array(
+            'type' => 'filemanager',
+            'label' => $this->l('Body background image'),
+            'name' => 'g_body_bg_image',
+        ), 
+        array(
+            'type' => 'select',
+            'label' => $this->l('Body background repeat'),
+            'name' => 'g_body_bg_repeat',
+            'options' => array (
+                'query' => array(
+                    '1' => array(
+                        'id' => 'x',
+                        'name' => 'Repeat X'
+                    ),
+					'2' => array(
+                        'id' => 'y', 
+                        'name' => 'Repeat Y'
+                    ),
+                    '3' => array(
+                        'id' => 'xy', 
+                        'name' => 'Repeat both'
+                    ),
+                    '4' => array(
+                        'id' => 'none', 
+                        'name' => 'Repeat none'
+                    ),
+                ),
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
+        array(
+            'type' => 'select',
+            'label' => $this->l('Body background attachment'),
+            'name' => 'g_body_bg_attachment',
+            'options' => array (
+                'query' => array(
+                    '1' => array(
+                        'id' => 'scroll',
+                        'name' => 'Scroll'
+                    ),
+					'2' => array(
+                        'id' => 'fixed', 
+                        'name' => 'Fixed'
+                    ),
+                ),
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
+        array(
+            'type' => 'select',
+            'label' => $this->l('Body background size'),
+            'name' => 'g_body_bg_size',
+            'options' => array (
+                'query' => array(
+                    '1' => array(
+                        'id' => 'auto',
+                        'name' => 'Auto'
+                    ),
+					'2' => array(
+                        'id' => 'cover', 
+                        'name' => 'Cover'
+                    ),
+                ),
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
         array(
             'type' => 'infoheading',
             'label' => $this->l('Title block'),

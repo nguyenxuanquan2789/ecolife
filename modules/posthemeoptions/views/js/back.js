@@ -907,6 +907,7 @@ $(document).ready(function(){
 	const parray = [
 		'g_main_color',
 		'g_body_font_color',
+		'g_body_bg_color',
 		'g_title_font_color',
 		'sticky_background',
 		'ptitle_color',
