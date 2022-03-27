@@ -11419,7 +11419,20 @@ html [type='button'],
 body {
     line-height: $line-height-base;
 }
-
+.layout_boxed {
+	@media (min-width: 1025px) {
+		padding-top: 50px;
+		main {
+			overflow: hidden;
+			max-width: 1550px;
+			margin: auto;
+			background: #fff;
+		}
+	}
+	@media (max-width: 1024px) {
+		background: transparent !important;
+	}
+}  
 @media (min-width: 1200px) {
     .container-fluid {
         padding: 0 15px;
@@ -17563,7 +17576,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
             display: inline-block;
         }
 		.slideshow-content {
-			max-width:630px;
+			max-width:645px;
 			display:inline-block;	
 		}
     }
@@ -17861,23 +17874,21 @@ body:not(.page-index) .sticky-inner.absolute-header {
 	.pos-sale-product-slider,
 	.product_categoryslide,
 	.product_accessoriesslide,
-	.categories-container,
 	.pos-producttabs-widget .tab-content,
 	.pos-product-widget {
 		margin: 0;
+		.slick-list {
+			padding-left:1px;
+			margin-left:-1px;
+			.slick-slide1 {
+				display:block !important;
+			}
+		}
 		.slick-slide {
 			padding: 0; 
 			> *:not(:last-child) {
 				margin-bottom: 0;
 				margin-bottom: -1px; 
-			}
-			&.slick-active:first-child {  
-				.js-product-miniature {
-					margin-left: 0;
-					&:hover {
-						border-left-color:var(--hovercolor);
-					}
-				}
 			}
 			.js-product-miniature {
 				border-radius: 0; 
@@ -17890,21 +17901,35 @@ body:not(.page-index) .sticky-inner.absolute-header {
 	}
 	.slider-arrows-top,
 	.slider-arrows-center {
-		.slick-prev {
-			left: -15px;
-		}
-		.slick-next {
-			right: -15px;
+		.pos-sale-product-widget,
+		.pos-sale-product-slider,
+		.product_categoryslide,
+		.product_accessoriesslide,
+		.pos-producttabs-widget .tab-content,
+		.pos-product-widget {
+			.slick-prev {
+				left: -15px;
+			}
+			.slick-next {
+				right: -15px;
+			}
 		}
 	} 
 	@media (min-width: 768px) {
 		.slider-arrows-top {
-			.slick-prev {
-				right: 2.5rem;
-				left: auto;
-			}
-			.slick-next {
-				right: 0; 
+			.pos-sale-product-widget,
+			.pos-sale-product-slider,
+			.product_categoryslide,
+			.product_accessoriesslide,
+			.pos-producttabs-widget .tab-content,
+			.pos-product-widget {
+				.slick-prev {
+					right: 2.5rem;
+					left: auto;
+				}
+				.slick-next {
+					right: 0; 
+				}
 			}
 		}
 	}
@@ -18456,6 +18481,11 @@ body:not(.page-index) .sticky-inner.absolute-header {
             }
         }
     }
+	&.text-countdown-black {
+		.is-countdown {
+			color: $main-color;
+		}
+	}
 }
 @media (min-width: 1200px) {
 	.min-column-desktop {

@@ -12,9 +12,9 @@
         {if $carousel_active}
           <div class="slick-slider-block" data-slider_options="{$slick_options}" data-slider_responsive="{$slick_responsive}">
             {foreach from=$tab_content.products item="product"}
-
+				<div class="slick-slide1">
                 {include file="$theme_template_path" product=$product}
-              
+				</div>
             {/foreach}
           </div>
         {else}

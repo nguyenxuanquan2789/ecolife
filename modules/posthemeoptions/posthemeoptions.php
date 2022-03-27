@@ -74,6 +74,7 @@ class PosThemeoptions extends Module implements WidgetInterface
     {
         //General
         Configuration::updateValue($this->name . 'container_width', '');
+        Configuration::updateValue($this->name . 'layout', 'wide');
         Configuration::updateValue($this->name . 'sidebar', 'normal');
         Configuration::updateValue($this->name . 'g_main_color', '#4fb68d');
         Configuration::updateValue($this->name . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
@@ -409,7 +410,7 @@ class PosThemeoptions extends Module implements WidgetInterface
                     $css .= 'background-color: '.$body_bg_color.';';
                 }
                 if($body_bg_image){
-                    $css .= 'background-image: src('.$body_bg_image.');';
+                    $css .= 'background-image:  url('.$body_bg_image.');';
                 }
                 if($body_bg_repeat){
                     if($body_bg_repeat == 'x' || $body_bg_repeat == 'y'){
@@ -424,7 +425,7 @@ class PosThemeoptions extends Module implements WidgetInterface
                     $css .= 'background-attachment: '.$body_bg_attachment.';';
                 }
                 if($body_bg_size){
-                    $css .= 'background-repeat: '.$body_bg_size.';';
+                    $css .= 'background-size: '.$body_bg_size.';';
                 }
             $css .= '}';
         }
@@ -570,6 +571,7 @@ class PosThemeoptions extends Module implements WidgetInterface
 		$smart_vals = array(
             'body_class' => $body_class,
 			'sidebar_width' => Configuration::get($this->name . 'sidebar'), 
+			'body_layout' => Configuration::get($this->name . 'layout'), 
             'header_sticky' => Configuration::get($this->name . 'header_sticky'),
             'header_template' => Configuration::get($this->name . 'header_template'),
             'home_template' => Configuration::get($this->name . 'home_template'),

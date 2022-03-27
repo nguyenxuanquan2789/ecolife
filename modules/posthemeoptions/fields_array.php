@@ -25,11 +25,11 @@ $this->fields_form[]['form'] = array(
                 'query' => array(
                     '1' => array(
                         'id' => 'wide',
-                        'name' => 'Wide'
+                        'name' => 'wide'
                     ),
 					'2' => array(
                         'id' => 'boxed', 
-                        'name' => 'Boxed'
+                        'name' => 'boxed'
                     ),
                 ),
                 'id' => 'id',

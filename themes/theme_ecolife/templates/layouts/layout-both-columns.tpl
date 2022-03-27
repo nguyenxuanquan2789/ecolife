@@ -31,7 +31,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}" class="{if $postheme.sidebar_width == 'narrow'}sidebar_narrow {elseif $postheme.sidebar_width == 'wide'}sidebar_wide{/if} {if $page.page_name == 'index'}page-index{/if} {$page.body_classes|classnames} {$postheme.body_class} {if $postheme.grid_border}grid-no-border{/if} {if $postheme.grid_padding}grid-no-padding{/if}">
+  <body id="{$page.page_name}" class="{if $postheme.body_layout == 'boxed'}layout_boxed {elseif $postheme.body_layout == 'wide'}layout_wide{/if} {if $postheme.sidebar_width == 'narrow'}sidebar_narrow {elseif $postheme.sidebar_width == 'wide'}sidebar_wide{/if} {if $page.page_name == 'index'}page-index{/if} {$page.body_classes|classnames} {$postheme.body_class} {if $postheme.grid_border}grid-no-border{/if} {if $postheme.grid_padding}grid-no-padding{/if}">
     {block name='hook_after_body_opening_tag'} 
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
