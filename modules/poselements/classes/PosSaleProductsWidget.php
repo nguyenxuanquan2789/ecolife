@@ -233,6 +233,25 @@ class PosSaleProductsWidget extends WidgetHelper {
 
 		$this->endControlsSection();
 		$this->addCarouselControls($this->getName() , 1);
+		$this->startControlsSection(
+			'style_section',
+			[
+				'label' => $this->l( 'Item style' ),
+				'tab' => ControlsManager::TAB_STYLE,
+			]
+		);
+			$this->addControl(
+				'padding',
+				[
+					'label' => $this->l( 'Padding' ),
+					'type' => ControlsManager::DIMENSIONS,
+					'size_units' => [ 'px', '%', 'em' ],
+					'selectors' => [
+						'{{WRAPPER}} .product-miniature' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+		$this->endControlsSection();
 	}
 
 	protected function render() {

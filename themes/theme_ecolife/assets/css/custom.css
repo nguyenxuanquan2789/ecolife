@@ -2353,5 +2353,24 @@
     max-width: 46%;
   }
 }
-
+.med-bestsale .product-miniature{
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 20px !important;
+}
+.med-bestsale .product-miniature:hover{
+  border-color: #ebebeb;
+}
+.med-bestsale .pos-product-widget .slick-arrow{
+  top: -2.957rem !important;
+}
+.med-bestsale .pos-product-widget .slick-next{
+  right: 1rem !important;
+}
+.med-bestsale .pos-product-widget .slick-prev{
+  right: 3.5rem !important;
+}
 /*# sourceMappingURL=animate.css.map */
