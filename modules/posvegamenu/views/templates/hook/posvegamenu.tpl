@@ -49,7 +49,7 @@
 					{elseif $menu_config.posvegamenu_sub_animation == 3}
 						{assign var='animation_class' value='menu_slideup'}
 					{else}
-						{assign var='animation_class' value='menu_rotate'}
+						{assign var='animation_class' value='menu_slideleft'} 
 					{/if}
 					{if $menu.submenu_type == 0}
 						{if isset($menu.sub_menu) && count($menu.sub_menu.info_rows) > 0}
