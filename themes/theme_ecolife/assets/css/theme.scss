@@ -12302,6 +12302,9 @@ body#checkout section#checkout-personal-information-step {
                 width: 45%;
                 max-width: 9.375rem;
                 margin-right: 1.25rem; 
+				@media (max-width: 479px) {
+					max-width: 8rem; 
+				}
             }
             .category-content {
                 flex: 1;
@@ -14987,16 +14990,7 @@ button.add-to-cart {
 .elementor-widget-wrap {
     z-index: auto !important;
 }
-@media (max-width: 1024px) {
-    .elementor-hidden-tablet {
-        display: none !important;
-    }
-}
-@media (max-width: 767px) {
-    .elementor-hidden-phone {
-        display: none !important;
-    }
-}
+ 
 @media (min-width: 1025px) {
     .elementor-hidden-desktop {
         background: -webkit-repeating-linear-gradient(
@@ -15052,6 +15046,9 @@ body.page-index:not(.elementor-editor-active) {
         -ms-animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
         animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
         @include pos-transition(300ms);
+		.not-sticky {
+			display: none; 
+		}
     }
 }
 body:not(.page-index) .sticky-inner.absolute-header {
@@ -15258,6 +15255,10 @@ body:not(.page-index) .sticky-inner.absolute-header {
 			position: absolute; 
 			left: 0;
 			right: 0;
+			pointer-events: none;
+			> * {
+				pointer-events: auto;
+			}
 		}
 		&.slider-arrows-top {
 			.navtab-products  {
@@ -16664,7 +16665,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
 				> .menu_slideleft,
 				> .menu_slideleft.cat-drop-menu li > .menu-dropdown {
 					opacity: 0;
-					visibility: hidden;
+					visibility: visible !important; 
 					-webkit-transform-origin: center center;
 					-moz-transform-origin: center center;
 					-ms-transform-origin: center center;
@@ -16680,7 +16681,7 @@ body:not(.page-index) .sticky-inner.absolute-header {
 					-moz-transition: -moz-transform 0.3s, opacity 0.3s;
 					-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 				}
-				&:hover > .menu_slideleft,
+				&:hover > .menu_slideleft,  
 				> .menu_slideleft.cat-drop-menu li:hover > .menu-dropdown {
 					opacity: 1;
 					visibility: visible;
@@ -17467,6 +17468,10 @@ body:not(.page-index) .sticky-inner.absolute-header {
 .elementor-section.elementor-section-stretched {
     width: 100vw !important;
     left: calc((-1 * (100vw - 100%) / 2)) !important;
+	&.elementor-section-boxed {
+		padding-left: 5px !important; 
+		padding-right: 5px !important; 
+	}
 }
 
 .slick-slider {
