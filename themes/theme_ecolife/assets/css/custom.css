@@ -2373,4 +2373,25 @@
 .med-bestsale .pos-product-widget .slick-prev{
   right: 3.5rem !important;
 }
+.toy-bestsale .product-miniature{
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 20px;
+  border-radius:0;
+}
+.toy-bestsale .product-miniature:hover{
+  border-color: #ebebeb;
+}
+.toy-bestsale .pos-product-widget .slick-slide > *:not(:last-child) {
+    margin-bottom: 0;
+}
+.toy-bestsale .pos-product-widget .slick-next{
+  right: 1rem !important;
+}
+.toy-bestsale .pos-product-widget .slick-prev{
+  right: 3.5rem !important;
+}
 /*# sourceMappingURL=animate.css.map */

@@ -117,7 +117,67 @@ class PosTestimonialsWidget extends WidgetHelper {
 		$this->endControlsSection();
 		
 		$this->addCarouselControls($this->getName() , 3);
-		
+		$this->startControlsSection(
+			'section_style_testimonial_item',
+			[
+				'label' => $this->l( 'Item', [], 'Admin.Global' ),
+				'tab' => ControlsManager::TAB_STYLE,
+			]
+		);
+
+		$this->addControl(
+			'item_bg',
+			[
+				'label' => $this->l( 'Backgound', [], 'Admin.Global' ),
+				'type' => ControlsManager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .pos-testimonial .testimonial-item .testimonial-item-inner' => 'background: {{VALUE}};',
+				],
+			]
+		);
+		$this->addControl(
+			'item_padding',
+			array(
+				'label' => __('Item padding', 'elementor'),
+				'type' => ControlsManager::DIMENSIONS,
+				'size_units' => array('px', 'em', '%'),
+				'selectors' => array(
+					'{{WRAPPER}} .pos-testimonial .testimonial-item .testimonial-item-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+			)
+		);
+		$this->addControl(
+			'item_margin',
+			array(
+				'label' => __('Item margin', 'elementor'),
+				'type' => ControlsManager::DIMENSIONS,
+				'size_units' => array('px', 'em', '%'),
+				'selectors' => array(
+					'{{WRAPPER}} .pos-testimonial .testimonial-item .testimonial-item-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+			)
+		);
+		$this->addControl(
+			'item_border_radius',
+			[
+				'label' => $this->l( 'Item Border Radius', [], 'Admin.Global' ),
+				'type' => ControlsManager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .pos-testimonial .testimonial-item .testimonial-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->addGroupControl(
+            GroupControlBoxShadow::getType(),
+            array(
+                'name' => 'item_box_shadow',
+                'selector' => '{{WRAPPER}} .pos-testimonial .testimonial-item .testimonial-item-inner',
+            )
+        );
+
+		$this->endControlsSection();
 		$this->startControlsSection(
 			'section_style_testimonial_content',
 			[
