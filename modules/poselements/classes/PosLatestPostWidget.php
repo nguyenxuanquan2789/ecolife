@@ -54,6 +54,7 @@ class PosLatestPostWidget extends WidgetHelper {
 						'2'  => $this->l( 'Design 2' ),
 						'3'  => $this->l( 'Design 3' ),
 						'4'  => $this->l( 'Design 4' ),
+						'5'  => $this->l( 'Design 5' ),
 					],
 					'frontend_available' => true,
 					'default' => '1'

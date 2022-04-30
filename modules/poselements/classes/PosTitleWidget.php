@@ -112,15 +112,13 @@ class PosTitleWidget extends WidgetHelper {
 				'tab' => ControlsManager::TAB_STYLE,
 			]
 		); 
-			$designs_title = array('1' => 'Classic','2' => 'Border Title');
+			$designs_title = array('1' => 'Classic','2' => 'Border title','3' => 'Icon under title');
 			$this->addControl(
 				'design',
 				[
 					'label' => $this->l( 'Select design' ),
 					'type' => ControlsManager::SELECT,
 					'options' => $designs_title,
-					'prefix_class' => 'pos-title-',
-					'frontend_available' => true,
 					'default' => '1'
 				]
 			);
@@ -191,7 +189,176 @@ class PosTitleWidget extends WidgetHelper {
 				]
 			);
 		$this->endControlsSection();
-
+		$this->startControlsSection(
+			'icon_section',
+			[
+				'label' => $this->l('Icon under title'),
+				'tab' => ControlsManager::TAB_STYLE,
+				'condition' => [
+					'design' => '3'
+				]
+			]
+		); 
+			$this->addControl(
+				'icon_type',
+				[
+					'label' => $this->l('Icon type'),
+					'type' => ControlsManager::SELECT, 
+					'options' => [
+						'awesome' => 'Awesome icons',
+						'image' => 'Image icon',
+					],
+					'default' => 'awesome',
+				]
+			);
+			$this->addControl(
+				'icon',
+				array(
+					'label' => $this->l('Icon'),
+					'type' => ControlsManager::ICON,
+					'label_block' => true,
+					'default' => 'fa fa-star',
+					'condition' => [
+						'icon_type' => 'awesome'
+					]
+				)
+			);
+			$this->addControl(
+				'image',
+				array(
+					'label' => $this->l('Choose icon image'),
+					'type' => ControlsManager::MEDIA,
+					'seo' => true,
+					'default' => array(
+						'url' => Utils::getPlaceholderImageSrc(),
+					),
+					'condition' => [
+						'icon_type' => 'image'
+					]
+				)
+			);
+			$this->addControl(
+				'color',
+				array(
+					'label' => $this->l('Icon Color'),
+					'type' => ControlsManager::COLOR,
+					'default' => '',
+					'selectors' => array(
+						'{{WRAPPER}} .pos-title-3 i' => 'color: {{VALUE}};',
+					),
+					'condition' => [
+						'icon_type' => 'awesome'
+					]
+				)
+			);
+			$this->addControl(
+				'size',
+				array(
+					'label' => $this->l('Size'),
+					'type' => ControlsManager::SLIDER,
+					'range' => array(
+						'px' => array(
+							'min' => 6,
+							'max' => 100,
+						),
+					),
+					'selectors' => array(
+						'{{WRAPPER}} .pos-title-3 i' => 'font-size: {{SIZE}}{{UNIT}};',
+					),
+					'condition' => [
+						'icon_type' => 'awesome'
+					]
+				)
+			);
+			$this->addControl(
+				'space',
+				array(
+					'label' => $this->l('Space'),
+					'type' => ControlsManager::SLIDER,
+					'range' => array(
+						'px' => array(
+							'min' => 6,
+							'max' => 100,
+						),
+					),
+					'selectors' => array(
+						'{{WRAPPER}} .pos-title-3 i' => 'margin-top: {{SIZE}}{{UNIT}};',
+					),
+					'condition' => [
+						'icon_type' => 'awesome'
+					]
+				)
+			);
+			$this->addControl(
+				'rotate',
+				array(
+					'label' => $this->l('Rotate'),
+					'type' => ControlsManager::SLIDER,
+					'default' => array(
+						'size' => 0,
+						'unit' => 'deg',
+					),
+					'selectors' => array(
+						'{{WRAPPER}} .pos-title-3 i' => 'transform: rotate({{SIZE}}{{UNIT}});',
+					), 
+					'condition' => [
+						'icon_type' => 'awesome'
+					]
+				)
+			);
+			$this->addControl(
+				'through_line',
+				[
+					'label' => $this->l('Through line'),
+					'type' => ControlsManager::SELECT, 
+					'options' => [
+						'none' => 'None',
+						'solid' => 'Solid',
+						'dashed' => 'Dashed',
+						'double' => 'Double',
+						'groove' => 'Groove',
+						'ridge' => 'Ridge',
+						'inset' => 'Inset',
+						'outset' => 'Outset',
+					],
+					'default' => 'solid',
+					'separator' => 'before',
+				]
+			);
+			$this->addControl(
+	            'line_color',
+	            array(
+	                'label' => $this->l('Through line Color'),
+	                'type' => ControlsManager::COLOR,
+	                'default' => '',
+	                'selectors' => array(
+	                    '{{WRAPPER}}.pos-title-3 span.title-through-line' => 'color: {{VALUE}};', 
+	                ),
+					'condition' => [
+						'through_line!' => 'none',
+					],
+	            )
+	        );
+			$this->addControl(
+				'line_width',
+				array(
+					'label' => $this->l('Through line width'),
+					'type' => ControlsManager::SLIDER,
+					'range' => array(
+						'px' => array(
+							'min' => 10,
+							'max' => 200,
+						),
+					),
+					'selectors' => array(
+						'{{WRAPPER}}.pos-title-3 span.title-through-line' => 'width: {{SIZE}}{{UNIT}};',
+					),
+					'condition' => [
+						'through_line!' => 'none',
+					],
+				)
+			);
+		$this->endControlsSection();
 	}
 
 	/**
@@ -201,17 +368,27 @@ class PosTitleWidget extends WidgetHelper {
 	protected function render() {
 
 		$settings = $this->getSettings(); 
-		
 		$title = $settings['title'];
 		$description = $settings['description'];
 		$html = '';
 
-		$html .= '<div class="pos-title-widget">';
+		$html .= '<div class="pos-title-widget pos-title-'. $settings['design'] .'">';
 			if($title){
 				$html .= '<h4 class="pos-title">'. $title .'</h4>';
 			}
 			if($description){
 				$html .= '<p class="pos-subtitle">'. $description .'</p>';
+			}
+			if($settings['design'] == 3){
+				if($settings['icon_type'] == 'awesome'){
+					$html .= '<i class="'. $settings['icon'] .'"></i>';
+				}
+				if($settings['icon_type'] == 'image' && $settings['image']['url']){
+					$html .= GroupControlImageSize::getAttachmentImageHtml($settings);
+				}
+				if($settings['through_line'] != 'none'){
+					$html .= '<span class="title-through-line '. $settings['through_line'] .'"></span>';
+				}
 			}
 		$html .= '</div>';
 

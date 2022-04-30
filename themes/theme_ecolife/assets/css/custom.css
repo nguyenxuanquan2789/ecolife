@@ -2395,3 +2395,7 @@
   right: 3.5rem !important;
 }
 /*# sourceMappingURL=animate.css.map */
+
+.list-bigger-image .style_product_list .img_block{
+  max-width: 170px;
+}

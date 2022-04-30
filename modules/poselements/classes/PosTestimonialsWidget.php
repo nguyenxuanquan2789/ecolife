@@ -185,7 +185,35 @@ class PosTestimonialsWidget extends WidgetHelper {
 				'tab' => ControlsManager::TAB_STYLE,
 			]
 		);
-
+		$this->addResponsiveControl(
+			'align',
+			[
+				'label' => $this->l( 'Alignment' ),
+				'type' => ControlsManager::CHOOSE,
+				'options' => [
+					'left' => [
+						'title' => $this->l( 'Left' ),
+						'icon' => 'fa fa-align-left',
+					],
+					'center' => [
+						'title' => $this->l( 'Center' ),
+						'icon' => 'fa fa-align-center',
+					],
+					'right' => [
+						'title' => $this->l( 'Right' ),
+						'icon' => 'fa fa-align-right',
+					],
+					'justify' => [
+						'title' => $this->l( 'Justified' ),
+						'icon' => 'fa fa-align-justify',
+					],
+				],
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .tes-content' => 'text-align: {{VALUE}};',
+				],
+			]
+		);
 		$this->addControl(
 			'content_color',
 			[
@@ -208,7 +236,7 @@ class PosTestimonialsWidget extends WidgetHelper {
 				],
 			]
 		);
-		$this->addControl(
+		$this->addResponsiveControl(
 			'content_padding',
 			array(
 				'label' => __('Content padding', 'elementor'),
@@ -219,7 +247,7 @@ class PosTestimonialsWidget extends WidgetHelper {
 				),
 			)
 		);
-		$this->addControl(
+		$this->addResponsiveControl(
 			'content_margin',
 			array(
 				'label' => __('Content margin', 'elementor'),
@@ -260,7 +288,7 @@ class PosTestimonialsWidget extends WidgetHelper {
 			]
 		);
 
-		$this->addControl(
+		$this->addResponsiveControl(
 			'image_size',
 			[
 				'label' => $this->l( 'Image Size', [], 'Admin.Global' ),
