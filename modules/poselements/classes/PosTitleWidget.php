@@ -332,10 +332,10 @@ class PosTitleWidget extends WidgetHelper {
 	                'type' => ControlsManager::COLOR,
 	                'default' => '',
 	                'selectors' => array(
-	                    '{{WRAPPER}}.pos-title-3 span.title-through-line' => 'color: {{VALUE}};', 
+	                    '{{WRAPPER}} .pos-title-3 .under-title .title-through-line' => 'border-color: {{VALUE}};', 
 	                ),
 					'condition' => [
-						'through_line!' => 'none',
+						'through_line!' => 'none', 
 					],
 	            )
 	        );
@@ -351,7 +351,7 @@ class PosTitleWidget extends WidgetHelper {
 						),
 					),
 					'selectors' => array(
-						'{{WRAPPER}}.pos-title-3 span.title-through-line' => 'width: {{SIZE}}{{UNIT}};',
+						'{{WRAPPER}} .pos-title-3 .under-title .title-through-line' => 'width: {{SIZE}}{{UNIT}};',
 					),
 					'condition' => [
 						'through_line!' => 'none',
@@ -380,15 +380,20 @@ class PosTitleWidget extends WidgetHelper {
 				$html .= '<p class="pos-subtitle">'. $description .'</p>';
 			}
 			if($settings['design'] == 3){
-				if($settings['icon_type'] == 'awesome'){
-					$html .= '<i class="'. $settings['icon'] .'"></i>';
-				}
-				if($settings['icon_type'] == 'image' && $settings['image']['url']){
-					$html .= GroupControlImageSize::getAttachmentImageHtml($settings);
-				}
-				if($settings['through_line'] != 'none'){
-					$html .= '<span class="title-through-line '. $settings['through_line'] .'"></span>';
-				}
+				$html .= '<span class="under-title">';
+					if($settings['through_line'] != 'none'){
+						$html .= '<span class="title-through-line line-before '. $settings['through_line'] .'"></span>';
+					}
+					if($settings['icon_type'] == 'awesome'){
+						$html .= '<i class="'. $settings['icon'] .'"></i>';
+					}
+					if($settings['icon_type'] == 'image' && $settings['image']['url']){
+						$html .= GroupControlImageSize::getAttachmentImageHtml($settings);
+					}
+					if($settings['through_line'] != 'none'){
+						$html .= '<span class="title-through-line line-after '. $settings['through_line'] .'"></span>';
+					}
+				$html .= '</span>';
 			}
 		$html .= '</div>';
 

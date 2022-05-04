@@ -453,7 +453,7 @@ class PosThemeoptions extends Module implements WidgetInterface
         $button_bgcolorh = Configuration::get($this->name . 'g_button_bgcolorh');
         //header
         $sticky_header_bg = Configuration::get($this->name . 'sticky_background');
-        $css .= '.sticky-inner{  
+        $css .= '#header .sticky-inner.scroll-menu{  
             background-color: '.$sticky_header_bg.';   
         }';
 

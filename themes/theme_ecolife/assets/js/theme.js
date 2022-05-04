@@ -58,6 +58,9 @@ var posthemes = {
 			$('#header .sticky-inner').before('<div class="headerSpace unvisible" style="height: '+headerSpaceH+'px;" ></div>'); 
 			if($('.page-index').length > 0 && $('.sticky-inner.absolute-header').length > 0){
 				$('.headerSpace').remove();
+			} 
+			if($('.page-index').length > 0 && $('.sticky-inner.absolute-header-full').length > 0){
+				$('.headerSpace').remove();  
 			} 	
 		}	
 		$(window).scroll(function() {

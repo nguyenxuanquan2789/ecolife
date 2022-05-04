@@ -83,7 +83,7 @@ class PosSocialsWidget extends WidgetHelper {
 	                'title_field' => '{{{ name }}}',
 	            )
 	        );
-	        
+			     
 		$this->endControlsSection();
 		
 		$this->startControlsSection(
@@ -108,6 +108,30 @@ class PosSocialsWidget extends WidgetHelper {
                     'frontend_available' => true
                 ]
             );
+			$this->addResponsiveControl(
+            	'text_align',
+	            [
+	                'label' => __('Alignment'),
+	                'type' => ControlsManager::CHOOSE,
+	                'options' => [
+	                    'flex-start' => [
+	                        'title' => $this->l('Left'),
+	                        'icon' => 'fa fa-align-left',
+	                    ],
+	                    'center' => [
+	                        'title' => $this->l('Center'),
+	                        'icon' => 'fa fa-align-center',
+	                    ],
+	                    'flex-end' => [
+	                        'title' => $this->l('Right'),
+	                        'icon' => 'fa fa-align-right',
+	                    ],
+	                ],
+	                'selectors' => [
+	                    '{{WRAPPER}} .pos-socials-widget ul' => 'justify-content: {{VALUE}};', 
+	                ],
+	            ]
+	        );
 		$this->endControlsSection();
 		$this->startControlsSection(
 			'icons_section',
@@ -178,6 +202,16 @@ class PosSocialsWidget extends WidgetHelper {
 					],
 				]
 			);
+			$this->addGroupControl(
+	            GroupControlBorder::getType(),
+	            array(
+	                'name' => 'border',
+	                'label' => $this->l('Border'),
+	                'placeholder' => '1px',
+	                'default' => '1px',
+	                'selector' => '{{WRAPPER}} .pos-socials-widget ul li a'
+	            )
+	        );
 			$this->startControlsTabs('tabs_button_style');
 
 	        $this->startControlsTab(
@@ -237,6 +271,16 @@ class PosSocialsWidget extends WidgetHelper {
 	                'type' => ControlsManager::COLOR,
 	                'selectors' => array(
 	                    '{{WRAPPER}} .pos-socials-widget ul li a:hover' => 'background-color: {{VALUE}};',
+	                ),
+	            )
+	        );
+			$this->addControl(
+	            'button_border_hover_color',
+	            array(
+	                'label' => $this->l('Border Color'), 
+	                'type' => ControlsManager::COLOR,
+	                'selectors' => array(
+	                    '{{WRAPPER}} .pos-socials-widget ul li a:hover' => 'border-color: {{VALUE}};',
 	                ),
 	            )
 	        );

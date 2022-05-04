@@ -73,19 +73,6 @@
 /***** End Hotspot widget *****/
 
 /***** Slideshow widget *****/
-.pos-slideshow-wrapper .desc-banner {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  right: 0;
-  z-index: 8;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  line-height: 1; }
-  .pos-slideshow-wrapper .desc-banner a.slideshow-button {
-    display: inline-block; }
 
 .slideshow-item {
   position: relative;

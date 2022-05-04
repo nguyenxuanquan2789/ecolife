@@ -1,4 +1,4 @@
-<article class="post-item design-1">
+<article class="post-item design-5"> 
   <div class="post-image">
     <a title="{$post.title}" href="{$post.url}">
       <div class="img-placeholder">
