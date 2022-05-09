@@ -121,9 +121,10 @@ class Helper
 
             ob_start();
             $scheme_css_file->enqueue();
-            Plugin::$instance->frontend->printGoogleFonts();
+            
             $css = ob_get_clean();
         }
+        Plugin::$instance->frontend->printGoogleFonts();
         while (!empty(Helper::$enqueue_css)) {
             $css .= array_pop(Helper::$enqueue_css);
         }

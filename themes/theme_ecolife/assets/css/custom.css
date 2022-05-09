@@ -2399,3 +2399,13 @@
 .list-bigger-image .style_product_list .img_block{
   max-width: 170px;
 }
+
+.has-section-inner .elementor-widget-wrap{
+  display: block !important;
+}
+.elementor-widget-wrap > section{
+  width: 100% !important;
+}
+.elementor-editor-active .elementor.elementor-edit-mode .elementor-top-column .elementor-widget-wrap .elementor-inner-section{
+  margin-top: 0;
+}

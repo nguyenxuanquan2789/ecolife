@@ -46,7 +46,7 @@
 				</div>
 			  {/if}
 			{/block} 
-			
+			{include file='catalog/_partials/customize/button-cart.tpl' product=$product}
 		</div>
 	</article>
 {/block}

@@ -235,6 +235,7 @@
 		<label class="control-label col-lg-3">{l s='Add specific class' mod='posmegamenu'}</label>
 		<div class="col-lg-9">
 			<input type="text" class="item_class" id="item_class" name="item_class" value="{if $menu->item_class}{$menu->item_class|escape:'html':'UTF-8'}{/if}"/>
+			<p class="help-block">Preset class: <span style="display:block;">- block-icon: make icon at top instead of left side.</span></p>
 		</div>
 	</div>
 	<div class="form-group">
