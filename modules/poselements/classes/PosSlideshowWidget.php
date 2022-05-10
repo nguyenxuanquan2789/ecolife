@@ -121,15 +121,41 @@ class PosSlideshowWidget extends WidgetHelper {
 			                    '{{WRAPPER}} .pos-slideshow-wrapper {{CURRENT_ITEM}} .desc-banner' => 'text-align: {{VALUE}};',
 			                ),
 	                    ],
+						[
+	                        'name' => 'max-width',
+							'label' => $this->l('Content max width'),
+	                        'type' => ControlsManager::SLIDER, 
+							'size_units' => array('px', '%'),
+							'range' => array(
+								'px' => array(
+									'min' => 0,
+									'max' => 2000,
+								),
+							),
+							'default' => [
+								'unit' => 'px',
+							],
+	                        'selectors' => [
+								'{{WRAPPER}} .desc-banner .slideshow-content' => 'max-width: {{SIZE}}{{UNIT}};',
+							],
+	                    ],
 	                    [
 	                        'name' => 'x',
 	                        'label' => _x('X Position', 'Background Control'),
 	                        'type' => ControlsManager::SLIDER, 
+							'size_units' => array('%', 'px'),
+							'default' => [
+								'unit' => '%',
+							],
 	                        'range' => [
 	                            '%' => [
 	                                'min' => 0,
 	                                'max' => 100,
 	                            ],
+								'px' => array(
+									'min' => 0,
+									'max' => 1000,
+								),
 	                        ],
 	                        'selectors' => [
 	                            '{{WRAPPER}} .pos-slideshow-wrapper {{CURRENT_ITEM}} .desc-banner' => 'left: {{SIZE}}{{UNIT}};',
@@ -138,12 +164,20 @@ class PosSlideshowWidget extends WidgetHelper {
 	                    [
 	                        'name' => 'y',
 	                        'label' => _x('Y Position', 'Background Control'),
-	                        'type' => ControlsManager::SLIDER,                        
+	                        'type' => ControlsManager::SLIDER, 
+							'size_units' => array('%', 'px'),
+							'default' => [
+								'unit' => '%', 
+							],
 	                        'range' => [
 	                            '%' => [
 	                                'min' => 0,
 	                                'max' => 100,
 	                            ],
+								'px' => array(
+									'min' => 0,
+									'max' => 1000,
+								),
 	                        ],
 	                        'selectors' => [ 
 	                            '{{WRAPPER}} .pos-slideshow-wrapper {{CURRENT_ITEM}} .desc-banner' => 'top: {{SIZE}}{{UNIT}}',
