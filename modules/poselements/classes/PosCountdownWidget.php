@@ -53,10 +53,7 @@ class PosCountdownWidget extends WidgetBase {
 	                	'colon' => ':',
 	                	'slash' => '/',
 	                	'minus' => '-',
-	                ],
-					'condition'		=>[
-						'countdown_display!' =>'block'
-					],
+	                ],					
 	                'default' => 'none',
 	                'prefix_class' => 'countdown-separate-',
 	            ]
@@ -237,6 +234,9 @@ class PosCountdownWidget extends WidgetBase {
 							'max' => 100,
 						],
 					],
+					'condition'		=>[
+						'separate' =>'none'
+					],
 					'default' => [
 						'unit' => 'px',
 						'size' => 15,
@@ -318,7 +318,7 @@ class PosCountdownWidget extends WidgetBase {
 					'label' 		=> $this->l('Color'),
 					'type' 			=> ControlsManager::COLOR,
 					'selectors' 	=> [
-						'{{WRAPPER}} .block-countdown .countdown-section .countdown-period' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .block-countdown .countdown-section:after' => 'color: {{VALUE}};',
 					],
 				]
 			);
@@ -331,7 +331,7 @@ class PosCountdownWidget extends WidgetBase {
 	                    'size' => 28,
 	                ],
 	                'selectors' => [
-	                    '{{WRAPPER}} .blockcart i' => 'font-size: {{SIZE}}{{UNIT}}',
+	                    '{{WRAPPER}} .block-countdown .countdown-section:after' => 'font-size: {{SIZE}}{{UNIT}}',
 	                ],
 	            ]
 	        );

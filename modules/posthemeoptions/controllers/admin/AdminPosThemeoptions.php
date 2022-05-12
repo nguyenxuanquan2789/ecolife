@@ -42,7 +42,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 		}
         
         $prefixname  = 'posthemeoptions';
-    	if($layout == 'organic1' || $layout == 'organic2' || $layout == 'organic3' || $layout == 'organic4'){
+    	if($layout == 'organic1' || $layout == 'organic2' || $layout == 'organic4'){
     		//Theme settings 
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -50,6 +50,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#4fb68d');
@@ -58,7 +62,27 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0);
             $images = array();
     	}
-    	if($layout == 'digital1' || $layout == 'digital2'){
+		if($layout == 'organic3'){
+    		//Theme settings 
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#4fb68d');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#4fb68d');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);
+            $images = array();
+    	}
+    	if($layout == 'digital1'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -66,6 +90,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0090F0');
+			Configuration::updateValue($vegamenu . '_behaviour', 2); 
+			Configuration::updateValue('POSSEARCH_CATE', 1);
+            $images = array();
+    	}
+		if($layout == 'digital2'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#0090f0');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
@@ -82,6 +130,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
@@ -98,6 +150,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#0090f0');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#0090F0');
@@ -114,6 +170,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 4);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
@@ -130,6 +190,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 4);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ef1e1e');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
@@ -146,6 +210,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 4);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
@@ -162,6 +230,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '1740px');
 			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#eb3e32');
@@ -178,6 +250,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '1740px');
 			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#e6a303');
@@ -194,6 +270,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '1740px');
 			Configuration::updateValue($themeoption . 'sidebar', 'narrow');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#eb3e32');
@@ -210,6 +290,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
@@ -226,6 +310,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
@@ -242,6 +330,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Roboto Slab", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#2579f7');
@@ -250,7 +342,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0);
             $images = array(); 
     	}
-		if($layout == 'cosmetic1' || $layout == 'cosmetic2' || $layout == 'cosmetic3' || $layout == 'cosmetic4'){
+		if($layout == 'cosmetic1' || $layout == 'cosmetic2' || $layout == 'cosmetic3'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -258,6 +350,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#c0b07d');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#c0b07d');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'cosmetic4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#c0b07d'); 
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#c0b07d');
@@ -274,6 +390,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#ef1e1e');
@@ -282,7 +402,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'jewelry1' || $layout == 'jewelry2' || $layout == 'jewelry3' || $layout == 'jewelry4'){
+		if($layout == 'jewelry1' || $layout == 'jewelry2' || $layout == 'jewelry3'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -290,6 +410,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#c1906f');
@@ -298,7 +422,27 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'sportwear1' || $layout == 'sportwear2' || $layout == 'sportwear3' || $layout == 'sportwear4'){
+		if($layout == 'jewelry4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#c1906f');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#c1906f');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'sportwear1' || $layout == 'sportwear2' || $layout == 'sportwear3'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '1');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -306,6 +450,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#F33535');
@@ -322,6 +470,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'boxed');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#F33535');
@@ -330,7 +482,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'autopart1' || $layout == 'autopart2'){
+		if($layout == 'autopart1'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -338,6 +490,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#F2AD0F');
@@ -346,7 +502,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'autopart3' || $layout == 'autopart4'){
+		if($layout == 'autopart2'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -354,6 +510,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#F2AD0F');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#F2AD0F');
+			Configuration::updateValue($vegamenu . '_behaviour', 1);
+			Configuration::updateValue('POSSEARCH_CATE', 1); 
+            $images = array();
+    	}
+		if($layout == 'autopart3'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#F2AD0F');
@@ -362,7 +542,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'houseware1' || $layout == 'houseware2' || $layout == 'houseware3' || $layout == 'houseware4'){
+		if($layout == 'autopart4'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -370,6 +550,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#f2ad0f');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#F2AD0F');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#F2AD0F');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 1); 
+            $images = array();
+    	}
+		if($layout == 'houseware1' || $layout == 'houseware4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#F08C0B');
@@ -378,7 +582,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'tool1' || $layout == 'tool4'){
+		if($layout == 'houseware2' || $layout == 'houseware3'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -386,6 +590,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 2);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#F08C0B');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#F08C0B');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 1); 
+            $images = array();
+    	}
+		if($layout == 'tool1'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#FDCE23');
@@ -394,7 +622,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'tool2' || $layout == 'tool3'){
+		if($layout == 'tool2'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -402,12 +630,56 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#fdce23');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#FDCE23');
 			Configuration::updateValue($themeoption . 'p_name_colorh', '#FDCE23');
 			Configuration::updateValue($vegamenu . '_behaviour', 2);
 			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'tool3'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#FDCE23');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#FDCE23');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'tool4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#253237');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#FDCE23');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#FDCE23');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
 		if($layout == 'toy1'){
@@ -418,6 +690,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Rum Raisin", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#35B1E5');
@@ -426,7 +702,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'toy2' || $layout == 'toy3'){
+		if($layout == 'toy2'){
     		//Theme settings
 			Configuration::updateValue($themeoption . 'p_padding', '0');
 			Configuration::updateValue($themeoption . 'p_border', '0');
@@ -434,6 +710,30 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Rum Raisin", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#35B1E5');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#35B1E5');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 1); 
+            $images = array();
+    	}
+		if($layout == 'toy3'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#35b1e5');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Rum Raisin", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#35B1E5');
@@ -450,6 +750,10 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue($themeoption . 'layout', 'wide');
 			Configuration::updateValue($themeoption . 'container_width', '');
 			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 1);
+			Configuration::updateValue($themeoption . 'sticky_background', '#35b1e5');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
 			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
 			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Rum Raisin", sans-serif');
 			Configuration::updateValue($themeoption . 'g_main_color', '#35B1E5');
@@ -458,6 +762,247 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
+		if($layout == 'singleproduct-airpurifier'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#1ABCBD');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#1ABCBD');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-bike'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#13BF9D');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#13BF9D');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-exercisepants'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#454545D9');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#EA3232');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#EA3232');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-facemask'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#07B9B9');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#07B9B9');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-headphone'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#454545D9');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#236CC4');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#236CC4');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-jewelry'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#C09578');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#C09578');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-skateboard'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#F4540D');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#F4540D');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-smartband'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#454545D9');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#F42D0C');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#F42D0C');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-smartmassager'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#454545');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#128AED');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#128AED');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-treadmill'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#C32239');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#C32239');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-vacuumcleaner'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Oswald", sans-serif'); 
+			Configuration::updateValue($themeoption . 'g_main_color', '#0365D4');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0365D4');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0); 
+            $images = array();
+    	}
+		if($layout == 'singleproduct-vr'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1200px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#2879FE');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#2879FE');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		
         $error = false;
 		if(!empty($images))
         foreach($images as $image){

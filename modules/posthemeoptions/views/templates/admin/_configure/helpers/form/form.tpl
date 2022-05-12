@@ -948,14 +948,18 @@
 											<option value="jewelry2">Jewelry 2</option>
 											<option value="jewelry3">Jewelry 3</option>
 											<option value="jewelry4">Jewelry 4</option>
-											<option value="singleproducts1">Single products 1</option>
-											<option value="singleproducts2">Single products 2</option>
-											<option value="singleproducts3">Single products 3</option>
-											<option value="singleproducts4">Single products 4</option>
-											<option value="singleproducts5">Single products 5</option>
-											<option value="singleproducts6">Single products 6</option>
-											<option value="singleproducts7">Single products 7</option>
-											<option value="singleproducts8">Single products 8</option>
+											<option value="singleproduct-airpurifier">Single products airpurifier</option>
+											<option value="singleproduct-bike">Single products bike</option>
+											<option value="singleproduct-exercisepants">Single products exercisepants</option>
+											<option value="singleproduct-facemask">Single products facemask</option>
+											<option value="singleproduct-headphone">Single products headphone</option>
+											<option value="singleproduct-jewelry">Single products jewelry</option>
+											<option value="singleproduct-skateboard">Single products skateboard</option>
+											<option value="singleproduct-smartband">Single products smartband</option>
+											<option value="singleproduct-smartmassager">Single products smartmassager</option>
+											<option value="singleproduct-treadmill">Single products treadmill</option>
+											<option value="singleproduct-vacuumcleaner">Single products vacuumcleaner</option>
+											<option value="singleproduct-vr">Single products VR</option>
 										</select>
 										</select>
 										<a href="http://demo.posthemes.com/pos_ecolifedemo/#section-page" class="pos-demos" target="_blank">View our list demo</a>

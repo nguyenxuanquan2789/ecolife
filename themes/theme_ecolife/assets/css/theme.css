@@ -17066,11 +17066,26 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .elementor-widget-pos_links .pos-links-widget .links-widget-content li:not(:last-child) a {
     margin-bottom: 0.8125rem; }
 
-.elementor-widget-pos_countdown.countdown-separate-colon .countdown-section:after, .elementor-widget-pos_countdown.countdown-separate-slash .countdown-section:after, .elementor-widget-pos_countdown.countdown-separate-minus .countdown-section:after {
-  content: ':';
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 700; }
+.elementor-widget-pos_countdown.countdown-separate-colon .countdown-section:not(:last-child), .elementor-widget-pos_countdown.countdown-separate-slash .countdown-section:not(:last-child), .elementor-widget-pos_countdown.countdown-separate-minus .countdown-section:not(:last-child) {
+  margin-right: 36px; }
+  .elementor-widget-pos_countdown.countdown-separate-colon .countdown-section:not(:last-child):after, .elementor-widget-pos_countdown.countdown-separate-slash .countdown-section:not(:last-child):after, .elementor-widget-pos_countdown.countdown-separate-minus .countdown-section:not(:last-child):after {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    right: -21px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+.elementor-widget-pos_countdown.countdown-separate-colon .countdown-section:not(:last-child):after {
+  content: ':'; }
+.elementor-widget-pos_countdown.countdown-separate-slash .countdown-section:not(:last-child):after {
+  content: '/'; }
+.elementor-widget-pos_countdown.countdown-separate-minus .countdown-section:not(:last-child):after {
+  content: '-'; }
 .elementor-widget-pos_countdown .pos-elements-countdown.block-display .countdown-section .countdown-amount,
 .elementor-widget-pos_countdown .pos-elements-countdown.block-display .countdown-section countdown-period {
   display: block; }

@@ -17784,12 +17784,46 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
     &.countdown-separate-slash,
     &.countdown-separate-minus {
         .countdown-section {
-            &:after {
-                content: ':';
-                display: inline-block;
-                font-size: 20px;
-                font-weight: $font-weight-bold;
-            }
+			&:not(:last-child) {
+				margin-right:36px;
+				&:after {
+					display: inline-block;
+					font-size: 20px;
+					font-weight: $font-weight-bold;
+					line-height: 1;
+					position: absolute;
+					right:-21px;
+					top:50%;
+					@include pos-transform(translateY(-50%));
+				}
+			}
+        }
+    }
+	&.countdown-separate-colon {
+        .countdown-section {
+			&:not(:last-child) {
+				&:after {
+					content: ':';
+				}
+			}
+        }
+    }
+    &.countdown-separate-slash {
+        .countdown-section {
+            &:not(:last-child) {
+				&:after {
+					content: '/';
+				}
+			}
+        }
+    }
+    &.countdown-separate-minus {
+        .countdown-section {
+            &:not(:last-child) {
+				&:after {
+					content: '-';
+				}
+			}
         }
     }
     .pos-elements-countdown {
