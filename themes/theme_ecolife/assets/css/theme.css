@@ -16974,23 +16974,21 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
 .elementor-widget-pos_title .pos-title-3 .under-title {
   position: relative; }
   .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line {
-    border-width: 1px;
+    border-bottom-width: 1px;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 20px; }
     .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.solid {
-      border-style: solid; }
+      border-bottom-style: solid; }
     .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.dashed {
-      border-style: dashed; }
+      border-bottom-style: dashed; }
     .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.double {
-      border-style: double; }
-    .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.groove {
-      border-style: groove; }
-    .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.ridge {
-      border-style: ridge; }
-    .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.inset {
-      border-style: inset; }
-    .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.outset {
-      border-style: outset; }
+      border-top-style: double;
+      border-bottom-style: double;
+      border-top-width: 1px;
+      padding: 1px 0; }
+    .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.dotted {
+      border-bottom-style: dotted; }
     .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.line-before {
       margin-right: 10px; }
     .elementor-widget-pos_title .pos-title-3 .under-title .title-through-line.line-after {
@@ -17104,7 +17102,8 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   margin: 0 -5px; }
 .elementor-section.elementor-section-full_width .elementor-column-gap-wider {
   margin: 0 -30px; }
-.elementor-section.elementor-section-full_width img {
+.elementor-section.elementor-section-full_width .elementor-widget-image img,
+.elementor-section.elementor-section-full_width .elementor-widget-pos_banner img {
   display: block; }
 
 .elementor-section.elementor-section-stretched {

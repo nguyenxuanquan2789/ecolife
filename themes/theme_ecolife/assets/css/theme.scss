@@ -17632,29 +17632,24 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 		.under-title {
 			position: relative; 
 			.title-through-line {
-				border-width: 1px;   
+				border-bottom-width: 1px;  
 				display: inline-block;
 				vertical-align: middle;
+				width: 20px;
 				&.solid {
-					border-style: solid;
+					border-bottom-style: solid;
 				}
 				&.dashed {
-					border-style: dashed;
+					border-bottom-style: dashed;
 				}
 				&.double {
-					border-style: double;
+					border-top-style: double;
+					border-bottom-style: double;
+					border-top-width: 1px;
+					padding: 1px 0;
 				}
-				&.groove {
-					border-style: groove;
-				}
-				&.ridge {
-					border-style: ridge;
-				}
-				&.inset {
-					border-style: inset;
-				}
-				&.outset {
-					border-style: outset;
+				&.dotted {
+					border-bottom-style: dotted;
 				}
 				&.line-before {
 					margin-right:10px;
@@ -17861,9 +17856,12 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
         .elementor-column-gap-wider {
             margin: 0 -30px;
         }
-        img {
-            display: block;  
-        }
+		.elementor-widget-image,
+		.elementor-widget-pos_banner {
+		    img {
+				display: block;  
+			}
+		}
     }
 }
 
