@@ -78,6 +78,22 @@ class PosHeaderCurrencyWidget extends WidgetHelper {
 	                ],
 	            ]
 	        );
+			$this->addControl(
+            	'position_top',
+	            [
+	                'label' => $this->l('Position top'),
+	                'type' => ControlsManager::SLIDER,
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100, 
+						],
+					],
+	                'selectors' => [
+	                    '{{WRAPPER}} .pos-currency-widget .pos-dropdown-menu' => 'top: {{SIZE}}{{UNIT}}', 
+	                ],
+	            ]
+	        );
 		$this->endControlsSection();
 		// Start for style
         $this->startControlsSection(

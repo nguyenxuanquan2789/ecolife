@@ -500,8 +500,28 @@ class PosHeaderSearchWidget extends WidgetBase {
                 ],
             ]
         );
-
-
+		$this->addControl(
+			'padding',
+			array(
+				'label' => __('Padding'),
+				'type' => ControlsManager::DIMENSIONS,
+				'size_units' => array('px', 'em', '%'),
+				'selectors' => array(
+					'{{WRAPPER}} .pos-search__input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+			)
+		);
+		$this->addControl(
+			'margin',
+			array(
+				'label' => __('Margin'),
+				'type' => ControlsManager::DIMENSIONS,
+				'size_units' => array('px', 'em', '%'),
+				'selectors' => array(
+					'{{WRAPPER}} .pos-search__input' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+			)
+		);
         $this->endControlsSection();
 
         $this->startControlsSection(
@@ -592,22 +612,21 @@ class PosHeaderSearchWidget extends WidgetBase {
                 ],
             ]
         );
-
-        $this->endControlsTab();
-
-        $this->endControlsTabs();
-        
-        $this->addControl(
+		 $this->addControl(
             'button_border_color_focus',
             [
                 'label' => __('Border Color'),
                 'type' => ControlsManager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .pos-search__submit' => 'border-color: {{VALUE}}',
+                    '{{WRAPPER}} .pos-search__submit:hover' => 'border-color: {{VALUE}}',
                 ],
             ]
         );
 
+        $this->endControlsTab();
+
+        $this->endControlsTabs();
+        
         $this->addGroupControl(
             GroupControlBoxShadow::getType(),
             [

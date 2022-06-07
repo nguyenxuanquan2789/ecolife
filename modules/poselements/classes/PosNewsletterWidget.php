@@ -43,7 +43,16 @@ class PosNewsletterWidget extends WidgetHelper {
 				'placeholder' => $this->l('Your email address'),
 			]
 		);
-
+		$this->addControl(
+            'placeholder_color',
+            [
+                'label' => __('Placeholder Color'),
+                'type' => ControlsManager::COLOR, 
+                'selectors' => [
+                    '{{WRAPPER}} input[name=email]::placeholder' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
 		$this->addControl(
 			'disable_psgdpr',
 			[

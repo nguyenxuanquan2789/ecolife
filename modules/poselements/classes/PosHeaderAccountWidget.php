@@ -358,6 +358,22 @@ class PosHeaderAccountWidget extends WidgetBase {
 	                ],
 	            ]
 	        );
+			$this->addControl(
+            	'position_top',
+	            [
+	                'label' => $this->l('Position top'),
+	                'type' => ControlsManager::SLIDER,
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100, 
+						],
+					],
+	                'selectors' => [
+	                    '{{WRAPPER}} .pos-account .pos-dropdown-menu' => 'top: {{SIZE}}{{UNIT}}', 
+	                ],
+	            ]
+	        );
 		$this->endControlsSection();
 	}
 
