@@ -43,6 +43,13 @@ $this->fields_form[]['form'] = array(
             'class' => 'fixed-width-md',
             'desc' => $this->l('Set maxium width of page. You must provide px or percent suffix (example 1240px or 100%)'),
         ),
+        array(
+            'type' => 'text',
+            'label' => $this->l('Boxed width'),
+            'name' => 'boxed_width',
+            'class' => 'fixed-width-md',
+            'desc' => $this->l('Set width of boxed layout. You must provide px or percent suffix (example 1240px or 100%)'),
+        ),
 		array(
             'type' => 'select',
             'label' => $this->l('Sidebar width'),

@@ -874,7 +874,19 @@
 }));//# sourceMappingURL=pickr.min.js.map
 
 $(document).ready(function(){
-	var productLayout = $('.productp_layout');
+	var gLayout = $('select[name="layout"]').val();
+	if(gLayout == 'wide'){
+		$('.boxed_width').hide();
+	}
+	$('select[name="layout"]').change(function() {
+		if($(this).val() == 'wide') {
+        	$('.boxed_width').hide();
+	   	}else{
+	   		$('.boxed_width').show();
+	   	}     
+    });
+
+    var productLayout = $('.productp_layout');
 	var current_layout= $('input[name="productp_layout"]:checked').val();
 	$('.productp-layout').hide();
 	$('.productp-layout'+current_layout).show();

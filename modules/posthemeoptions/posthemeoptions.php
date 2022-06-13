@@ -378,12 +378,23 @@ class PosThemeoptions extends Module implements WidgetInterface
     {
         $css = '';
 		$container_width = Configuration::get($this->name . 'container_width');
-        $css .='
-		@media (min-width: 1200px) {
-        .container {  	
-			width: '.$container_width.';
-			
-        }}';
+        if($container_width){
+            $css .='
+            @media (min-width: 1200px) {
+            .container {  	
+                width: '.$container_width.';
+                
+            }}';
+        }
+        $boxed_width = Configuration::get($this->name . 'boxed_width');
+        if($boxed_width){
+            $css .='
+            @media (min-width: 1200px) {
+            .layout_boxed {  	
+                width: '.$boxed_width.';
+                
+            }}';
+        }
         $main_color = Configuration::get($this->name . 'g_main_color'); 
         $css .='
          :root {  
