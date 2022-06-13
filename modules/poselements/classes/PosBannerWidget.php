@@ -220,7 +220,7 @@ class PosBannerWidget extends WidgetHelper {
 					],
 					'default' => [
 						'unit' => 'px',
-						'size' => 15,
+						'size' => 0,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .banner-content .banner-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
@@ -268,7 +268,7 @@ class PosBannerWidget extends WidgetHelper {
 					],
 					'default' => [
 						'unit' => 'px',
-						'size' => 15,
+						'size' => 0,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .banner-content .banner-title2' => 'margin-bottom: {{SIZE}}{{UNIT}};',
@@ -318,7 +318,7 @@ class PosBannerWidget extends WidgetHelper {
 					],
 					'default' => [
 						'unit' => 'px',
-						'size' => 15,
+						'size' => 0,
 					],
 					'selectors' => [
 						'{{WRAPPER}} .banner-content .banner-text' => 'margin-bottom: {{SIZE}}{{UNIT}};',

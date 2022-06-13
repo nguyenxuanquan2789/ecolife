@@ -276,7 +276,7 @@ class PosHeaderSettingsWidget extends WidgetHelper {
 	                'range' => [
 						'px' => [
 							'min' => 100,
-							'max' => 200, 
+							'max' => 300, 
 						],
 					],
 					'default' => [
