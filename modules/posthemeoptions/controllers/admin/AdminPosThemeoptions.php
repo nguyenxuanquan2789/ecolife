@@ -1002,6 +1002,86 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			Configuration::updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
+		if($layout == 'medical1' || $layout == 'medical2' || $layout == 'medical3' || $layout == 'medical4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1440px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0bbfbd');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0bbfbd');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'fastfood1' || $layout == 'fastfood2' || $layout == 'fastfood3' || $layout == 'fastfood4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1440px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#cf2929');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#cf2929');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#cf2929');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'petshop1' || $layout == 'petshop2' || $layout == 'petshop3' || $layout == 'petshop4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1440px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#0d8cf1');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#0d8cf1');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#0d8cf1');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'decoration1' || $layout == 'decoration2' || $layout == 'decoration3' || $layout == 'decoration4'){
+    		//Theme settings
+			Configuration::updateValue($themeoption . 'p_padding', '0');
+			Configuration::updateValue($themeoption . 'p_border', '0');
+			Configuration::updateValue($themeoption . 'g_body_bg_image', '');
+			Configuration::updateValue($themeoption . 'layout', 'wide');
+			Configuration::updateValue($themeoption . 'container_width', '1440px');
+			Configuration::updateValue($themeoption . 'sidebar', 'normal');
+			Configuration::updateValue($themeoption . 'p_display', 5);
+			Configuration::updateValue($themeoption . 'sticky_background', '#ffffff');
+			Configuration::updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_body_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			Configuration::updateValue($themeoption . 'g_title_gfont_name', '"Poppins", sans-serif');
+			Configuration::updateValue($themeoption . 'g_main_color', '#b79b6c');
+			Configuration::updateValue($themeoption . 'p_name_colorh', '#b79b6c');
+			Configuration::updateValue($vegamenu . '_behaviour', 2);
+			Configuration::updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
 		
         $error = false;
 		if(!empty($images))

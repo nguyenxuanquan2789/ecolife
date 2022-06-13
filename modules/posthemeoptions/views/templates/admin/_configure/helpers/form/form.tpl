@@ -940,14 +940,6 @@
 											<option value="toy2">Toy 2</option>
 											<option value="toy3">Toy 3</option>
 											<option value="toy4">Toy 4</option>
-											<option value="fashion1">Fashion 1</option>
-											<option value="fashion2">Fashion 2</option>
-											<option value="fashion3">Fashion 3</option>
-											<option value="fashion4">Fashion 4</option>
-											<option value="jewelry1">Jewelry 1</option>
-											<option value="jewelry2">Jewelry 2</option>
-											<option value="jewelry3">Jewelry 3</option>
-											<option value="jewelry4">Jewelry 4</option>
 											<option value="singleproduct-airpurifier">Single products airpurifier</option>
 											<option value="singleproduct-bike">Single products bike</option>
 											<option value="singleproduct-exercisepants">Single products exercisepants</option>
