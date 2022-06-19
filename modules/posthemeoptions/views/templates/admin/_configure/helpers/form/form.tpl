@@ -904,6 +904,14 @@
 											<option value="furniture2">Furniture 2</option>
 											<option value="furniture3">Furniture 3</option>
 											<option value="furniture4">Furniture 4</option>
+											<option value="gym1">Gym 1</option>
+											<option value="gym2">Gym 2</option>
+											<option value="gym3">Gym 3</option>
+											<option value="gym4">Gym 4</option>
+											<option value="handmade1">Handmade 1</option>
+											<option value="handmade2">Handmade 2</option>
+											<option value="handmade3">Handmade 3</option>
+											<option value="handmade4">Handmade 4</option>
 											<option value="houseware1">Houseware 1</option>
 											<option value="houseware2">Houseware 2</option>
 											<option value="houseware3">Houseware 3</option>
@@ -920,6 +928,10 @@
 											<option value="medical2">Medical 2</option>
 											<option value="medical3">Medical 3</option>
 											<option value="medical4">Medical 4</option>
+											<option value="minimal1">Minimal 1</option>
+											<option value="minimal2">Minimal 2</option>
+											<option value="minimal3">Minimal 3</option>
+											<option value="minimal4">Minimal 4</option>
 											<option value="organic1">Organic 1</option>
 											<option value="organic2">Organic 2</option>
 											<option value="organic3">Organic 3</option>
@@ -928,6 +940,10 @@
 											<option value="petshop2">Petshop 2</option>
 											<option value="petshop3">Petshop 3</option>
 											<option value="petshop4">Petshop 4</option>
+											<option value="plants1">Plants 1</option>
+											<option value="plants2">Plants 2</option>
+											<option value="plants3">Plants 3</option>
+											<option value="plants4">Plants 4</option>
 											<option value="sportwear1">Sportwear 1</option>
 											<option value="sportwear2">Sportwear 2</option>
 											<option value="sportwear3">Sportwear 3</option>
@@ -1141,9 +1157,14 @@
 					token : token,
 				},
 				success: function(resp) {
-					$('.btn-import').removeClass('loading').addClass('btn-success');
-					$('.btn-import span').text(resp.data.message);
-					location.reload();
+					if(resp.success){
+						$('.btn-import').removeClass('loading').addClass('btn-success');
+						$('.btn-import span').text(resp.data.message);
+						location.reload();
+					}else{
+						$('.btn-import').removeClass('loading').addClass('btn-error');
+						$('.btn-import span').text(resp.data.message);
+					}
 				}
 			})
 		});
