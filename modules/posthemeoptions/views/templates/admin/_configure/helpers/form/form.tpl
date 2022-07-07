@@ -939,19 +939,19 @@
 											<option value="petshop1">Petshop 1</option>
 											<option value="petshop2">Petshop 2</option>
 											<option value="petshop3">Petshop 3</option>
-											<option value="petshop4">Petshop 4</option>
+											<option value="petshop4">Petshop 4</option>	
 											<option value="plants1">Plants 1</option>
 											<option value="plants2">Plants 2</option>
 											<option value="plants3">Plants 3</option>
-											<option value="plants4">Plants 4</option>
+											<option value="plants4">Plants 4</option>											
 											<option value="sportwear1">Sportwear 1</option>
 											<option value="sportwear2">Sportwear 2</option>
 											<option value="sportwear3">Sportwear 3</option>
 											<option value="sportwear4">Sportwear 4</option>
-											<option value="tool1">Tools 1</option>
-											<option value="tool2">Tools 2</option>
-											<option value="tool3">Tools 3</option>
-											<option value="tool4">Tools 4</option>
+											<option value="tools1">Tools 1</option>
+											<option value="tools2">Tools 2</option>
+											<option value="tools3">Tools 3</option>
+											<option value="tools4">Tools 4</option>
 											<option value="toy1">Toy 1</option>
 											<option value="toy2">Toy 2</option>
 											<option value="toy3">Toy 3</option>
@@ -1160,7 +1160,9 @@
 					if(resp.success){
 						$('.btn-import').removeClass('loading').addClass('btn-success');
 						$('.btn-import span').text(resp.data.message);
-						location.reload();
+						setTimeout(() => {
+                          window.location.href = window.location.href;
+                        }, 1000)
 					}else{
 						$('.btn-import').removeClass('loading').addClass('btn-error');
 						$('.btn-import span').text(resp.data.message);

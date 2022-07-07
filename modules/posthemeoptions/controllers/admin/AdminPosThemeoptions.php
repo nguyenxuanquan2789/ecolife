@@ -13,7 +13,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
     {
         parent::__construct();
         
-        $this->templates = 'http://ecolife.posthemes.com/import_data/';
+        $this->templates = 'http://ecolife.posthemes.com/ecolife_data/';
 		if ((bool)Tools::getValue('ajax')){
 			$this->ajaxImportData(Tools::getValue('layout'));
 		}else{
@@ -52,6 +52,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -73,6 +74,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -94,6 +96,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -115,6 +118,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -136,6 +140,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -157,6 +162,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -178,6 +184,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -199,6 +206,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -220,6 +228,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -241,6 +250,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -262,6 +272,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -283,6 +294,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -304,6 +316,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -325,6 +338,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -346,6 +360,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -367,6 +382,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -388,6 +404,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -409,6 +426,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -430,6 +448,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -451,6 +470,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -472,6 +492,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -493,6 +514,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '/pos_ecolife/img/cms/bg_body.jpg');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '1550px');
@@ -514,6 +536,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -535,6 +558,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -556,6 +580,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -577,6 +602,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -598,6 +624,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -619,6 +646,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -635,11 +663,12 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'tool1'){
+		if($layout == 'tools1'){
     		//Theme settings
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -656,11 +685,12 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 1); 
             $images = array();
     	}
-		if($layout == 'tool2'){
+		if($layout == 'tools2'){
     		//Theme settings
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -677,11 +707,12 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'tool3'){
+		if($layout == 'tools3'){
     		//Theme settings
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -698,11 +729,12 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0); 
             $images = array();
     	}
-		if($layout == 'tool4'){
+		if($layout == 'tools4'){
     		//Theme settings
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -724,6 +756,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -745,6 +778,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -766,6 +800,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -787,6 +822,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -808,6 +844,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -829,6 +866,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -850,6 +888,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -871,6 +910,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -892,6 +932,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -913,6 +954,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -933,6 +975,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -954,6 +997,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -975,6 +1019,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -996,6 +1041,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1017,6 +1063,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1038,6 +1085,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1059,6 +1107,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1080,6 +1129,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1101,6 +1151,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1122,6 +1173,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1143,6 +1195,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1164,6 +1217,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1185,6 +1239,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1206,6 +1261,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '1');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1227,6 +1283,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '0');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1248,6 +1305,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1269,6 +1327,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1290,6 +1349,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1311,6 +1371,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1332,6 +1393,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#F6F6F7');
 			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '1270px');
@@ -1353,6 +1415,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1374,6 +1437,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
@@ -1402,7 +1466,7 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
             'success' => true,
 			'content' => $results,
             'data' => [
-                'message' => $error ? $this->l('Error with import images.') : $this->l('Import successfully'),
+                'message' => $error ? $this->l('Error with import images.') : $this->l('Import successfully !!!'),
             ]
         )));
     }

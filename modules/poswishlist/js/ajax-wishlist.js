@@ -32,7 +32,7 @@ function WishlistCart(id, action, id_product, id_product_attribute, quantity, id
 			{	
 				if (isLogged == true) {
 
-                    $('.wishtlist_top .cart-wishlist-number').html(data);
+                    $('.wishlist-top-count').html(data);
                     $('#qmwishlist-count').html(data);
 
 					var html = '';

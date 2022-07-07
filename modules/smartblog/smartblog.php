@@ -90,22 +90,7 @@ class smartblog extends Module
 			$this->registerHook('header') &&
 			$this->registerHook('moduleRoutes') &&
 			$this->registerHook('displayBackOfficeHeader') &&
-			$this->registerHook('displayOverrideTemplate') &&
-			$this->registerHook('actionsbnewpost') &&
-			$this->registerHook('actionsbupdatepost') &&
-			$this->registerHook('actionsbdeletepost') &&
-			$this->registerHook('actionsbtogglepost') &&
-			$this->registerHook('actionsbnewcat') &&
-			$this->registerHook('actionsbupdatecat') &&
-			$this->registerHook('actionsbdeletecat') &&
-			$this->registerHook('actionsbtogglecat') &&
-			$this->registerHook('actionsbpostcomment') &&
-			$this->registerHook('actionsbappcomment') &&
-			$this->registerHook('actionsbsingle') &&
-			$this->registerHook('actionsbcat') &&
-			$this->registerHook('actionsbsearch') &&
-			$this->registerHook('actionsbheader') &&
-			$this->registerHook('actionHtaccessCreate');
+			$this->registerHook('displayOverrideTemplate');
 
 		$ret &= $this->installSql();
 		$ret &= $this->CreateSmartBlogTabs();
@@ -379,40 +364,80 @@ class smartblog extends Module
 		$languages = Language::getLanguages(false);
 		for ($i = 1; $i <= 4; $i++) {
 			if ($i == 1) :
-				$title = 'A certified web agency SmartDataSoft';
-				$slug  = 'a-certified-web-agency-smartdatasoft';
-				$des   = 'SmartDataSoft is an offshore web development company located in Bangladesh. We are serving this sector since 2010. Our team is committed to develop high quality web based application and theme for our clients and also for the global marketplace. As your web development partner we will assist you in planning, development, implementation and upgrade! Why SmartDataSoft? SmartDataSoft released their first prestashop theme in November 2012. Till now we have 6+ prestashop theme which are getting sold on global renowned marketplace. We have brought products like Revolution Slider and Visual Composer to PrestaShop. SmartBlog, the most popular blog module for PrestaShop is also built by us.
-				
-				After a long time SmartDataSoft is back as ClassyDevs with a team of talented developers. Till now they have already released two awesome modules. The best elementor based page builder for PrestaShop Crazy Elements and the latest version of the best slider module Revolution Slider 6. They have brought the latest version of SmartBlog 4.0.0 on their site. Classy Product Extra Tab is another free module with which you can add extra tabs to your products.';
+				$title = 'Eat fresh berries instead of dried ones';
+				$slug  = 'eat-fresh-berries-instead-of-dried-ones';
+				$des   = '<p>With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.</p>
+				<p>Weve cherry picked a mix of sweet and savoury recipes, that were sure will get both adults and kids in the Halloween mood. However, if dressing up and going out trick or treating isnt your thing, then thats completely fine with us too, these recipes are just as perfect for a cosy autumnal night in.</p>
+				<h4>What ever the nature of your Halloween.</h4>
+				<p>It wouldnt be Halloween without a toffee apple. These sticky, gooey, delicious sticks of joy by Indy from The Little Green Spoon are made from coconut sugar, cashew butter and coconut milk. If youve got kids then this one is perfect for getting them involved. Set up a decorating station with all your favourite toppings and be prepared for a little bit of mess. Indy suggests: roasted nuts, cacao nibs, and desiccated coconut to decorate.</p>
+				<p>A Global Web Index survey of internet users aged 16 to 64 found that the average amount of time spent using the web per day is now six hours and 42 minutes. This is a 1.7% decrease year-on-year, down from six hours and forty-nine minutes in January 2020.</p>
+				<h4>UK marketers using influencers</h4>
+				<p>A new global study from Rakuten Marketing has revealed that the proportion of marketing budget being allocated to influencer campaigns (by marketers working with influencers) has nearly doubled over the past two years, reaching 40% in 2020. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here, content here making it look like readable english.</p>
+				<h4>Complaints about data and privacy dominated 2019</h4>
+				<p>According to the DM Commissions Annual Report, issues relating to data, privacy, and accuracy were the biggest concerns for consumers in 2020. In the year that GDPR came into force, the DM Commission reported a marked reduction in complaints against businesses in the direct marketing sector from over 200 in 2017 to just over 100 in 2020. The Commission did however investigate 27 cases involving a breach of the DMA Code, 83% of which related to data, privacy and quality (up from 69% last year). The remaining complaints were split between customer service and contractual issues.</p>
+				<h4>Email spam decreased by 5%</h4>
+				<p>By the time October comes around squash is in an abundance. This beautiful seasonal recipe by serial dinner party host Alexandra Dudley celebrates the squash in all its glory pairing it with a herby butterbean mash, which makes a nice change from the traditional potato. Serve this up to guests on an autumnal evening and were sure there ll be empty plates all round.</p>
+				<h4>Complaints about data</h4>
+				<p>We dont know about you but this is the kind of food we love. Full of seasonal veg and fragrant spices, this is the perfect bowl food after a long day. What makes this even better is youll probably have most of the ingredients in your kitchen already. Niki from @rebelrecipes finishes this dish off with a spoonful of coconut yogurt for creaminess and then adds a tahini dressing for even more flavour - delicious!</p>';
+				$s_des =  'With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.';
 			elseif ($i == 2) :
-				$title = 'Answers to your Questions about PrestaShop 1.7';
-				$slug  = 'question-about-prestashop';
-				$des   = 'PrestaShop has launched PrestaShop 1.7, the latest software version. It was developed with the help of user feedback from the last few years. Today, over 250,000 online stores use PrestaShop to sell their products. What do these sellers need to know?
-				
-				How can I upgrade my store to 1.7? Developers are updating the one-click upgrade module to work with the transition to version 1.7. Take note that this module will only deal with your store\'s data. The theme and modules will be those used by default, and your theme from version 1.5/1.6 will be deactivated, as will all of your third-party modules. Be sure to consider that before updating! We strongly recommend you get in touch with our partner agencies and developers to make sure that your move to version 1.7 goes off without a hitch.';
+				$title = 'Eat your fruits instead of drinking them';
+				$slug  = 'Eat-your-fruits-instead-of-drinking-them';
+				$des   = '<p>With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.</p>
+				<p>Weve cherry picked a mix of sweet and savoury recipes, that were sure will get both adults and kids in the Halloween mood. However, if dressing up and going out trick or treating isnt your thing, then thats completely fine with us too, these recipes are just as perfect for a cosy autumnal night in.</p>
+				<h4>What ever the nature of your Halloween.</h4>
+				<p>It wouldnt be Halloween without a toffee apple. These sticky, gooey, delicious sticks of joy by Indy from The Little Green Spoon are made from coconut sugar, cashew butter and coconut milk. If youve got kids then this one is perfect for getting them involved. Set up a decorating station with all your favourite toppings and be prepared for a little bit of mess. Indy suggests: roasted nuts, cacao nibs, and desiccated coconut to decorate.</p>
+				<p>A Global Web Index survey of internet users aged 16 to 64 found that the average amount of time spent using the web per day is now six hours and 42 minutes. This is a 1.7% decrease year-on-year, down from six hours and forty-nine minutes in January 2020.</p>
+				<h4>UK marketers using influencers</h4>
+				<p>A new global study from Rakuten Marketing has revealed that the proportion of marketing budget being allocated to influencer campaigns (by marketers working with influencers) has nearly doubled over the past two years, reaching 40% in 2020. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here, content here making it look like readable english.</p>
+				<h4>Complaints about data and privacy dominated 2019</h4>
+				<p>According to the DM Commissions Annual Report, issues relating to data, privacy, and accuracy were the biggest concerns for consumers in 2020. In the year that GDPR came into force, the DM Commission reported a marked reduction in complaints against businesses in the direct marketing sector from over 200 in 2017 to just over 100 in 2020. The Commission did however investigate 27 cases involving a breach of the DMA Code, 83% of which related to data, privacy and quality (up from 69% last year). The remaining complaints were split between customer service and contractual issues.</p>
+				<h4>Email spam decreased by 5%</h4>
+				<p>By the time October comes around squash is in an abundance. This beautiful seasonal recipe by serial dinner party host Alexandra Dudley celebrates the squash in all its glory pairing it with a herby butterbean mash, which makes a nice change from the traditional potato. Serve this up to guests on an autumnal evening and were sure there ll be empty plates all round.</p>
+				<h4>Complaints about data</h4>
+				<p>We dont know about you but this is the kind of food we love. Full of seasonal veg and fragrant spices, this is the perfect bowl food after a long day. What makes this even better is youll probably have most of the ingredients in your kitchen already. Niki from @rebelrecipes finishes this dish off with a spoonful of coconut yogurt for creaminess and then adds a tahini dressing for even more flavour - delicious!</p>';
+				$s_des =  'With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.';
 			elseif ($i == 3) :
-				$title = 'Crazy Elements is the best elementor based page builder for PrestaShop';
-				$slug  = 'crazy-elements-is-the-best-page-builder-for-prestashop';
-				$des   = 'Crazy Elements and elementor based page builder for PrestaShop vows to upgrade and take your PrestaShop web page editing and scheming abilities to a whole new level.
-
-				This elementor based add-ons is the most recent inclusion in the list of PrestaShop premium product libraries. Appreciate this premium page builder for elementor that consist of leading-edge widgets that are clearly set to take your PrestaShop page building knowledge to the next level.
-				
-				Unlike most other addons, Crazy Elements offers itself with numerous strong  widgets. These significant widgets would surely give you a feel of surprise about these wonderful widgets. Let’s explore all the outstanding widgets of Crazy Elements.';
+				$title = 'Tips You To Balance Nutrition Meal Day';
+				$slug  = 'tips-you-to-balance-nutrition-meal-day';
+				$des   = '<p>With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.</p>
+				<p>Weve cherry picked a mix of sweet and savoury recipes, that were sure will get both adults and kids in the Halloween mood. However, if dressing up and going out trick or treating isnt your thing, then thats completely fine with us too, these recipes are just as perfect for a cosy autumnal night in.</p>
+				<h4>What ever the nature of your Halloween.</h4>
+				<p>It wouldnt be Halloween without a toffee apple. These sticky, gooey, delicious sticks of joy by Indy from The Little Green Spoon are made from coconut sugar, cashew butter and coconut milk. If youve got kids then this one is perfect for getting them involved. Set up a decorating station with all your favourite toppings and be prepared for a little bit of mess. Indy suggests: roasted nuts, cacao nibs, and desiccated coconut to decorate.</p>
+				<p>A Global Web Index survey of internet users aged 16 to 64 found that the average amount of time spent using the web per day is now six hours and 42 minutes. This is a 1.7% decrease year-on-year, down from six hours and forty-nine minutes in January 2020.</p>
+				<h4>UK marketers using influencers</h4>
+				<p>A new global study from Rakuten Marketing has revealed that the proportion of marketing budget being allocated to influencer campaigns (by marketers working with influencers) has nearly doubled over the past two years, reaching 40% in 2020. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here, content here making it look like readable english.</p>
+				<h4>Complaints about data and privacy dominated 2019</h4>
+				<p>According to the DM Commissions Annual Report, issues relating to data, privacy, and accuracy were the biggest concerns for consumers in 2020. In the year that GDPR came into force, the DM Commission reported a marked reduction in complaints against businesses in the direct marketing sector from over 200 in 2017 to just over 100 in 2020. The Commission did however investigate 27 cases involving a breach of the DMA Code, 83% of which related to data, privacy and quality (up from 69% last year). The remaining complaints were split between customer service and contractual issues.</p>
+				<h4>Email spam decreased by 5%</h4>
+				<p>By the time October comes around squash is in an abundance. This beautiful seasonal recipe by serial dinner party host Alexandra Dudley celebrates the squash in all its glory pairing it with a herby butterbean mash, which makes a nice change from the traditional potato. Serve this up to guests on an autumnal evening and were sure there ll be empty plates all round.</p>
+				<h4>Complaints about data</h4>
+				<p>We dont know about you but this is the kind of food we love. Full of seasonal veg and fragrant spices, this is the perfect bowl food after a long day. What makes this even better is youll probably have most of the ingredients in your kitchen already. Niki from @rebelrecipes finishes this dish off with a spoonful of coconut yogurt for creaminess and then adds a tahini dressing for even more flavour - delicious!</p>';
+				$s_des =  'With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.';
 			elseif ($i == 4) :
-				$title = 'Slider Revolution 6 for PrestaShop is available now';
-				$slug  = 'slider-revolution-six-is-available';
-				$des   = 'Slider Revolution is a PrestaShop advanced module for today’s skyward web design demands. Wrapped with cool features, it can turn dull and static designs into visually-grabbing, responsive websites with just a few snaps.
-				
-				This Powerful PrestaShop module helps the designer of any level to display the website to their visitors and clients in an attractive way. You can now wow your clients and site visitors with astonishing responsive designs that look wonderful on any device. No coding knowledge is needed. Transcend even the most unreal fantasy with special effects, animation, and exciting designs—the powerful drag & drop visual editor will let you tell your own stories in no time!
-				
-				Create simplistic or high-level content modules with our entirely visual editor. No coding knowledge is needed.';
+				$title = 'Ways To Deodorize Vegetables And Fruits';
+				$slug  = 'ways-to-deodorize-vegetables-and-fruits';
+				$des   = '<p>With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.</p>
+				<p>Weve cherry picked a mix of sweet and savoury recipes, that were sure will get both adults and kids in the Halloween mood. However, if dressing up and going out trick or treating isnt your thing, then thats completely fine with us too, these recipes are just as perfect for a cosy autumnal night in.</p>
+				<h4>What ever the nature of your Halloween.</h4>
+				<p>It wouldnt be Halloween without a toffee apple. These sticky, gooey, delicious sticks of joy by Indy from The Little Green Spoon are made from coconut sugar, cashew butter and coconut milk. If youve got kids then this one is perfect for getting them involved. Set up a decorating station with all your favourite toppings and be prepared for a little bit of mess. Indy suggests: roasted nuts, cacao nibs, and desiccated coconut to decorate.</p>
+				<p>A Global Web Index survey of internet users aged 16 to 64 found that the average amount of time spent using the web per day is now six hours and 42 minutes. This is a 1.7% decrease year-on-year, down from six hours and forty-nine minutes in January 2020.</p>
+				<h4>UK marketers using influencers</h4>
+				<p>A new global study from Rakuten Marketing has revealed that the proportion of marketing budget being allocated to influencer campaigns (by marketers working with influencers) has nearly doubled over the past two years, reaching 40% in 2020. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using lorem ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here, content here making it look like readable english.</p>
+				<h4>Complaints about data and privacy dominated 2019</h4>
+				<p>According to the DM Commissions Annual Report, issues relating to data, privacy, and accuracy were the biggest concerns for consumers in 2020. In the year that GDPR came into force, the DM Commission reported a marked reduction in complaints against businesses in the direct marketing sector from over 200 in 2017 to just over 100 in 2020. The Commission did however investigate 27 cases involving a breach of the DMA Code, 83% of which related to data, privacy and quality (up from 69% last year). The remaining complaints were split between customer service and contractual issues.</p>
+				<h4>Email spam decreased by 5%</h4>
+				<p>By the time October comes around squash is in an abundance. This beautiful seasonal recipe by serial dinner party host Alexandra Dudley celebrates the squash in all its glory pairing it with a herby butterbean mash, which makes a nice change from the traditional potato. Serve this up to guests on an autumnal evening and were sure there ll be empty plates all round.</p>
+				<h4>Complaints about data</h4>
+				<p>We dont know about you but this is the kind of food we love. Full of seasonal veg and fragrant spices, this is the perfect bowl food after a long day. What makes this even better is youll probably have most of the ingredients in your kitchen already. Niki from @rebelrecipes finishes this dish off with a spoonful of coconut yogurt for creaminess and then adds a tahini dressing for even more flavour - delicious!</p>';
+				$s_des =  'With Halloween creeping up and the weather starting to feel colder we want to inspire you to get a little bit creative in the kitchen this festive period, so weve treated you to a round-up of our favourite seasonal recipes from our most-loved foodie bloggers.';
 			endif;
 			foreach ($languages as $language) {
 				if (!Db::getInstance()->Execute(
 					'INSERT INTO `' . _DB_PREFIX_ . 'smart_blog_post_lang`(`id_smart_blog_post`,`id_lang`,`meta_title`,`meta_description`,`short_description`,`content`,`link_rewrite`)
                         VALUES(' . (int) $i . ',' . (int) $language['id_lang'] . ', 
 							"' . htmlspecialchars($title) . '", 
-							"' . htmlspecialchars($des) . '","' . Tools::substr($des, 0, 200) . '","' . htmlspecialchars($des) . '","' . $slug . '"
+							"' . $s_des . '","' . $s_des . '","' . $des . '","' . $slug . '"
 						)'
 				)) {
 					return false;

@@ -58,32 +58,17 @@ class PosSaleProductsWidget extends WidgetHelper {
 			);
 			
 			$this->addControl(
-            'products',
-	            [
-	                'type' => ControlsManager::REPEATER,
-	                'item_actions' => [
-	                    'add' => !is_admin() ? true : [
-	                        'product' => $this->getAjaxProductsListUrl(),
-	                        'placeholder' => __('Add Product'),
-	                    ],
-	                    'duplicate' => false,
-	                ],
-	                'fields' => [
-	                    [
-	                        'name' => 'id',
-	                        'type' => ControlsManager::HIDDEN,
-	                        'default' => '',
-	                    ],
-	                ],
-	                'title_field' =>
-	                    '<# var prodImg = elementor.getProductImage( id ), prodName = elementor.getProductName( id ); #>' .
-	                    '<# if ( prodImg ) { #><img src="{{ prodImg }}" class="ce-repeater-thumb"><# } #>' .
-	                    '<# if ( prodName ) { #><span title="{{ prodName }}">{{{ prodName }}}</span><# } #>',
-	                'condition' => [
+				'products',
+				[
+					'label'   		=> __('Add product ID'),
+					'description'	=> __('Add product ID separate by comma . Example: 1,2,3,4,5'),
+					'type'    		=> ControlsManager::TEXT,
+					'label_block' 	=> true,
+					'condition' => [
 	                    'product_type' => 'select_products',
 	                ],
-	            ]
-	        );
+				]
+			);
 			$this->addControl(
 				'limit',
 				[
@@ -384,10 +369,7 @@ class PosSaleProductsWidget extends WidgetHelper {
 				break;
 			case 'select_products':
 				$ids_array = array();
-				foreach($settings['products'] as $selected_product){
-					$ids_array[] = $selected_product['id'];
-				}
-				$list_ids = implode(',', $ids_array);
+				$list_ids = $settings['products'];
 				$order_by_prefix = '';
 				$orderby = $settings['orderby'];
 				if ( $orderby == 'id_product' || $orderby == 'price' || $orderby == 'date_add' || $orderby == 'date_upd' ) {

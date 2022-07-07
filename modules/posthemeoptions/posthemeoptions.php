@@ -74,6 +74,7 @@ class PosThemeoptions extends Module implements WidgetInterface
     {
         //General
         Configuration::updateValue($this->name . 'container_width', '');
+        Configuration::updateValue($this->name . 'boxed_width', '');
         Configuration::updateValue($this->name . 'layout', 'wide');
         Configuration::updateValue($this->name . 'sidebar', 'normal');
         Configuration::updateValue($this->name . 'g_main_color', '#4fb68d');
@@ -390,8 +391,8 @@ class PosThemeoptions extends Module implements WidgetInterface
         if($boxed_width){
             $css .='
             @media (min-width: 1200px) {
-            .layout_boxed {  	
-                width: '.$boxed_width.';
+            .layout_boxed main{  	 
+                width: '.$boxed_width.'; 
                 
             }}';
         }

@@ -60,6 +60,7 @@ global_settings:
      - ps_mainmenu
      - ps_banner
      - ps_searchbar 
+     - blockwishlist 
    to_enable:
      - ps_socialfollow
      - ps_contactinfo

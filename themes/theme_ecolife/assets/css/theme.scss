@@ -11464,6 +11464,38 @@ body {
 			width: calc(100% - 28%);   
 		}
 	}
+	#index .plants-box-shadow:not(.scroll-menu) {
+		.elementor-container {
+			> .elementor-row {
+				position: relative;
+				z-index: 4;
+			}
+			&:before,
+			&:after {
+				background: #fff;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+			   -webkit-box-shadow: 0px 10px 30px 0px rgba(209,209,209,.5);
+				-moz-box-shadow: 0px 10px 30px 0px rgba(209,209,209,.5);
+				box-shadow: 0px 10px 30px 0px rgba(209,209,209,.5);
+				pointer-events: none;
+			}
+			&:before {
+				left: 6px;
+				right: 6px;
+				top: 6px;
+				z-index: 3;
+			}
+			&:after {
+				left: 12px;
+				right: 12px;
+				top: 12px;
+				z-index: 2;
+			}
+		}
+	}
 }
 main {
     overflow: hidden;
@@ -13530,7 +13562,7 @@ button.add-to-cart {
         justify-content: center;
         overflow: hidden;
         .hook-reviews {
-            display: block;
+            display: block; 
         }
     }
 	button.ajax_add_to_cart_button, 
@@ -15225,7 +15257,7 @@ button.add-to-cart {
     align-items: center;
 }
 .elementor-column-wrap .elementor-widget-wrap > .elementor-widget {
-    width: 100%;
+    width: 100%; 
 }
 .elementor-column-wrap
     .elementor-widget-wrap
@@ -15677,6 +15709,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 }
 .pos-search {
     position: relative;
+	margin: 0;
     .pos-search__container {
         @include flex;
         align-items: center;
@@ -17468,6 +17501,10 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
         }
     }
 }
+#index .not-border-footer {
+	border: none !important;
+	margin-top: -20px;
+}
 #footer {
     @media (min-width: 1025px) {
         overflow: hidden;
@@ -18203,6 +18240,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
     margin: 0 -0.625rem;
     .slick-slide {
         padding: 0 0.625rem;
+		height: auto; 
         > *:not(:last-child) {
             margin-bottom: 1.25rem;
         }
@@ -18469,6 +18507,20 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 		}
 	}
 }
+.not-desc {
+	.post-item {
+		align-items: center !important;
+		@media (min-width: 768px) {
+			.post-image {
+				width:40% !important;
+			}
+		}
+		.post-content .post-description {
+			display: none !important;
+		}
+	} 
+}
+
 .post-item {
     position: relative;
 	overflow:hidden;
