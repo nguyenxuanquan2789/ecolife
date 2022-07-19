@@ -44,6 +44,45 @@ class PosBrandWidget extends WidgetHelper {
 				]
 			);
 			$this->addControl(
+				'brand_background',
+				[
+					'label' 		=> $this->l('background'),
+					'type' 			=> ControlsManager::COLOR,
+					'selectors' 	=> [
+						'{{WRAPPER}} .pos-brand-widgets .brand-item' => 'background: {{VALUE}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+			'brand_padding',
+				[
+					'label' 		=> $this->l('Padding'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .pos-brand-widgets .brand-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addResponsiveControl(
+				'brand_border_radius',
+				[
+					'label' 		=> $this->l('Border Radius'),
+					'type' 			=> ControlsManager::DIMENSIONS,
+					'size_units' 	=> [ 'px', '%' ],
+					'selectors' 	=> [
+						'{{WRAPPER}} .pos-brand-widgets .brand-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+			$this->addGroupControl(
+				GroupControlBorder::getType(),
+				[
+					'name' 			=> 'item_border',
+					'selector' 		=> '{{WRAPPER}} .pos-brand-widgets .brand-item',
+				]
+			);
+			$this->addControl(
 				'enable_slider',
 				[
 					'label' 		=> $this->l('Enable Slider'),

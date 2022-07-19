@@ -12232,6 +12232,65 @@ body#checkout section#checkout-personal-information-step {
 		}
 	}
 }
+.elementor-widget-pos_categories {
+	&.grid-no-padding {
+		.categories-container .slick-slide {
+			padding: 0;
+		}
+	}
+	&.hover-before {
+		.categories-container {
+			.category-item {
+				> div {
+					.category-image {
+						position:relative;
+						img {
+							width: 100%;
+						}
+						&:before {
+							content: '';
+							background: var(--hovercolor);
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							opacity: 0;
+							z-index: 1;
+							pointer-events: none;
+							visibility: hidden;
+							 @include pos-transition(300ms);
+						}
+					}
+					.category-content {
+						z-index: 2;
+						visibility: hidden;
+						opacity: 0;
+						@include pos-transform(scale(1.1));
+						@include pos-transition(300ms);
+					}
+					&:hover {
+						.category-image {
+							&:before {
+								opacity: 0.6;
+								visibility: visible;
+								 @include pos-transition(300ms);
+							}
+						} 
+						.category-content {
+							@include pos-transform(scale(1));
+							visibility: visible;
+							opacity: 1;
+							@include pos-transition(300ms);
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}
+
 .categories-container {
     .category-item {
         > div {
@@ -18236,6 +18295,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 .elementor-widget-pos_testimonials .pos-testimonial,
 .categories-container,
 .pos-producttabs-widget .tab-content,
+.pos-brand-widgets,
 .pos-product-widget {
     margin: 0 -0.625rem;
     .slick-slide {

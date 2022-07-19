@@ -1454,6 +1454,50 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
+		if($layout == 'glasses1' || $layout == 'glasses2' || $layout == 'glasses3'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#ffffff');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Montserrat", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Montserrat", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#C43B68');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#C43B68');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'glasses4'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#F4F4F4');
+			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '1270px');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#ffffff');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#DF2121');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#DF2121');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
         $error = false;
 		if(!empty($images))
         foreach($images as $image){

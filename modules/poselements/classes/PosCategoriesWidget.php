@@ -284,7 +284,7 @@ class PosCategoriesWidget extends WidgetHelper {
                     ),
                 ),
                 'selectors' => array(
-                    '{{WRAPPER}} .categories-container .category-item .category-content,{{WRAPPER}} .categories-container .category-item .category-content ul' => 'align-items: {{VALUE}};',
+                    '{{WRAPPER}} .categories-container .category-item .category-content,{{WRAPPER}} .categories-container .category-item .category-content ul' => 'align-items: {{VALUE}};text-align: center;',
                 ),
             )
         );

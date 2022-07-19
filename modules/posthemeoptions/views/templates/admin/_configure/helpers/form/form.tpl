@@ -904,6 +904,10 @@
 											<option value="furniture2">Furniture 2</option>
 											<option value="furniture3">Furniture 3</option>
 											<option value="furniture4">Furniture 4</option>
+											<option value="glasses1">Glasses 1</option>
+											<option value="glasses2">Glasses 2</option>
+											<option value="glasses3">Glasses 3</option>
+											<option value="glasses4">Glasses 4</option>
 											<option value="gym1">Gym 1</option>
 											<option value="gym2">Gym 2</option>
 											<option value="gym3">Gym 3</option>

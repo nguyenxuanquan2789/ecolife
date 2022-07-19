@@ -12357,6 +12357,63 @@ body#checkout section#checkout-personal-information-step .step-title {
   -o-transition: all 300ms linear;
   transition: all 300ms linear; }
 
+.elementor-widget-pos_categories.grid-no-padding .categories-container .slick-slide {
+  padding: 0; }
+.elementor-widget-pos_categories.hover-before .categories-container .category-item > div .category-image {
+  position: relative; }
+  .elementor-widget-pos_categories.hover-before .categories-container .category-item > div .category-image img {
+    width: 100%; }
+  .elementor-widget-pos_categories.hover-before .categories-container .category-item > div .category-image:before {
+    content: '';
+    background: var(--hovercolor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    visibility: hidden;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
+.elementor-widget-pos_categories.hover-before .categories-container .category-item > div .category-content {
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear; }
+.elementor-widget-pos_categories.hover-before .categories-container .category-item > div:hover .category-image:before {
+  opacity: 0.6;
+  visibility: visible;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear; }
+.elementor-widget-pos_categories.hover-before .categories-container .category-item > div:hover .category-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear; }
+
 .categories-container .category-item > div {
   position: relative; }
   .categories-container .category-item > div .category-image img {
@@ -17433,6 +17490,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
 .elementor-widget-pos_testimonials .pos-testimonial,
 .categories-container,
 .pos-producttabs-widget .tab-content,
+.pos-brand-widgets,
 .pos-product-widget {
   margin: 0 -0.625rem; }
   .pos-sale-product-widget .slick-slide,
@@ -17443,6 +17501,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .elementor-widget-pos_testimonials .pos-testimonial .slick-slide,
   .categories-container .slick-slide,
   .pos-producttabs-widget .tab-content .slick-slide,
+  .pos-brand-widgets .slick-slide,
   .pos-product-widget .slick-slide {
     padding: 0 0.625rem;
     height: auto; }
@@ -17454,6 +17513,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
     .elementor-widget-pos_testimonials .pos-testimonial .slick-slide > *:not(:last-child),
     .categories-container .slick-slide > *:not(:last-child),
     .pos-producttabs-widget .tab-content .slick-slide > *:not(:last-child),
+    .pos-brand-widgets .slick-slide > *:not(:last-child),
     .pos-product-widget .slick-slide > *:not(:last-child) {
       margin-bottom: 1.25rem; }
   @media (max-width: 767px) {
@@ -17465,6 +17525,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
     .elementor-widget-pos_testimonials .pos-testimonial,
     .categories-container,
     .pos-producttabs-widget .tab-content,
+    .pos-brand-widgets,
     .pos-product-widget {
       margin: 0 -7.5px; }
       .pos-sale-product-widget .slick-slide,
@@ -17475,6 +17536,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
       .elementor-widget-pos_testimonials .pos-testimonial .slick-slide,
       .categories-container .slick-slide,
       .pos-producttabs-widget .tab-content .slick-slide,
+      .pos-brand-widgets .slick-slide,
       .pos-product-widget .slick-slide {
         padding: 0 7.5px; } }
   .pos-sale-product-widget .slick-prev,
@@ -17493,6 +17555,8 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .categories-container .slick-next,
   .pos-producttabs-widget .tab-content .slick-prev,
   .pos-producttabs-widget .tab-content .slick-next,
+  .pos-brand-widgets .slick-prev,
+  .pos-brand-widgets .slick-next,
   .pos-product-widget .slick-prev,
   .pos-product-widget .slick-next {
     width: 2.125rem;
@@ -17507,6 +17571,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .elementor-widget-pos_testimonials .pos-testimonial .slick-dots,
   .categories-container .slick-dots,
   .pos-producttabs-widget .tab-content .slick-dots,
+  .pos-brand-widgets .slick-dots,
   .pos-product-widget .slick-dots {
     position: static;
     margin: 1.25rem 0 0 0; }
@@ -17518,6 +17583,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .elementor-widget-pos_testimonials .pos-testimonial .product-grid:after,
   .categories-container .product-grid:after,
   .pos-producttabs-widget .tab-content .product-grid:after,
+  .pos-brand-widgets .product-grid:after,
   .pos-product-widget .product-grid:after {
     content: '';
     display: table;
@@ -17530,6 +17596,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   .elementor-widget-pos_testimonials .pos-testimonial .product-grid [class^='col-'],
   .categories-container .product-grid [class^='col-'],
   .pos-producttabs-widget .tab-content .product-grid [class^='col-'],
+  .pos-brand-widgets .product-grid [class^='col-'],
   .pos-product-widget .product-grid [class^='col-'] {
     margin-bottom: 20px; }
 
