@@ -15414,6 +15414,27 @@ body.page-index:not(.elementor-editor-active) {
 		flex-wrap: wrap;
 	}
 }
+@-webkit-keyframes fadeInsTicky {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInsTicky {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInsTicky {
+  -webkit-animation-name: fadeInsTicky;
+  animation-name: fadeInsTicky; }
 #header {
     .sticky-inner.scroll-menu { 
         position: fixed;
@@ -15429,11 +15450,9 @@ body.page-index:not(.elementor-editor-active) {
         -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
         box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-        -webkit-animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
-        -moz-animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
-        -ms-animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
-        animation: 0.7s ease-out 0s 1 normal forwards running fadeInDown;
-        @include pos-transition(300ms);
+		animation-name: fadeInsTicky;
+		animation-duration: 1s;
+		animation-fill-mode: inherit;
 		.not-sticky {
 			display: none; 
 		}

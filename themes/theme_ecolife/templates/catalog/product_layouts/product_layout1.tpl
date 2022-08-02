@@ -13,7 +13,7 @@
     <div class="col-md-6">
 		{block name='page_header_container'}
 		{block name='page_header'}
-		<h1 class="h1 namne_details" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+		<h1 class="h1 namne_details" >{block name='page_title'}{$product.name}{/block}</h1>
 		{/block}
 		{/block}
 		{hook h="displayReviewsProduct"}
@@ -23,7 +23,7 @@
 
 		<div class="product-information">
 			 {block name='product_description_short'}
-			  <div id="product-description-short-{$product.id}" class="product-description" itemprop="description">{$product.description_short nofilter}</div>
+			  <div id="product-description-short-{$product.id}" class="product-description" >{$product.description_short nofilter}</div>
 			{/block}
 
 			{if $product.is_customizable && count($product.customizations.fields)}

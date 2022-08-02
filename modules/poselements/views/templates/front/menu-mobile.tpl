@@ -2,7 +2,7 @@
 <div class="menu-mobile-content" id="mobile_menu_wrapper">
 	{hook h='displayMegamenuMobileTop'} 
 	<div class="menu-close"> 
-		{l s='close' d='Shop.Theme.Global'} <i class="material-icons float-xs-right">arrow_back</i>
+		{l s='Close' mod='poselements'} <i class="material-icons float-xs-right">arrow_back</i>
 	</div>
 	{if $vmenu}
 	<ul class="nav nav-mobile-menu" role="tablist"> 

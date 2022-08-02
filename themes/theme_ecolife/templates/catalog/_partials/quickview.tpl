@@ -78,7 +78,7 @@
 			  {/block}
 			  <div class="product-information">
 			  {block name='product_description_short'}
-				<div id="product-description-short" itemprop="description" class="product-description">{$product.description_short nofilter}</div>
+				<div id="product-description-short"  class="product-description">{$product.description_short nofilter}</div>
 			  {/block}
 			  {block name='product_buy'}
 				<div class="product-actions">

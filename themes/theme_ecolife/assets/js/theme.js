@@ -255,7 +255,7 @@ var posthemes = {
 				var id_product = $(this).children('article.js-product-miniature').attr('data-id-product');
 				var id_product_attr = $(this).children('article.js-product-miniature').attr('data-id-product-attribute');
 				if (cate_type == 1){ 
-					html += '<article class="js-product-miniature style_product_default" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product">';
+					html += '<article class="js-product-miniature style_product_default" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" >';
 					html += '<div class="img_block">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc">';
 						html += '<div class="inner_desc">';
@@ -272,13 +272,13 @@ var posthemes = {
 							html += '<ul class="add-to-links">'+ $(element).find('.add-to-links').html() + '</ul>';
 						html += '</div>';
 						html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
-						html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+						html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
 						html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';
 														
 					html += '</div>';
 					html += '</article>';
 				}else if (cate_type == 2) {
-					html += '<article class="js-product-miniature style_product1" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product">';
+					html += '<article class="js-product-miniature style_product1" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" >';
 					html += '<div class="img_block">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc">';
 						html += '<div class="inner_desc">';			
@@ -295,12 +295,12 @@ var posthemes = {
 							html += '<div class="cart">'+ $(element).find('.cart').html() + '</div>';
 						html += '</div>';
 						html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
-						html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';				
+						html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';				
 						html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';
 					html += '</div>';
 					html += '</article>';
 				}else if (cate_type == 3) {
-					html += '<article class="js-product-miniature style_product2" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product">';
+					html += '<article class="js-product-miniature style_product2" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" >';
 					html += '<div class="img_block">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc">';
 						html += '<div class="inner_desc">';	
@@ -318,12 +318,12 @@ var posthemes = {
 							
 						html += '</div>';
 						html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
-						html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+						html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
 						html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	
 					html += '</div>';
 					html += '</article>';
 				}else if (cate_type == 4) {
-					html += '<article class="js-product-miniature style_product3" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product">';
+					html += '<article class="js-product-miniature style_product3" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" >';
 					html += '<div class="img_block">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc">';
 	 
@@ -338,13 +338,13 @@ var posthemes = {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';
 					html += '</div>';
 					html += '</article>';
 				}
 				else if (cate_type == 5) {
-					html += '<article class="js-product-miniature style_product4" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product">';
+					html += '<article class="js-product-miniature style_product4" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" >';
 					html += '<div class="img_block">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc">';
 	 
@@ -360,7 +360,7 @@ var posthemes = {
 					}
 					html += '<div class="cart">'+ $(element).find('.cart').html() + '</div>';
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';
 					html += '</div>';
 					html += '</article>';
@@ -386,7 +386,7 @@ var posthemes = {
 				var id_product = $(this).children('article.js-product-miniature').attr('data-id-product');
 				var id_product_attr = $(this).children('article.js-product-miniature').attr('data-id-product-attribute');
 				if (cate_type == 1){
-					html = '<article class="js-product-miniature style_product_default" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product"><div class="row">';
+					html = '<article class="js-product-miniature style_product_default" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" ><div class="row">';
 					html += '<div class="img_block col-xs-4 col-sm-4 col-md-4 col-lg-4">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc col-xs-8 col-sm-8 col-md-8 col-lg-8">';
 					html += '<div class="manufacturer">'+ $(element).find('.manufacturer').html() + '</div>';	
@@ -400,13 +400,13 @@ var posthemes = {
 					if (price != null) {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}	
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';		
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';		
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';	
 					html += '<ul class="add-to-links">'+ $(element).find('.add-to-links').html() + '</ul>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>'; 	
 					html += '</div></article>';
 				}else if(cate_type == 2){
-					html = '<article class="js-product-miniature style_product1" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product"><div class="row">';
+					html = '<article class="js-product-miniature style_product1" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" ><div class="row">';
 					html += '<div class="img_block col-xs-4 col-sm-4 col-md-4 col-lg-4">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc col-xs-8 col-sm-8 col-md-8 col-lg-8">';
 					html += '<div class="manufacturer">'+ $(element).find('.manufacturer').html() + '</div>';	
@@ -419,13 +419,13 @@ var posthemes = {
 					if (price != null) {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}		
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';				
 					html += '<div class="cart">'+ $(element).find('.cart').html() + '</div>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	
 					html += '</div></article>';
 				}else if(cate_type == 3){
-					html = '<article class="js-product-miniature style_product2" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product"><div class="row">';
+					html = '<article class="js-product-miniature style_product2" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" ><div class="row">';
 					html += '<div class="img_block col-xs-4 col-sm-4 col-md-4 col-lg-4">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc col-xs-8 col-sm-8 col-md-8 col-lg-8">';
 					html += '<div class="manufacturer">'+ $(element).find('.manufacturer').html() + '</div>';
@@ -438,13 +438,13 @@ var posthemes = {
 					if (price != null) {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';		
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';		
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
 					html += '<ul class="add-to-links">'+ $(element).find('.add-to-links').html() + '</ul>';	 
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';
 					html += '</div></article>';
 				}else if(cate_type == 4){
-					html = '<article class="js-product-miniature style_product3" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product"><div class="row">';
+					html = '<article class="js-product-miniature style_product3" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" ><div class="row">';
 					html += '<div class="img_block col-xs-4 col-sm-4 col-md-4 col-lg-4">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc col-xs-8 col-sm-8 col-md-8 col-lg-8">';
 					html += '<div class="manufacturer">'+ $(element).find('.manufacturer').html() + '</div>';	
@@ -457,13 +457,13 @@ var posthemes = {
 					if (price != null) {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';			
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';			
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	
 					html += '</div></article>';
 				}
 				else if(cate_type == 5){
-					html = '<article class="js-product-miniature style_product4" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" itemscope itemtype="http://schema.org/Product"><div class="row">';
+					html = '<article class="js-product-miniature style_product4" data-id-product="'+ id_product +'" data-id-product-attribute="'+ id_product_attr +'" ><div class="row">';
 					html += '<div class="img_block col-xs-4 col-sm-4 col-md-4 col-lg-4">' + $(element).find('.img_block').html() + '</div>';
 					html += '<div class="product_desc col-xs-8 col-sm-8 col-md-8 col-lg-8">';
 					html += '<div class="manufacturer">'+ $(element).find('.manufacturer').html() + '</div>';	
@@ -476,7 +476,7 @@ var posthemes = {
 					if (price != null) {
 						html += '<div class="product-price-and-shipping">'+ price + '</div>';
 					}
-					html += '<div itemprop="description" class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';			
+					html += '<div  class="product-desc">'+ $(element).find('.product-desc').html() + '</div>';			
 					html += '<div class="availability">'+ $(element).find('.availability').html() + '</div>';
 					html += '<div class="cart">'+ $(element).find('.cart').html() + '</div>';
 					html += '<div class="variant-links">'+ $(element).find('.variant-links').html() + '</div>';	

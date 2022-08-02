@@ -39,9 +39,9 @@
                 <textarea
                         name="html_content-{$language.id_lang|escape:'htmlall':'UTF-8'}"
                         max="1000"
-                        class="autoload_rte1"  data-serializable="true"
-                        value="{if isset($block)}{$allblockByShop[{$language.id_lang}][$block['id_quickmenu']]['html_content']}{/if}"
-                >{if isset($block)}{$allblockByShop[{$language.id_lang}][$block['id_quickmenu']]['html_content']}{/if}</textarea>
+                        class="autoload_rte01"  data-serializable="true"
+                        value=""
+                >{if isset($block)}{$allblockByShop[{$language.id_lang}][$block['id_quickmenu']]['html_content'] nofilter}{/if}</textarea>
             </div>
         </div>
         <div class="col-xs-12 help-block">
@@ -52,7 +52,7 @@
     <div class="clearfix"></div>
     <script type="text/javascript">
         tinySetup({
-            editor_selector :"autoload_rte1",
+            editor_selector :"autoload_rte01",
             setup : function(ed) {
                 ed.on('change', function(ed, e) {
                     tinyMCE.triggerSave();

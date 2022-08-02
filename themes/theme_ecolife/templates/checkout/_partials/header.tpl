@@ -22,4 +22,8 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-{hook h="displayHeaderBuilder"} 
+{if $postheme.header_template == 0}
+    {hook h="displayHeaderBuilder"}
+{else}
+    {hook h="CETemplate" id="{$postheme.header_template}"}
+{/if}

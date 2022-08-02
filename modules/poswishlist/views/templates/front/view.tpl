@@ -39,14 +39,14 @@
 			  {block name='breadcrumb_item'}
 				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 				<a itemprop="item" href="{$path.url}">
-				  <span itemprop="name">{$path.title}</span>
+				  <span >{$path.title}</span>
 				</a>
 				<meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
 				</li>
 			  {/block}
 			  {/foreach}
 				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-					<span itemprop="name">{l s='Wishlist' mod='poswishlist'}</span>
+					<span >{l s='Wishlist' mod='poswishlist'}</span>
 				  <meta itemprop="position" content="2">
 				</li>
 			</ol>
@@ -64,7 +64,7 @@
 					<div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="wlp_product" id="wlp_{$product.id_product}_{$product.id_product_attribute}">
 						<a href="#" class="lnkdel" onclick="deleteProductWishlist('{$product.id_product}', '{$product.id_product_attribute}'); return false;" title="{l s='Delete' mod='poswishlist'}"><i class="material-icons close">close</i>
 						</a>
-					  <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" itemscope itemtype="http://schema.org/Product">
+					  <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemprop="item" >
 								    <div class="img_block">
 								      {block name='product_thumbnail'}
 								        {if $product.cover}
@@ -84,7 +84,7 @@
 
 								      <div class="product_desc">
 								        {block name='product_name'}
-								            <h3 itemprop="name"><a href="{$product.url}" itemprop="url" content="{$product.url}" class="product_name">{$product.name|truncate:30:'...'}</a></h3>
+								            <h3 ><a href="{$product.url}" itemprop="url" content="{$product.url}" class="product_name">{$product.name|truncate:30:'...'}</a></h3>
 								        {/block}
 										<div class="hook-reviews">	
 								        {block name='product_reviews'}

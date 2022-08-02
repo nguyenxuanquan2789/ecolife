@@ -1,6 +1,6 @@
 {if $product_display == 'grid'}
   {block name='product_miniature_item'}
-	<article class="thumbnail-container style_product_default product-miniature js-product-miniature item_in" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+	<article class="thumbnail-container style_product_default product-miniature js-product-miniature item_in" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" >
 		<div class="img_block">
 		    {block name='product_thumbnail'}
 				{if $product.cover}
@@ -39,7 +39,7 @@
 				 <div class="manufacturer"><a href="{url entity='manufacturer' id=$product.id_manufacturer }">{Manufacturer::getnamebyid($product.id_manufacturer)}</a></div>
 				{/if}
 				{block name='product_name'}
-				  <h3 itemprop="name"><a href="{$product.url}" class="product_name" title="{$product.name}">{$product.name|truncate:50:'...'}</a></h3> 
+				  <h3 ><a href="{$product.url}" class="product_name" title="{$product.name}">{$product.name|truncate:50:'...'}</a></h3> 
 				{/block}
 				 {block name='product_reviews'}
 					<div class="hook-reviews">
@@ -113,7 +113,7 @@
 {/block}
 {else}
   {block name='product_miniature_item'}
-	<article class="thumbnail-container style_product_default style_product_list_sale product-miniature js-product-miniature item_in" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+	<article class="thumbnail-container style_product_default style_product_list_sale product-miniature js-product-miniature item_in" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" >
 		<div class="img_block">
 		    {block name='product_thumbnail'}
 				{if $product.cover}
@@ -152,7 +152,7 @@
 				 <div class="manufacturer"><a href="{url entity='manufacturer' id=$product.id_manufacturer }">{Manufacturer::getnamebyid($product.id_manufacturer)}</a></div>
 				{/if}
 				{block name='product_name'}
-				  <h3 itemprop="name"><a href="{$product.url}" class="product_name" title="{$product.name}">{$product.name|truncate:50:'...'}</a></h3> 
+				  <h3 ><a href="{$product.url}" class="product_name" title="{$product.name}">{$product.name|truncate:50:'...'}</a></h3> 
 				{/block}
 				 {block name='product_reviews'}
 					<div class="hook-reviews">
