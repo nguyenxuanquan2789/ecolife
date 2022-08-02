@@ -28,7 +28,7 @@
 
             <link itemprop="trackingUrl" href="{followup}"/>
             <div itemprop="carrier" itemscope="" itemtype="https://schema.org/Organization">
-              <meta  content="{carrier}"/>
+              <meta itemprop="name" content="{carrier}"/>
             </div>
 
             {meta_products}
@@ -36,7 +36,7 @@
             <div itemprop="partOfOrder" itemscope="" itemtype="https://schema.org/Order">
               <meta itemprop="orderNumber" content="{order_name}"/>
               <div itemprop="merchant" itemscope="" itemtype="https://schema.org/Organization">
-                <meta  content="{shop_name}"/>
+                <meta itemprop="name" content="{shop_name}"/>
               </div>
               <link itemprop="orderStatus" href="https://schema.org/OrderInTransit"/>
             </div>
