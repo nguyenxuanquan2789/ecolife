@@ -520,6 +520,7 @@ class PosLatestPostWidget extends WidgetHelper {
 			array(
 				'slick_options' => json_encode($slick_options) ,
 				'slick_responsive' => json_encode($slick_responsive),
+				'class' => 'column-desktop-'. $settings['items'] . ' column-tablet-'. $slick_responsive['items_landscape_tablet'] .' column-mobile-'. $slick_responsive['items_portrait_mobile'],
 			)
 		);
 		

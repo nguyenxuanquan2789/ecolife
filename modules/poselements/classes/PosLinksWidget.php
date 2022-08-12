@@ -244,7 +244,7 @@ class PosLinksWidget extends WidgetHelper {
 					'selector' 		=> '{{WRAPPER}} .pos-links-widget .links-widget-content a',
 				]
 			);
-			$this->addControl(
+			$this->addResponsiveControl(
 				'padding',
 				[
 					'label' => $this->l( 'Padding' ),
@@ -255,10 +255,10 @@ class PosLinksWidget extends WidgetHelper {
 					],
 				]
 			);
-			$this->addControl(
+			$this->addResponsiveControl(
 				'margin',
 				[
-					'label' => $this->l( 'margin' ),
+					'label' => $this->l( 'Margin' ),
 					'type' => ControlsManager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ],
 					'selectors' => [

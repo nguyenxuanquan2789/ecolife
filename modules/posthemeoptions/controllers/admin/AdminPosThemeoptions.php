@@ -1498,6 +1498,58 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
+		if($layout == 'flower1' || $layout == 'flower2' || $layout == 'flower3' || $layout == 'flower4'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 5);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#ffffff');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#ED2353');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#ED2353');
+			$results .= $this->updateValue($themeoption . 'custom_css', '
+					.js-product-miniature{border-color:#fff;}
+					.js-product-miniature.style_product4{border-radius:0;}
+				');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'wine1' || $layout == 'wine2' || $layout == 'wine3' || $layout == 'wine4'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 2);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#101111CC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#98152F');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#98152F');
+			$results .= $this->updateValue($themeoption . 'custom_css', '
+					.js-product-miniature.style_product1 div.cart button.ajax_add_to_cart_button{width:145px;border-radius: 0;background: #98152F;}
+					.js-product-miniature.style_product1 div.cart button.ajax_add_to_cart_button:hover{background:#101111}
+					.js-product-miniature.style_product1 .inner_desc{text-align:center;}
+					.js-product-miniature .product_desc .product_name{font-weight:400;}
+				');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
         $error = false;
 		if(!empty($images))
         foreach($images as $image){

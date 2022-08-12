@@ -900,6 +900,10 @@
 											<option value="fastfood2">Fastfood 2</option>
 											<option value="fastfood3">Fastfood 3</option>
 											<option value="fastfood4">Fastfood 4</option>
+											<option value="flower1">Flower 1</option>
+											<option value="flower2">Flower 2</option>
+											<option value="flower3">Flower 3</option>
+											<option value="flower4">Flower 4</option>
 											<option value="furniture1">Furniture 1</option>
 											<option value="furniture2">Furniture 2</option>
 											<option value="furniture3">Furniture 3</option>
@@ -972,6 +976,10 @@
 											<option value="singleproduct-treadmill">Single products treadmill</option>
 											<option value="singleproduct-vacuumcleaner">Single products vacuumcleaner</option>
 											<option value="singleproduct-vr">Single products VR</option>
+											<option value="wine1">Wine 1</option>
+											<option value="wine2">Wine 2</option>
+											<option value="wine3">Wine 3</option>
+											<option value="wine4">Wine 4</option>
 										</select>
 										</select>
 										<a href="http://demo.posthemes.com/pos_ecolifedemo/#section-page" class="pos-demos" target="_blank">View our list demo</a>

@@ -227,7 +227,7 @@ class PosProductsWidget extends WidgetHelper {
 				],
 			]
 		);	
-			$this->addControl(
+			$this->addResponsiveControl(
 				'padding',
 				[
 					'label' => $this->l( 'Padding' ),

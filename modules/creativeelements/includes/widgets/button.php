@@ -324,7 +324,7 @@ class WidgetButton extends WidgetBase
             )
         );
 
-        $this->addControl(
+        $this->addResponsiveControl(
             'text_padding',
             array(
                 'label' => __('Text Padding', 'elementor'),
