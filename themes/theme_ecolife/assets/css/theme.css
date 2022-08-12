@@ -9226,8 +9226,7 @@ ul:first-child {
 
 .pagination .page-list {
   padding: 0.375rem;
-  margin-bottom: 0;
-  background: #fff; }
+  margin-bottom: 0; }
 
 .pagination .page-list li {
   display: inline; }
@@ -13005,6 +13004,16 @@ button.add-to-cart.loading:before {
           -o-transition: all 300ms linear;
           transition: all 300ms linear; }
 
+.item-transparent .js-product-miniature {
+  background: transparent !important; }
+  .item-transparent .js-product-miniature .product_desc {
+    background: transparent !important; }
+  .item-transparent .js-product-miniature.style_product_default .add-to-links,
+  .item-transparent .js-product-miniature.style_product_default button.ajax_add_to_cart_button,
+  .item-transparent .js-product-miniature.style_product_default span.ajax_add_to_cart_button,
+  .item-transparent .js-product-miniature.style_product_default .add-to-links li a {
+    background: #efefef !important; }
+
 .js-product-miniature.style_product1:hover {
   -webkit-transition: all 300ms linear;
   -moz-transition: all 300ms linear;
@@ -14032,7 +14041,6 @@ button.add-to-cart.loading:before {
       padding: 1.25rem 0; } }
 
 .pagination {
-  background: #ffffff;
   font-size: 14px;
   font-weight: 400;
   margin: 1.25rem 0 0 0;
@@ -15214,6 +15222,12 @@ body.page-index:not(.elementor-editor-active) .absolute-header-full {
   animation-fill-mode: inherit; }
   #header .sticky-inner.scroll-menu .not-sticky {
     display: none; }
+  #header .sticky-inner.scroll-menu .column-sticky .elementor-column-wrap {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    #header .sticky-inner.scroll-menu .column-sticky .elementor-column-wrap .site-logo img {
+      max-height: 50px; }
 
 body:not(.page-index) .sticky-inner.absolute-header,
 body:not(.page-index) .sticky-inner.absolute-header-full {
@@ -17009,6 +17023,16 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
       right: 15px;
       background: #0d1316;
       z-index: 0;
+      pointer-events: none; }
+    #footer .bg_shoes_before:before {
+      content: '';
+      position: absolute;
+      left: -9999em;
+      top: -9999em;
+      bottom: -9999em;
+      right: 15px;
+      background: #232222;
+      z-index: 0;
       pointer-events: none; } }
 
 .pos-socials-widget ul {
@@ -17294,6 +17318,10 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
   top: -0.625rem; }
   .slick-vertical .slick-next:before {
     content: '\e92e'; }
+
+.elementor-widget-pos_slideshow.desc-fluid .desc-banner .container {
+  width: 100%;
+  max-width: 1500px; }
 
 .pos-slideshow-wrapper .desc-banner {
   position: absolute;

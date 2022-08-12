@@ -93,13 +93,14 @@
 				{/if}
 			{/if}
 			</div>
-			<div class="variant-links">
+			
 			{block name='product_variants'}
 			{if $product.main_variants}
+			<div class="variant-links">
 			{include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+			</div>
 			{/if}
 			{/block} 
-			</div>
 			{if isset($product.specific_prices.to) && $product.specific_prices.to|strtotime > $smarty.now && $product.specific_prices.from|strtotime < $smarty.now}
 			<div class="countdown" >
 			  <div class="title_countdown">{$title}</div>
@@ -206,13 +207,13 @@
 				{/if}
 			{/if}
 			</div>
-			<div class="variant-links">
 			{block name='product_variants'}
 			{if $product.main_variants}
+			<div class="variant-links">
 			{include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
+			</div>
 			{/if}
 			{/block} 
-			</div>
 			{if isset($product.specific_prices.to) && $product.specific_prices.to|strtotime > $smarty.now && $product.specific_prices.from|strtotime < $smarty.now}
 			<div class="countdown" >
 			  <div class="title_countdown">{$title}</div>

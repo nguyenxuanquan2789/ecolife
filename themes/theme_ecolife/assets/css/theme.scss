@@ -8968,7 +8968,6 @@ body#checkout
 .pagination .page-list {
     padding: 0.375rem;
     margin-bottom: 0;
-    background: #fff;
 }
 .pagination .page-list li {
     display: inline;
@@ -12935,6 +12934,23 @@ button.add-to-cart {
         }
     }
 }
+.item-transparent {
+	.js-product-miniature {
+		background: transparent !important;
+		.product_desc{
+			background: transparent !important;
+		}
+		&.style_product_default{
+			.add-to-links,
+			button.ajax_add_to_cart_button,
+			span.ajax_add_to_cart_button,
+			.add-to-links li a{
+				background: #efefef !important;; 
+			}
+		} 
+	}
+	
+}
 //style1
 .js-product-miniature.style_product1 {
     &:hover {
@@ -14063,7 +14079,6 @@ button.add-to-cart {
     }
 }
 .pagination {
-    background: $color-white;
     font-size: 14px;
     font-weight: $font-weight-regular;
     margin: 1.25rem 0 0 0;
@@ -15455,6 +15470,18 @@ body.page-index:not(.elementor-editor-active) {
 		animation-fill-mode: inherit;
 		.not-sticky {
 			display: none; 
+		}
+		.column-sticky {
+			.elementor-column-wrap {
+				margin:0;
+				padding-top:10px;
+				padding-bottom:10px;
+				.site-logo {
+					img {
+						max-height:50px;
+					}
+				}
+			}
 		}
     }
 }
@@ -17618,6 +17645,19 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
                 pointer-events: none;
             }
         }
+		.bg_shoes_before {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -9999em;
+                top: -9999em;
+                bottom: -9999em;
+                right: 15px;
+                background: #232222;
+                z-index: 0;
+                pointer-events: none;
+            }
+        }
 		
     }
 }
@@ -18092,6 +18132,14 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
     }
 }
 //slideshow
+.elementor-widget-pos_slideshow.desc-fluid {
+	.desc-banner {
+		.container {
+			width:100%;
+			max-width: 1500px;
+		}
+	}
+}
 .pos-slideshow-wrapper {
     .desc-banner {
         position: absolute;
