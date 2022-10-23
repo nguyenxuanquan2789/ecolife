@@ -1,6 +1,6 @@
 name: theme_ecolife
 display_name: Ecolife
-version: 1.0.0
+version: 2.0.4
 author:
   name: "Posthemes"
   email: ""
@@ -61,6 +61,8 @@ global_settings:
      - ps_banner
      - ps_searchbar 
      - blockwishlist 
+     - ps_shoppingcart 
+     - productcomments 
    to_enable:
      - ps_socialfollow
      - ps_contactinfo

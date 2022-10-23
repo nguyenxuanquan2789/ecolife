@@ -7599,9 +7599,6 @@ input[type='number']::-webkit-inner-spin-button {
     visibility: visible;
     opacity: 1;
     transition: 0.5s ease-out; } }
-body#checkout {
-  color: #253237; }
-
 body#checkout #header .header-nav {
   max-height: none;
   padding: 0.9375rem 0;
@@ -8124,10 +8121,6 @@ body#checkout #gift_message textarea,
 body#checkout #delivery textarea {
   max-width: 100%;
   margin-bottom: 10px; }
-
-body#checkout #footer {
-  color: #7a7a7a;
-  background: #fff; }
 
 body#checkout #delivery > label {
   text-align: left; }
@@ -10687,9 +10680,6 @@ ul {
   margin-bottom: 0;
   font-size: 0.9375rem; }
 
-#stores .page-stores .store-item-container .divide-left {
-  border-left: #f6f6f6 1px solid; }
-
 #stores .page-stores .store-item-container .divide-left tr {
   height: 1.563rem; }
 
@@ -10994,7 +10984,8 @@ ul {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: nowrap; }
     .contact-rich .block:not(:last-child) {
       margin-bottom: 20px; }
     .contact-rich .block .icon {
@@ -11016,8 +11007,7 @@ ul {
         font-size: 22px; }
 
 .contact-form {
-  width: 100%;
-  background: #fff; }
+  width: 100%; }
   .contact-form .bootstrap-filestyle .group-span-filestyle .btn {
     padding: 10.5px 1rem; }
   .contact-form #gdpr_consent {
@@ -15541,6 +15531,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
       .pos-search.search-topbar .dropdown-menu {
         padding-left: 1.25rem;
         padding-right: 1.25rem; } }
+    .pos-search.search-topbar .dropdown-menu .result-content,
     .pos-search.search-topbar .dropdown-menu .pos-search__container {
       max-width: 1170px;
       margin: auto; }
@@ -17247,8 +17238,8 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
 
 .slick-slider .slick-prev,
 .slick-slider .slick-next {
-  width: 2.125rem;
-  height: 2.125rem;
+  width: 2.125rem !important;
+  height: 2.125rem !important;
   background: #ffffff;
   color: #888888;
   border: 1px solid #ebebeb;
@@ -17270,8 +17261,8 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
     opacity: 0.25; }
   .slick-slider .slick-prev:before,
   .slick-slider .slick-next:before {
-    font-family: "roadthemes-icon";
-    font-size: 0.6875rem; }
+    font-family: "roadthemes-icon" !important;
+    font-size: 0.6875rem !important; }
   .slick-slider .slick-prev:hover,
   .slick-slider .slick-next:hover {
     background: var(--hovercolor);
@@ -17280,28 +17271,28 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
 .slick-slider .slick-prev {
   left: -0.625rem; }
   .slick-slider .slick-prev:before {
-    content: '\e92c'; }
+    content: '\e92c' !important; }
 .slick-slider .slick-next {
   right: -0.625rem; }
   .slick-slider .slick-next:before {
-    content: '\e92d'; }
+    content: '\e92d' !important; }
 .slick-slider .slick-dots {
-  position: static;
-  margin: 1.25rem 0 0 0;
+  position: static !important;
+  margin: 1.25rem 0 0 0 !important;
   display: flex;
   justify-content: center; }
   .slick-slider .slick-dots li button {
     margin: 0 7px;
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 0.75rem !important;
+    height: 0.75rem !important;
     border: none;
-    background: #ccc;
+    background: #ccc !important;
     border-radius: 50%;
     font-size: 0; }
     .slick-slider .slick-dots li button:before {
-      font-size: 8px; }
+      display: none; }
   .slick-slider .slick-dots li.slick-active button, .slick-slider .slick-dots li:hover button {
-    background: var(--hovercolor); }
+    background: var(--hovercolor) !important; }
 
 .slick-vertical .slick-prev,
 .slick-vertical .slick-next {
@@ -17386,6 +17377,25 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
 .pos-slideshow-wrapper:hover .slick-slider .slick-next {
   opacity: 1;
   visibility: visible; }
+
+.elementor-image-carousel-wrapper figure {
+  overflow: hidden; }
+  .elementor-image-carousel-wrapper figure img {
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
+  .elementor-image-carousel-wrapper figure:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear; }
 
 .section {
   position: relative;
@@ -17799,6 +17809,9 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
     padding: 0; }
     .grid-no-border .js-product-miniature.style_product_list .product_desc {
       padding-left: 20px; }
+
+#footer .js-product-miniature.style_product_list .img_block {
+  max-width: 100px; }
 
 .testimonial-item .testimonial-item-inner .author {
   padding-left: 3.125rem;
@@ -18635,3 +18648,213 @@ body:not(.page-index) .sticky-inner.absolute-header-full {
     .mobile-flex .elementor-icon-box-wrapper .elementor-icon-box-icon {
       margin: 0 10px 0 0 !important;
       line-height: 1; } }
+/* ========= dark theme =============*/
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6, .dark-theme .h1, .dark-theme .h2, .dark-theme .h3, .dark-theme .h4, .dark-theme .h5, .dark-theme .h6,
+.dark-theme .blockcart .popup_cart.popup-sidebar .title-cart > span,
+.dark-theme .blockcart .popup_cart ul li .right_block .product-name:not(:hover),
+.dark-theme .blockcart .popup_cart ul li .right_block .remove-from-cart:hover,
+.dark-theme .blockcart .popup_cart .price_content .cart-summary-line.cart-total .label,
+.dark-theme .blockcart .popup_cart .price_content .cart-summary-line.cart-total .value,
+.dark-theme .blockcart .popup_cart ul li .right_block .product-name,
+.dark-theme #blockcart-modal,
+.dark-theme #blockcart-modal .divide-right p, .dark-theme #blockcart-modal .cart-content p,
+.dark-theme #blockcart-modal .product-name,
+.dark-theme #blockcart-modal .divide-right strong,
+.dark-theme #blockcart-modal .cart-content p.cart-products-count, .dark-theme #blockcart-modal .cart-content .page-content.page-cms ul.cart-products-count,
+.dark-theme .page-content.page-cms #blockcart-modal .cart-content ul.cart-products-count,
+.dark-theme .product-line-grid-right .cart-line-product-actions .remove-from-cart, .dark-theme .product-line-grid-right .product-price .remove-from-cart,
+.dark-theme .cart-items-title,
+.dark-theme .cart-summary-line .value,
+.dark-theme .nav-item :not(.nav-link.active), .dark-theme .nav-item :not(.nav-separtor.active),
+.dark-theme .product-line-grid-right .cart-line-product-actions, .dark-theme .product-line-grid-right .product-price,
+.dark-theme a:not(:hover),
+.dark-theme .alert-warning,
+.dark-theme .table thead th, .dark-theme.page-my-account #content .links a:not(:hover) i, .dark-theme.page-my-account #content .links a:not(:hover), .dark-theme.page-addresses .address, .dark-theme#checkout section.checkout-step .add-address a,
+.dark-theme #tags_block h2,
+.dark-theme .tabs .nav-tabs .nav-item .nav-link:hover, .dark-theme .tabs .nav-tabs .nav-item .nav-link.active,
+.dark-theme .page-header h1, .dark-theme .breadcrumb,
+.dark-theme .contact-rich,
+.dark-theme .contact-rich a:not(:hover),
+.dark-theme .product-information .control-label,
+.dark-theme .social-sharing > span,
+.dark-theme .product-actions .add-to-cart,
+.dark-theme .product-quantity #quantity_wanted,
+.dark-theme textarea,
+.dark-theme #product_comments_block_tab div.comment .comment_author span,
+.dark-theme #product_comments_block_tab div.comment .comment_details h4,
+.dark-theme #product-details .label,
+.dark-theme #poscompare-table .poscompare-product-td.feature-name,
+.dark-theme .product-quantity .qty .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin:not(:hover),
+.dark-theme .product-prices .price, .dark-theme .product-prices .current-price span:first-child,
+.dark-theme .h1.namne_details, .dark-theme .product_name_h1,
+.dark-theme .cart_button #wishlist_button:not(:hover), .dark-theme .cart_button .compare-button:not(:hover),
+.dark-theme .slick-slider .slick-prev:not(:hover), .dark-theme .slick-slider .slick-next:not(:hover),
+.dark-theme .js-product-miniature .product_desc .product_name:not(:hover),
+.dark-theme .js-product-miniature.style_product_default .add-to-links li a:not(:hover),
+.dark-theme .js-product-miniature.style_product2 .add-to-links li a:not(:hover),
+.dark-theme .js-product-miniature.style_product2 .add-to-links li.cart button.ajax_add_to_cart_button:not(:hover),
+.dark-theme .js-product-miniature.style_product2 .add-to-links li.cart span.ajax_add_to_cart_button:not(:hover),
+.dark-theme #js-product-list-top .sort-by-row .products-sort-order .dropdown-menu .select-list:not(:hover),
+.dark-theme .custom-checkbox input[type='checkbox'] + span .checkbox-checked,
+.dark-theme #search_filters_wrapper #search_filters .facet .facet-title {
+  color: #ffffff; }
+.dark-theme .product-pack .pack-product-container .pack-product-quantity,
+.dark-theme #product_comments_block_tab .reviews-header,
+.dark-theme #product_comments_block_tab div.comment,
+.dark-theme .elementor-widget-posAccount .pos-dropdown-menu a:not(:last-child),
+.dark-theme .elementor-widget-pos_currency .pos-dropdown-menu a:not(:last-child),
+.dark-theme .elementor-widget-pos_language .pos-dropdown-menu a:not(:last-child),
+.dark-theme #header,
+.dark-theme .card, .dark-theme .cart-item,
+.dark-theme .cart-items-title,
+.dark-theme .separator,
+.dark-theme #order-items hr,
+.dark-theme hr,
+.dark-theme .modal-header,
+.dark-theme .blockcart .popup_cart ul li,
+.dark-theme .table-bordered th, .dark-theme .table-bordered td, .dark-theme.page-addresses .address, .dark-theme.page-addresses .address .address-body address, .dark-theme.page-addresses .address .address-footer, .dark-theme#checkout section.checkout-step .address, .dark-theme#checkout section.checkout-step .step-number, .dark-theme#checkout section.checkout-step .step-title, .dark-theme#checkout section.checkout-step.-current + .checkout-step .step-title,
+.dark-theme .card-block.cart-detailed-subtotals + .cart-summary-totals .cart-total,
+.dark-theme .product-quantity .qty .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin:not(:hover),
+.dark-theme .product-quantity .qty .bootstrap-touchspin #quantity_wanted,
+.dark-theme .buy .buy-now:not(:hover),
+.dark-theme .images-quickviews .product-images .thumb-container:not(:hover) img,
+.dark-theme .cart_button #wishlist_button:not(:hover), .dark-theme .cart_button .compare-button:not(:hover),
+.dark-theme .product-images .image-item:not(:hover) img,
+.dark-theme .product-images .image-item:not(:hover) .image-item:not(:hover) img,
+.dark-theme .product-actions .add-to-cart:not(:hover),
+.dark-theme .js-product-miniature:not(:hover),
+.dark-theme .tabs .tab-content,
+.dark-theme .product-additional-info,
+.dark-theme .product-information .product-description,
+.dark-theme .form-control,
+.dark-theme .sitemap h2,
+.dark-theme #js-product-list-top .sort-by-row .products-sort-order .select-title,
+.dark-theme #tags_block h2,
+.dark-theme .slick-slider .slick-prev:not(:hover), .dark-theme .slick-slider .slick-next:not(:hover),
+.dark-theme #tags_block .tags_block li a:not(:hover),
+.dark-theme #search_filters_wrapper #search_filters .facet .custom-checkbox input[type="checkbox"] + span,
+.dark-theme #search_filters_wrapper #search_filters .facet .facet-title {
+  border-color: #323232; }
+.dark-theme .product-information,
+.dark-theme #blockcart-modal .cart-content strong,
+.dark-theme .form-control:focus,
+.dark-theme .sitemap a:not(:hover),
+.dark-theme .comments_advices a:not(:hover),
+.dark-theme #wrapper .breadcrumb li a:not(:hover),
+.dark-theme label, .dark-theme .label,
+.dark-theme #js-product-list-top .sort-by-row .products-sort-order .select-title,
+.dark-theme #tags_block .tags_block li a:not(:hover),
+.dark-theme #search_filters .facet .facet-label a,
+.dark-theme #search_filters_brands .facet .facet-label a:not(:hover), .dark-theme #search_filters_suppliers .facet .facet-label a:not(:hover) {
+  color: #888888; }
+.dark-theme#checkout section.checkout-step .address-item.selected,
+.dark-theme .page-content.page-cms,
+.dark-theme .radio-label,
+.dark-theme .tabs,
+.dark-theme .form-control,
+.dark-theme .js-product-miniature.style_product_default .add-to-links li a,
+.dark-theme .js-product-miniature.style_product_default .add-to-links li.cart button.ajax_add_to_cart_button,
+.dark-theme .js-product-miniature.style_product_default .add-to-links li.cart span.ajax_add_to_cart_button,
+.dark-theme .js-product-miniature,
+.dark-theme .js-product-miniature.style_product2:hover .add-to-links,
+.dark-theme .js-product-miniature .product_desc,
+.dark-theme #js-product-list-top .sort-by-row .products-sort-order .select-title,
+.dark-theme #tags_block .tags_block li a:not(:hover) {
+  background: transparent; }
+.dark-theme #js-product-list-top.products-selection {
+  background: transparent;
+  border: 1px solid #323232;
+  padding: 10px 20px; }
+.dark-theme #js-product-list-top .sort-by-row .products-sort-order .dropdown-menu {
+  border-color: #323232;
+  background: #2e2e2e; }
+.dark-theme .pagination li:not(.current) a:not(:hover) {
+  color: #ffffff;
+  background: #2e2e2e; }
+.dark-theme .js-product-miniature.style_product2 .add-to-links li a,
+.dark-theme .js-product-miniature.style_product_default .add-to-links {
+  z-index: 3;
+  background: var(--bg_dark); }
+.dark-theme .pos-recent-orders,
+.dark-theme #blockcart-modal .modal-body,
+.dark-theme .blockcart .popup_cart,
+.dark-theme .modal-content, .dark-theme.page-customer-account #content,
+.dark-theme .quickview .modal-content {
+  background-color: var(--bg_dark); }
+.dark-theme .psgdprinfo17,
+.dark-theme #posnewsletterpopup {
+  background-color: #1d1d1d; }
+.dark-theme .pos-search.search-topbar .pos-search__toggle:before,
+.dark-theme #posnewsletterpopup-overlay,
+.dark-theme .blockcart .popup_cart.popup-sidebar .title-cart .close-cart:after {
+  opacity: 0.5; }
+.dark-theme .js-product-miniature.style_product_default .add-to-links li.cart button.ajax_add_to_cart_button:not(:hover),
+.dark-theme .js-product-miniature.style_product_default .add-to-links li.cart span.ajax_add_to_cart_button:not(:hover) {
+  color: #ffffff;
+  border-color: #ffffff; }
+.dark-theme .contact-rich .block .icon,
+.dark-theme .product-features > dl.data-sheet dd.value, .dark-theme .product-features > dl.data-sheet dt.name,
+.dark-theme #posnewsletterpopup .pnp-newsletter-form .pos-btn-newsletter:not(:hover),
+.dark-theme .elementor-widget-posAccount .pos-dropdown-menu,
+.dark-theme .elementor-widget-pos_currency .pos-dropdown-menu,
+.dark-theme .elementor-widget-pos_language .pos-dropdown-menu,
+.dark-theme #blockcart-modal .modal-header,
+.dark-theme .blockcart .popup_cart.popup-sidebar .title-cart,
+.dark-theme .table thead th, .dark-theme.page-my-account #content .links a span.link-item,
+.dark-theme #poscompare-table .poscompare-product-row:nth-child(even), .dark-theme #poscompare-table .poscompare-product-row:nth-child(even) .poscompare-product-td,
+.dark-theme #order-items table tr.total-value,
+.dark-theme textarea, .dark-theme.page-addresses .address, .dark-theme#checkout section.checkout-step .delivery-options .delivery-option,
+.dark-theme .input-group .input-group-btn > .btn[data-action="show-password"]:not(:hover),
+.dark-theme .btn-secondary:not(:hover),
+.dark-theme .btn-tertiary:not(:hover),
+.dark-theme .btn-primary:not(:hover),
+.dark-theme .poscompare-product .product_desc div.cart button.ajax_add_to_cart_button:not(:hover),
+.poscompare-product .product_desc div.cart .dark-theme button.ajax_add_to_cart_button:not(:hover),
+.dark-theme .poscompare-product .product_desc div.cart span.ajax_add_to_cart_button:not(:hover),
+.poscompare-product .product_desc div.cart .dark-theme span.ajax_add_to_cart_button:not(:hover),
+.dark-theme .product-quantity #quantity_wanted,
+.dark-theme .product-quantity .qty .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin:not(:hover),
+.dark-theme .active_filters,
+.dark-theme .buy .buy-now:not(:hover),
+.dark-theme .cart_button #wishlist_button:not(:hover), .dark-theme .cart_button .compare-button:not(:hover),
+.dark-theme .product-actions .add-to-cart:not(:hover),
+.dark-theme .slick-slider .slick-prev:not(:hover), .dark-theme .slick-slider .slick-next:not(:hover),
+.dark-theme .js-product-miniature.style_product2 .add-to-links li.cart button.ajax_add_to_cart_button:not(:hover),
+.dark-theme .js-product-miniature.style_product2 .add-to-links li.cart span.ajax_add_to_cart_button:not(:hover) {
+  background: #2e2e2e; }
+.dark-theme .btn-secondary:not(:hover),
+.dark-theme .btn-tertiary:not(:hover),
+.dark-theme .btn-primary:not(:hover),
+.dark-theme .poscompare-product .product_desc div.cart button.ajax_add_to_cart_button:not(:hover),
+.poscompare-product .product_desc div.cart .dark-theme button.ajax_add_to_cart_button:not(:hover),
+.dark-theme .poscompare-product .product_desc div.cart span.ajax_add_to_cart_button:not(:hover),
+.poscompare-product .product_desc div.cart .dark-theme span.ajax_add_to_cart_button:not(:hover) {
+  border-color: #2e2e2e; }
+.dark-theme .images-quickviews .product-images .slick-current .thumb-container img,
+.dark-theme .product-images .is-active .image-item img {
+  border-color: var(--hovercolor); }
+.dark-theme.page-addresses .addresses-footer a:hover, .dark-theme.page-addresses .address .address-footer a:hover {
+  color: var(--hovercolor); }
+.dark-theme .block-promo .cart-voucher h5 {
+  background: #222222; }
+.dark-theme .pos-search.search-topbar .pos-search__toggle:before,
+.dark-theme #posnewsletterpopup-overlay,
+.dark-theme .blockcart .popup_cart.popup-sidebar .title-cart .close-cart:after,
+.dark-theme .modal-backdrop {
+  background-color: #ffffff; }
+.dark-theme #posnewsletterpopup .title-popup h2, .dark-theme#checkout section.checkout-step .add-address a, .dark-theme#checkout section.checkout-step .step-title,
+.dark-theme .js-product-miniature .product_desc .product_name,
+.dark-theme #tags_block h2,
+.dark-theme #search_filters_wrapper #search_filters .facet .facet-title,
+.dark-theme #search_filters_wrapper #search_filters .h6,
+.dark-theme .h1.namne_details, .dark-theme .product_name_h1 {
+  font-weight: var(--font-weight); }
+
+.pos-search__result .result-content > a:not(:hover) {
+  color: #253237; }
+
+.page-addresses .addresses-footer {
+  margin-bottom: 2rem; }
+
+#module-psgdpr-gdpr .page-content .container {
+  padding: 0; }

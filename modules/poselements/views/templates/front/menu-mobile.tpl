@@ -7,11 +7,11 @@
 	{if $vmenu}
 	<ul class="nav nav-mobile-menu" role="tablist"> 
 		<li class="nav-item">
-			<a class="nav-link active"  data-toggle="tab" href="#tab-mobile-megamenu" role="tab" aria-controls="mobile-megamenu" aria-selected="true">Menu</a>
+			<a class="nav-link active"  data-toggle="tab" href="#tab-mobile-megamenu" role="tab" aria-controls="mobile-megamenu" aria-selected="true">{l s='Menu' mod='poselements'} Menu</a>
 			
 		</li>
 		<li class="nav-item">
-			<a class="nav-link"  data-toggle="tab" href="#tab-mobile-vegamenu" role="tab" aria-controls="mobile-vegamenu" aria-selected="true">Categories</a>
+			<a class="nav-link"  data-toggle="tab" href="#tab-mobile-vegamenu" role="tab" aria-controls="mobile-vegamenu" aria-selected="true">{l s='Categories' mod='poselements'}</a>
 		</li>
 	</ul>
 	{/if}

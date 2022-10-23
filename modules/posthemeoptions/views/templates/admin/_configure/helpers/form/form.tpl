@@ -951,7 +951,11 @@
 											<option value="plants1">Plants 1</option>
 											<option value="plants2">Plants 2</option>
 											<option value="plants3">Plants 3</option>
-											<option value="plants4">Plants 4</option>											
+											<option value="plants4">Plants 4</option>	
+											<option value="shoes1">Shoes 1</option>
+											<option value="shoes2">Shoes 2</option>
+											<option value="shoes3">Shoes 3</option>
+											<option value="shoes4">Shoes 4</option>	 										
 											<option value="sportwear1">Sportwear 1</option>
 											<option value="sportwear2">Sportwear 2</option>
 											<option value="sportwear3">Sportwear 3</option>
@@ -976,6 +980,10 @@
 											<option value="singleproduct-treadmill">Single products treadmill</option>
 											<option value="singleproduct-vacuumcleaner">Single products vacuumcleaner</option>
 											<option value="singleproduct-vr">Single products VR</option>
+											<option value="watch1">Watch 1</option>
+											<option value="watch2">Watch 2</option>
+											<option value="watch3">Watch 3</option>
+											<option value="watch4">Watch 4</option>
 											<option value="wine1">Wine 1</option>
 											<option value="wine2">Wine 2</option>
 											<option value="wine3">Wine 3</option>

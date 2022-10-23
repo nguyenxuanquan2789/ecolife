@@ -40,6 +40,14 @@ class PosThemeoptions extends Module implements WidgetInterface
         2 => array('id' =>2 , 'name' => 'Capitalize'),
         3 => array('id' =>3 , 'name' => 'UPPERCASE'),
     );
+    public static $text_font_weight = array(
+        1 => array('id' =>1 , 'name' => '600'),
+        2 => array('id' =>2 , 'name' => '400'),
+        3 => array('id' =>3 , 'name' => '500'),
+        4 => array('id' =>4 , 'name' => '700'),
+        5 => array('id' =>5 , 'name' => '800'),
+        6 => array('id' =>6 , 'name' => '900'),
+    );
     public static $product_row = array(
         1 => array('id' =>1 , 'name' => '3'),
         2 => array('id' =>2 , 'name' => '4'),
@@ -90,6 +98,7 @@ class PosThemeoptions extends Module implements WidgetInterface
         Configuration::updateValue($this->name . 'g_title_font_color', '#253237');
         Configuration::updateValue($this->name . 'g_title_font_transform', 2);
         Configuration::updateValue($this->name . 'g_title_font_size_column', 20);
+		Configuration::updateValue($this->name . 'g_title_font_weight', 600);
 		//header
 
 		Configuration::updateValue($this->name . 'header_sticky', 1);
@@ -375,6 +384,29 @@ class PosThemeoptions extends Module implements WidgetInterface
             }
             return  $transform_option;
     }
+	   public function convertFontweight($value) {
+            switch($value) {
+                case 1 :
+                    $font_weight_option = '600';
+                    break;
+                case 2 :
+                    $font_weight_option = '400';
+                    break;
+				case 3 :
+                    $font_weight_option = '500';
+                    break;
+                case 4 :
+                    $font_weight_option = '700';
+                    break;
+				case 5 :
+                    $font_weight_option = '800';
+                    break;	
+				default :
+                    $font_weight_option = '900';
+                
+            }
+            return  $font_weight_option;
+    }
     public function generateCss()
     {
         $css = '';
@@ -397,13 +429,18 @@ class PosThemeoptions extends Module implements WidgetInterface
             }}';
         }
         $main_color = Configuration::get($this->name . 'g_main_color'); 
+		$body_bg_color = Configuration::get($this->name . 'g_body_bg_color');
+		$body_font_color = Configuration::get($this->name . 'g_body_font_color');
+		$title_block_font_weight = $this->convertFontweight(Configuration::get($this->name . 'g_title_font_weight'));
         $css .='
          :root {  
             --hovercolor: '.$main_color.'; 
+            --bg_dark: '.$body_bg_color.'; 
+            --font-weight '.$title_block_font_weight.';  
+			
         }';
         $body_font_family = Configuration::get($this->name . 'g_body_gfont_name');
         $body_font_size = Configuration::get($this->name . 'g_body_font_size');
-        $body_font_color = Configuration::get($this->name . 'g_body_font_color');
         $body_link_color = Configuration::get($this->name . 'g_a_color');
         $body_link_colorh = Configuration::get($this->name . 'g_a_colorh');
         $css .= 'body{
@@ -411,7 +448,6 @@ class PosThemeoptions extends Module implements WidgetInterface
             font-size: '.$body_font_size.'px;
             color: '.$body_font_color.';
         }';
-        $body_bg_color = Configuration::get($this->name . 'g_body_bg_color');
         $body_bg_image = Configuration::get($this->name . 'g_body_bg_image');
         $body_bg_repeat = Configuration::get($this->name . 'g_body_bg_repeat');
         $body_bg_attachment = Configuration::get($this->name . 'g_body_bg_attachment');
@@ -447,11 +483,12 @@ class PosThemeoptions extends Module implements WidgetInterface
         $title_block_font_color = Configuration::get($this->name . 'g_title_font_color');
         $title_block_font_tranform = $this->convertTransform(Configuration::get($this->name . 'g_title_font_transform'));
         $title_block_font_size_column = Configuration::get($this->name . 'g_title_font_size_column');
-        $css .='.pos_title h2{
+        $css .='.pos_title h2,.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
             font-family: '.$title_block_font_family.';
             font-size: '.$title_block_font_size.'px;
             color: '.$title_block_font_color.';
             text-transform: '.$title_block_font_tranform.';
+			font-weight: '.$title_block_font_weight.';
         }';
 		$css .='.pos-title{
             font-family: '.$title_block_font_family.';
@@ -582,6 +619,7 @@ class PosThemeoptions extends Module implements WidgetInterface
 
 		$smart_vals = array(
             'body_class' => $body_class,
+			'body_dark' => Configuration::get($this->name . 'g_dark'),
 			'sidebar_width' => Configuration::get($this->name . 'sidebar'), 
 			'body_layout' => Configuration::get($this->name . 'layout'), 
             'header_sticky' => Configuration::get($this->name . 'header_sticky'),

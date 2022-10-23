@@ -104,7 +104,7 @@ $this->fields_form[]['form'] = array(
         ),
         array(
             'type' => 'color2',
-            'label' => $this->l('Body font color'),
+            'label' => $this->l('Body color'),
             'name' => 'g_body_font_color',
         ), 
         array(
@@ -112,6 +112,25 @@ $this->fields_form[]['form'] = array(
             'label' => $this->l('Body background'),
             'name'=> 'bodybg'
         ), 
+		 array(
+            'type' => 'switch',
+            'label' => $this->l('Dark theme'),
+            'name' => 'g_dark',
+            'class' => 'fixed-width-xs',
+            'values' => array(
+                array(
+                    'id' => 'g_dark_on',
+                    'value' => 1,
+                    'label' => $this->l('Yes') 
+                    ),
+                array(
+                    'id' => 'g_dark_off',
+                    'value' => 0,
+                    'label' => $this->l('No')
+                )
+            ),
+            'desc' => $this->l('if you choose dark theme please change background body to dark color')
+        ),
         array(
             'type' => 'color2',
             'label' => $this->l('Body background color'),
@@ -222,6 +241,16 @@ $this->fields_form[]['form'] = array(
             'name' => 'g_title_font_transform',
             'options' => array (
                 'query' => self::$text_transform,
+                'id' => 'id',
+                'name' => 'name'
+            ),
+        ),
+		array(
+            'type' => 'select',
+            'label' => $this->l('Title block font weight'),
+            'name' => 'g_title_font_weight',
+            'options' => array (
+                'query' => self::$text_font_weight,
                 'id' => 'id',
                 'name' => 'name'
             ),

@@ -54,6 +54,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -76,6 +78,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -98,6 +102,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -120,6 +126,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -142,6 +150,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -164,6 +174,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -186,6 +198,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -208,6 +222,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -230,6 +246,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -252,6 +270,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'narrow');
@@ -274,6 +294,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'narrow');
@@ -296,6 +318,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1740px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'narrow');
@@ -318,6 +342,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -340,6 +366,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -362,6 +390,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -384,6 +414,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -406,6 +438,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -428,6 +462,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -450,6 +486,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -472,6 +510,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -494,6 +534,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -516,6 +558,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '/pos_ecolife/img/cms/bg_body.jpg');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '1550px');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -538,6 +582,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -560,6 +606,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -582,6 +630,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -604,6 +654,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -626,6 +678,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -648,6 +702,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -670,6 +726,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -692,6 +750,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -714,6 +774,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -736,6 +798,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -758,6 +822,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -780,6 +846,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -802,6 +870,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -824,6 +894,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -846,6 +918,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -868,6 +942,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -890,6 +966,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -912,6 +990,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -934,6 +1014,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -956,6 +1038,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
 			$results .= $this->updateValue($themeoption . 'p_display', 5);
@@ -977,6 +1061,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -999,6 +1085,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1021,6 +1109,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1043,6 +1133,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1065,6 +1157,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1087,6 +1181,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1109,6 +1205,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1131,6 +1229,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1153,6 +1253,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1175,6 +1277,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1197,6 +1301,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1219,6 +1325,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1241,6 +1349,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1263,6 +1373,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1285,6 +1397,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1307,6 +1421,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1329,6 +1445,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal'); 
@@ -1351,6 +1469,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1373,6 +1493,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1395,6 +1517,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#F6F6F7');
 			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '1270px');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1417,6 +1541,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1439,6 +1565,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1461,6 +1589,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1483,6 +1613,8 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#F4F4F4');
 			$results .= $this->updateValue($themeoption . 'layout', 'boxed');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '1270px');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
@@ -1505,10 +1637,12 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
 			$results .= $this->updateValue($themeoption . 'p_display', 5);
-			$results .= $this->updateValue($themeoption . 'sticky_background', '#ffffff');
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
 			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
 			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
 			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
@@ -1523,13 +1657,15 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
-		if($layout == 'wine1' || $layout == 'wine2' || $layout == 'wine3' || $layout == 'wine4'){
+		if($layout == 'wine1' || $layout == 'wine3' || $layout == 'wine4'){
     		//Theme settings
 			$results .= $this->updateValue($themeoption . 'p_padding', '0');
 			$results .= $this->updateValue($themeoption . 'p_border', '1');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
 			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
 			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
 			$results .= $this->updateValue($themeoption . 'boxed_width', '');
 			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
 			$results .= $this->updateValue($themeoption . 'p_display', 2);
@@ -1546,6 +1682,155 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 					.js-product-miniature.style_product1 .inner_desc{text-align:center;}
 					.js-product-miniature .product_desc .product_name{font-weight:400;}
 				');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'wine2'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 2);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#98152F');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#98152F');
+			$results .= $this->updateValue($themeoption . 'custom_css', '
+					.js-product-miniature.style_product1 div.cart button.ajax_add_to_cart_button{width:145px;border-radius: 0;background: #98152F;}
+					.js-product-miniature.style_product1 div.cart button.ajax_add_to_cart_button:hover{background:#101111}
+					.js-product-miniature.style_product1 .inner_desc{text-align:center;}
+					.js-product-miniature .product_desc .product_name{font-weight:400;}
+				');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'shoes1'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#ffffff');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Teko", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#F2640A');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#F2640A');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'shoes2'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#DD1C1C');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#DD1C1C');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'shoes3'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Montserrat", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#F6435B');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#F6435B');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'shoes4'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '1');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#253237CC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Open Sans", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Montserrat", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#F6435B');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#F6435B');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'watch1' || $layout == 'watch2' || $layout == 'watch3' || $layout == 'watch4'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '0');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#242424');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '2');
+			$results .= $this->updateValue($themeoption . 'g_dark', '1');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#242424CC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Prata&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Prata", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#A8741A');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#A8741A');
 			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
