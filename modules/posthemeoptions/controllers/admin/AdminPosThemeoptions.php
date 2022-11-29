@@ -1835,6 +1835,102 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
+		if($layout == 'bike'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '3');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Teko", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#9BB70D');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#9BB70D');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'coffee1'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '3');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFF');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#A16C21');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#A16C21');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'coffee2'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '2');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Prata&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Prata", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#A16C21');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#A16C21');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'game'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '0');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '#000000');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '3');
+			$results .= $this->updateValue($themeoption . 'g_dark', '1');
+			$results .= $this->updateValue($themeoption . 'container_width', '1200px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 1);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#DF2121CC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Rubik", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#DF2121');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#DF2121');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
         $error = false;
 		if(!empty($images))
         foreach($images as $image){

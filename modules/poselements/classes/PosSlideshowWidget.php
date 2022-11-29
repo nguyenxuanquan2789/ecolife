@@ -118,7 +118,7 @@ class PosSlideshowWidget extends WidgetHelper {
 			                    ),
 			                ),
 			                'selectors' => array(
-			                    '{{WRAPPER}} .pos-slideshow-wrapper {{CURRENT_ITEM}} .desc-banner' => 'text-align: {{VALUE}};',
+			                    '{{WRAPPER}} .pos-slideshow-wrapper {{CURRENT_ITEM}} .desc-banner .slideshow-content' => 'text-align: {{VALUE}};',
 			                ),
 	                    ],
 						[

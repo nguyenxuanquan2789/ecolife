@@ -436,7 +436,7 @@ class PosThemeoptions extends Module implements WidgetInterface
          :root {  
             --hovercolor: '.$main_color.'; 
             --bg_dark: '.$body_bg_color.'; 
-            --font-weight '.$title_block_font_weight.';  
+            --font-weight: '.$title_block_font_weight.';  
 			
         }';
         $body_font_family = Configuration::get($this->name . 'g_body_gfont_name');

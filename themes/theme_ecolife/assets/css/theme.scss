@@ -12554,6 +12554,7 @@ body#checkout section#checkout-personal-information-step {
             font-weight: 400;
             margin: 0;
             line-height: 1;
+			font-family: inherit;
         }
         .product_name {
             line-height: 1.4;
@@ -16680,6 +16681,9 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
                             }
                         }
                     }
+					h4 {
+						font-family:inherit;
+					}
                     .pos-sub-inner {
                         box-shadow: 0px 0px 3.76px 0.24px rgba(0, 0, 0, 0.15);
                         background: $color-white;
@@ -17163,6 +17167,9 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 					top: 0;
 					left: 100%;
 					padding: 0;
+					h4 {
+						font-family:inherit;
+					}
 					.popup_vertical {
 						background: $color-white;
 						padding: 1.875rem;
@@ -17426,6 +17433,9 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 .mobile-menu {
     text-align: left;
     .menu-content {
+		h4 {
+			font-family:inherit;
+		}
         .pos-sub-menu,
         .pos-sub-menu .pos-menu-col {
             float: none;
@@ -18075,8 +18085,8 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
         }
     }
     .slick-dots {
-        position: static !important;
-        margin: 1.25rem 0 0 0 !important;
+        position: static ;
+        margin: 1.25rem 0 0 0 ;
         display: flex;
         justify-content: center;
         li {
@@ -18084,10 +18094,11 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
                 margin: 0 7px;
                 width: 0.75rem !important;
                 height: 0.75rem !important;
-                border: none;
-                background: #ccc !important;
+                border: none; 
+                background: #ccc;
                 border-radius: 50%;
                 font-size: 0;
+				cursor: pointer;
                 &:before {
                     display: none;
                 }
@@ -18095,11 +18106,27 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
             &.slick-active,
             &:hover {
                 button {
-                    background: var(--hovercolor) !important;
+                    background: var(--hovercolor);
                 }
             }
         }
     }
+}
+.elementor-widget-image-carousel .elementor-slick-slider ul.slick-dots {
+	position: static;
+	margin: 1.25rem 0 0 0;
+    display: flex;
+	li{
+		 button {
+			background: #ccc;
+		}
+		&.slick-active,
+		&:hover {
+			button {
+				background: var(--hovercolor);
+			}
+		}
+	}
 }
 .slick-vertical {
     .slick-prev,
@@ -19535,6 +19562,14 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
                 line-height: 1;
             }
         }
+		.elementor-image-box-wrapper {
+            display: flex;
+            align-items: center;
+            .elementor-image-box-img {
+                margin: 0 10px 0 0 !important;   
+                line-height: 1;
+            }
+        }
     }
 }
 /* ========= dark theme =============*/
@@ -19758,16 +19793,7 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 	.modal-backdrop {
 		background-color: $color-white;
 	}
-	#posnewsletterpopup .title-popup h2,
-	&#checkout section.checkout-step .add-address a, 
-	&#checkout section.checkout-step .step-title,
-	.js-product-miniature .product_desc .product_name,
-	#tags_block h2,
-	#search_filters_wrapper #search_filters .facet .facet-title,
-	#search_filters_wrapper #search_filters .h6,
-	.h1.namne_details, .product_name_h1 {
-		font-weight: var( --font-weight);
-	}
+	
 }
 .pos-search__result .result-content > a:not(:hover) {
 	color: $main-color;
@@ -19777,4 +19803,17 @@ body:not(.page-index) .sticky-inner.absolute-header-full{
 }
 #module-psgdpr-gdpr .page-content .container {
 	padding: 0;
+}
+.menu-no-gap .main-menu .pos-menu-horizontal .menu-content .menu-item .menu-dropdown {
+	padding-top: 0;
+}
+#posnewsletterpopup .title-popup h2,
+#checkout section.checkout-step .add-address a, 
+#checkout section.checkout-step .step-title,
+.js-product-miniature .product_desc .product_name,
+#tags_block h2,
+#search_filters_wrapper #search_filters .facet .facet-title,
+#search_filters_wrapper #search_filters .h6,
+.h1.namne_details, .product_name_h1 {
+	font-weight: var( --font-weight);
 }

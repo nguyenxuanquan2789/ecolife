@@ -876,6 +876,7 @@
 											<option value="autopart2">Autopart 2</option>
 											<option value="autopart3">Autopart 3</option>
 											<option value="autopart4">Autopart 4</option>
+											<option value="bike">Bike</option>											
 											<option value="book1">Book 1</option>
 											<option value="book2">Book 2</option>
 											<option value="book3">Book 3</option>
@@ -884,6 +885,8 @@
 											<option value="cosmetic2">Cosmetic 2</option>
 											<option value="cosmetic3">Cosmetic 3</option>
 											<option value="cosmetic4">Cosmetic 4</option>
+											<option value="coffee1">Coffee 1</option>
+											<option value="coffee2">Coffee 2</option>
 											<option value="decoration1">Decoration 1</option>
 											<option value="decoration2">Decoration 2</option>
 											<option value="decoration3">Decoration 3</option>
@@ -908,6 +911,7 @@
 											<option value="furniture2">Furniture 2</option>
 											<option value="furniture3">Furniture 3</option>
 											<option value="furniture4">Furniture 4</option>
+											<option value="game">Game</option>
 											<option value="glasses1">Glasses 1</option>
 											<option value="glasses2">Glasses 2</option>
 											<option value="glasses3">Glasses 3</option>
@@ -990,7 +994,7 @@
 											<option value="wine4">Wine 4</option>
 										</select>
 										</select>
-										<a href="http://demo.posthemes.com/pos_ecolifedemo/#section-page" class="pos-demos" target="_blank">View our list demo</a>
+										<a href="https://ecolife.posthemes.com/" class="pos-demos" target="_blank">View our list demo</a>
 										<div class="import-processing"></div>
 										<button class="btn-import"><span>Import</span></button>
 									</div>

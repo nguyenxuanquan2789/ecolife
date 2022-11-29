@@ -7,7 +7,6 @@ defined('_PS_VERSION_') or die;
 use Context;
 use Configuration;
 use Posthemes\Module\Poselements\WidgetHelper;
-use Posthemes\Module\Poselements\WidgetProductBase;
 
 class PosProductsWidget extends WidgetHelper { 
 	public function getName() {
@@ -227,7 +226,7 @@ class PosProductsWidget extends WidgetHelper {
 				],
 			]
 		);	
-			$this->addResponsiveControl(
+			$this->addControl(
 				'padding',
 				[
 					'label' => $this->l( 'Padding' ),

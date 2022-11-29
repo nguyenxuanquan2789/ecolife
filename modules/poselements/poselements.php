@@ -32,7 +32,7 @@ use CE\Plugin;
 use Posthemes\Module\Poselements\Install;
 class Poselements extends Module
 {
-    const DBKEY = 'poselement_flag';
+    const POSFLAG = 'poselement_flag';
     public function __construct()
     {
         $this->name = 'poselements';
@@ -57,7 +57,7 @@ class Poselements extends Module
 
     public function install()
     {
-
+        Configuration::updateValue('poselement_flag', 0);
         return parent::install() &&
             $this->registerHook('header') &&
             $this->registerHook('actionCreativeElementsInit') && 
@@ -71,17 +71,15 @@ class Poselements extends Module
         return parent::uninstall();
     }
 
-    // hook used to import demo templates. The only way to import templates when current module is already installed
     public function hookActionAdminControllerSetMedia()
     {
-        if (Configuration::get(self::DBKEY) != 1) {
-            include_once(_PS_MODULE_DIR_.$this->name.'/install/install.php');
+        if (Configuration::get('poselement_flag') != 1) {
+            include_once(_PS_MODULE_DIR_ .'poselements/install/install.php');
 
-            $install = new Install($this->name);
+            $install = new Install();
             
-            if ($install->installContent()) {
-                // set flag if templates was installed successfully
-                Configuration::updateValue(self::DBKEY, 1);
+            if ($install->installTemplates()) {
+                Configuration::updateValue('poselement_flag', 1);
             }
         }
     }
@@ -94,14 +92,14 @@ class Poselements extends Module
         $this->context->controller->addJS($this->_path.'/views/js/front.js');
         $this->context->controller->addCSS($this->_path.'/views/css/front.css');
         Media::addJsDef(array(
-            'pdays_text' => 'days',
-            'pday_text' => 'day',
-            'phours_text' => 'hours',
-            'phour_text' => 'hour',
-            'pmins_text' => 'mins',
-            'pmin_text' => 'min',
-            'psecs_text' => 'secs',
-            'psec_text' => 'sec',
+            'pdays_text' => $this->l('days'),
+            'pday_text' => $this->l('day'),
+            'phours_text' => $this->l('hours'),
+            'phour_text' => $this->l('hour'),
+            'pmins_text' => $this->l('mins'),
+            'pmin_text' => $this->l('min'),
+            'psecs_text' => $this->l('secs'),
+            'psec_text' => $this->l('sec'),
 			'pos_subscription' => $this->context->link->getModuleLink($this->name, 'subscription'),
         ));
     }
@@ -112,45 +110,37 @@ class Poselements extends Module
 		$this->context->controller->addCSS($this->_path.'/views/css/back.css');
     }
 
+    public function posEnqueueScripts()
+    {
+        CE\wp_enqueue_style('ecolife-icon', $this->_path.'/views/css/ecolife-icon.css', array(), '1.0.0');
+    }
+
+    public function registerPosWidgets(){
+        $poswidgets = glob(_PS_MODULE_DIR_.$this->name.'/classes/*.php');
+        foreach( $poswidgets as $poswidget ){
+            require( $poswidget );
+            $classname = 'CE\\'.basename( $poswidget, '.php' );
+            if ( class_exists($classname) ){
+                CE\Plugin::instance()->widgets_manager->registerWidgetType( new $classname() );
+            }
+        }
+    }
+    
     public function hookActionCreativeElementsInit()
     {
-        $this->includeClassesToElementor();
+        $poswidgets = glob(_PS_MODULE_DIR_ . $this->name . '/src/*.php');
+        foreach ($poswidgets as $poswidget)
+        {
+            include($poswidget);
+        }
 
-        CE\add_action('elementor/widgets/widgets_registered', [$this, 'registerWidget']);
+        CE\add_action('elementor/widgets/widgets_registered', [$this, 'registerPosWidgets']);
 
         CE\add_action('elementor/elements/categories_registered', function($manager) {
             $manager->addCategory('posthemes',  ['title' => 'Posthemes']);
             $manager->addCategory('posthemes_header',  ['title' => 'Posthemes header']);
             $manager->addCategory('posthemes_footer',   ['title' => 'Posthemes footer']);
         });
-		CE\add_action('elementor/editor/before_enqueue_scripts', array($this, 'posEnqueueScripts'));
+        CE\add_action('elementor/editor/before_enqueue_scripts', array($this, 'posEnqueueScripts'));
     }
-    public function posEnqueueScripts()
-    {
-        CE\wp_enqueue_style('ecolife-icon', $this->_path.'/views/css/ecolife-icon.css', array(), '1.0.0');
-    }
-    public function registerWidget()
-    {
-        $widgets = glob(_PS_MODULE_DIR_.$this->name.'/classes/*.php');
-        foreach ($widgets as $widget)
-        {
-            require($widget);
-            $classname = 'CE\\'.basename($widget, '.php');
-
-            if (class_exists($classname))
-            {
-                CE\Plugin::instance()->widgets_manager->registerWidgetType(new $classname());
-            }
-        }
-    }
-
-    private function includeClassesToElementor()
-    {
-        $classes = glob(_PS_MODULE_DIR_.$this->name.'/src/*.php');
-        foreach ($classes as $class)
-        {
-            include($class);
-        }
-    }
-    
 }
