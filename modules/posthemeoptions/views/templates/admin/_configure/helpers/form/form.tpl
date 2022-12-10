@@ -948,6 +948,10 @@
 											<option value="organic2">Organic 2</option>
 											<option value="organic3">Organic 3</option>
 											<option value="organic4">Organic 4</option>
+											<option value="organic5">Organic 5</option>
+											<option value="organic6">Organic 6</option>
+											<option value="organic7">Organic 7</option>
+											<option value="organic8">Organic 8</option>
 											<option value="petshop1">Petshop 1</option>
 											<option value="petshop2">Petshop 2</option>
 											<option value="petshop3">Petshop 3</option>

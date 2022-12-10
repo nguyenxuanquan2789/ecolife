@@ -1931,6 +1931,54 @@ class AdminPosThemeoptionsController extends ModuleAdminController {
 			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
             $images = array();
     	}
+		if($layout == 'organic5' || $layout == 'organic7' || $layout == 'organic8'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '2');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1320px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 4);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#FFFFFFCC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#056630');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#056630');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
+		if($layout == 'organic6'){
+    		//Theme settings
+			$results .= $this->updateValue($themeoption . 'p_padding', '0');
+			$results .= $this->updateValue($themeoption . 'p_border', '1');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_image', '');
+			$results .= $this->updateValue($themeoption . 'g_body_bg_color', '');
+			$results .= $this->updateValue($themeoption . 'layout', 'wide');
+			$results .= $this->updateValue($themeoption . 'g_title_font_weight', '2');
+			$results .= $this->updateValue($themeoption . 'g_dark', '0');
+			$results .= $this->updateValue($themeoption . 'container_width', '1320px');
+			$results .= $this->updateValue($themeoption . 'boxed_width', '');
+			$results .= $this->updateValue($themeoption . 'sidebar', 'normal');
+			$results .= $this->updateValue($themeoption . 'p_display', 4);
+			$results .= $this->updateValue($themeoption . 'sticky_background', '#01574ACC');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_body_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_url', 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			$results .= $this->updateValue($themeoption . 'g_title_gfont_name', '"Jost", sans-serif');
+			$results .= $this->updateValue($themeoption . 'g_main_color', '#01574A');
+			$results .= $this->updateValue($themeoption . 'p_name_colorh', '#01574A');
+			$results .= $this->updateValue($vegamenu . '_behaviour', 2);
+			$results .= $this->updateValue('POSSEARCH_CATE', 0);  
+            $images = array();
+    	}
         $error = false;
 		if(!empty($images))
         foreach($images as $image){
